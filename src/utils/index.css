@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.preloader{
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    color: #FFF;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+
+}
+
+.preloader .text-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 280px;
+    font-size: 20px;
+    font-weight: 888;
+    font-family: 'Lato', sans-serif;
+   overflow-y: hidden;
+    color: #FFF;
+}
+
+  
+ 
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 10%;
+    box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  li .active{
+    font-weight: 500;
+color: rgba(238, 75, 43, 0.7);
+  }
+
+  li:hover{
+    color: #147efb;
+  }
+
+  header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+
+
+  
+  header .navbar ul li {
+    font-size: 1.2rem;
+   
+    margin-left: 3rem;
+  }
+  
+
+ 
+  
+  header .logo img {
+    height: 1.8rem;
+  }
+
+
+  .wobble{
+    -webkit-animation: morph 8s ease-in-out infinite;
+    animation: morph 8s ease-in-out infinite;
+    background-image: url("gojo.gif");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #2d2e32;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    height: 25rem;
+    position: relative;
+    transition: all 1s ease-in-out;
+    width: 25rem;
+  }
+
+
+
+  @media (max-width: 768px) {
+    header .navbar ul {
+      display: none;
+    }
+    
+
+
+  }
+
+
+
+
+
+
