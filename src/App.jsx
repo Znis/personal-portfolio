@@ -13,11 +13,8 @@ function App() {
 
 <BrowserRouter>
           <Routes>
-            <Route 
-              element={
-                
-                  <AppLayout />
-               
+            <Route path="/personal-portfolio/" element={
+              <AppLayout />
               }
             >
              <Route index element={
