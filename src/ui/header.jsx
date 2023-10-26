@@ -15,7 +15,7 @@ const StyledDropdownDivContent = styled.div`
   background-color: #FFFFFF;
   min-width: 12rem;
   border-radius: 0.4rem;
-  margin-top: 2.8rem;
+  margin-top: 2.4rem;
   box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.2);
   z-index: 1;
  
@@ -25,8 +25,8 @@ const StyledDropdownDivContentA = styled.a`
 display: block;
 font-weight: 500;  
 color: black;
-font-size: 1.1rem;
-padding: 1rem 4rem 1rem 2rem;
+font-size: 1rem;
+padding: 0.8rem 4rem 0.8rem 2rem;
 font-family: 'Lato', sans-serif;
 
 &:hover{
@@ -38,7 +38,7 @@ const StyledBtn = styled.button`
   text-align: center;
   align-items: center;
   width: fit-content;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
@@ -61,6 +61,7 @@ function Header() {
       <a href="/" className="logo">
         <img src="logo.svg" title="website logo" alt="website logo" />
       </a>
+
 
       <nav className="navbar">
         <ul>

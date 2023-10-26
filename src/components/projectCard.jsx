@@ -19,7 +19,7 @@ const CardDiv = styled.div`
     flex-direction: column;
     margin: 4rem 0rem auto;
     width: 100%;
-    padding:2rem 3rem;
+    padding:2rem 2rem;
 
     @media (min-width: 1024px) {
         flex-direction: row;
@@ -32,7 +32,8 @@ background: rgba(238, 75, 43, 1);
 color:#FFFFFF;
 height:auto;
 width: fit-content;
-padding: 0.5rem 1rem;
+padding: 0.4rem 0.8rem;
+font-size: 0.85rem;
 text-align:center;
 font-style: italic;
 font-weight:300;
@@ -57,7 +58,7 @@ const ProjectDemoDiv = styled.div`
 
 
 const H1 = styled.h1`
-font-size: 1.8rem;
+font-size: 1.6rem;
 font-weight: 500;
 color: #553c9a;
 font-family: 'Roboto', sans-serif;
@@ -65,7 +66,7 @@ text-align: ${props => props.orientation === 0 ? "left" : "right"};
 `
 
 const P = styled.p`
-font-size: 1.15rem;
+font-size: 1rem;
 font-weight: 400;
 font-family: 'Lato', sans-serif;
 text-align: justify;
@@ -73,7 +74,7 @@ text-align: justify;
 `
 
 const SPAN = styled.span`
-font-size: 1.25rem;
+font-size: 1.1rem;
 font-weight:500;
 color: #553c9a;
 font-family: 'Roboto', sans-serif;
@@ -104,7 +105,7 @@ align-items: center;
 width: fit-content;
 float: ${props => props.orientation === 0 ? "left" : "right"};
 gap: 0.5rem;
-font-size: 1.3rem;
+font-size: 1.2rem;
 color: rgba(238, 75, 43, 1);
 font-family: 'Roboto', sans-serif;
 transition: color 0.25s;
@@ -216,7 +217,7 @@ return(
     <ProjectIntroDiv mediaQuery = {mediaQuery} orientation = {orientation}>
         <H1 orientation={orientation}>{projectTitle}</H1>
         
-        <div className="flex flex-wrap gap-8 my-6 justify-end">
+        <div className="flex flex-wrap gap-6 my-6 justify-end">
         {listProjectCategory}
         </div>
         <P orientation={orientation}>{description}</P>
@@ -244,7 +245,7 @@ else{
 <ProjectIntroDiv mediaQuery = {mediaQuery} orientation = {orientation}>
     <H1 orientation={orientation}>{projectTitle}</H1>
     
-    <div className={"flex flex-wrap gap-8 my-8 lg:my-6 " }>
+    <div className={"flex flex-wrap gap-6 my-8 lg:my-6 " }>
     {listProjectCategory}
     </div>
     <P orientation={orientation}>{description}</P>

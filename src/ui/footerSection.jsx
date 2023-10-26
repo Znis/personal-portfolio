@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 
 const P = styled.p`
-font-size: 1.2rem;
+font-size: 1rem;
 font-weight: 500;
 font-family: 'Lato', sans-serif;
 color: #553c9a;

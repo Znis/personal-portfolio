@@ -4,7 +4,7 @@ import { FiMail } from "react-icons/fi";
 
 
 const H1 = styled.h1`
-font-size: 2.4rem;
+font-size: 2rem;
 font-weight: 600;
 color: #553c9a;
 font-family: 'Roboto', sans-serif;
@@ -13,7 +13,7 @@ margin-bottom: 2rem;
 `
 
 const P = styled.p`
-font-size: 1.15rem;
+font-size: 1rem;
 font-weight: 400;
 font-family: 'Lato', sans-serif;
 text-align: justify;
@@ -25,7 +25,7 @@ text-align: center;
 align-items: center;
 width: fit-content;
 gap: 0.5rem;
-font-size: 2rem;
+font-size: 1.6rem;
 font-family: 'Roboto', sans-serif;
 padding: 1rem 0rem;
 transition: color 0.25s;
@@ -50,7 +50,7 @@ const Button = styled.button`
   gap: 0.5rem;
   align-items: center;
   font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 2.5;
   outline: transparent;
@@ -100,7 +100,7 @@ function ContactMeSection() {
  
     <div className="flex-1 bg-[#614a9e] h-[3px]" />
 </div>
-    <div className="flex gap-8">
+    <div className="flex gap-6">
     <A><AiFillGithub /></A>
     <A><AiFillLinkedin/></A>
    <A><FiMail/></A> 

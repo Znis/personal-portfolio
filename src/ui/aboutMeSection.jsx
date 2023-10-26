@@ -3,7 +3,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import {BiWindowOpen} from "react-icons/bi";
 
 const H1 = styled.h1`
-font-size: 2.4rem;
+font-size: 2rem;
 font-weight: 600;
 color: #553c9a;
 font-family: 'Roboto', sans-serif;
@@ -12,7 +12,7 @@ text-align: end;
 `
 
 const P = styled.p`
-font-size: 1.15rem;
+font-size: 1rem;
 font-weight: 400;
 font-family: 'Lato', sans-serif;
 text-align: justify;
@@ -31,7 +31,7 @@ const Button = styled.button`
   gap: 0.5rem;
   align-items: center;
   font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 2.5;
   outline: transparent;
@@ -80,7 +80,7 @@ text-align: center;
 align-items: center;
 width: fit-content;
 gap: 0.5rem;
-font-size: 1.3rem;
+font-size: 1.2rem;
 color: rgba(238, 75, 43, 1);
 font-family: 'Roboto', sans-serif;
 padding: 1rem 0rem;

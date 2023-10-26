@@ -10,10 +10,10 @@ text-align: center;
 align-items: center;
 width: fit-content;
 gap: 0.5rem;
-font-size: 1.8rem;
+font-size: 1.4rem;
 font-family: 'Roboto', sans-serif;
 padding: 1rem 0rem;
-margin: 1.5rem 0rem;
+margin: 1rem 0rem 0rem 0rem;
 transition: color 0.25s;
 -webkit-transition: color 0.25s;
 color: rgba(238, 75, 43, 1);
@@ -27,7 +27,7 @@ float:right;
 
 
 const H1 = styled.h1`
-font-size: 2.4rem;
+font-size: 2rem;
 font-weight: 600;
 color: #553c9a;
 font-family: 'Roboto', sans-serif;

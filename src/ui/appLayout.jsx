@@ -14,7 +14,7 @@ function AppLayout() {
       <Header />
 
      
-        <main className="mx-auto pt-16">
+        <main className="mx-auto pt-12">
           <Outlet />
         </main>
     
