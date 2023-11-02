@@ -4,17 +4,17 @@ import Preloader from "../components/preloader"
 
 import { Outlet } from 'react-router-dom';
 
-function AppLayout() {
+function AppLayout({showPreloader}) {
 
 
   return (
     <div >
     
-    <Preloader/>
+    {showPreloader ? <Preloader/> : ""}
       <Header />
 
      
-        <main className="mx-auto pt-12">
+        <main className="flex flex-col items-center  pt-12">
           <Outlet />
         </main>
     

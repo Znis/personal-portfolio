@@ -72,10 +72,10 @@ function Header() {
           </li>
 
           <li>
-            <a href="">Project</a>
+            <a href="/personal-portfolio/projects">Project</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="/personal-portfolio/about-me">About</a>
           </li>
           <li>
             <a href="">Contact</a>

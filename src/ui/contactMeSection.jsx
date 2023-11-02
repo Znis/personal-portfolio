@@ -7,7 +7,7 @@ const H1 = styled.h1`
 font-size: 2rem;
 font-weight: 600;
 color: #553c9a;
-font-family: 'Roboto', sans-serif;
+font-family: "Space Grotesk", sans-serif;
 margin-bottom: 2rem;
 
 `
@@ -15,7 +15,7 @@ margin-bottom: 2rem;
 const P = styled.p`
 font-size: 1rem;
 font-weight: 400;
-font-family: 'Lato', sans-serif;
+font-family: "Space Grotesk", sans-serif;
 text-align: justify;
 
 `
@@ -26,7 +26,7 @@ align-items: center;
 width: fit-content;
 gap: 0.5rem;
 font-size: 1.6rem;
-font-family: 'Roboto', sans-serif;
+font-family: "Space Grotesk", sans-serif;
 padding: 1rem 0rem;
 transition: color 0.25s;
 -webkit-transition: color 0.25s;
@@ -49,7 +49,7 @@ const Button = styled.button`
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 2.5;
@@ -96,12 +96,12 @@ function ContactMeSection() {
 <div className="flex items-center">
     <div className="flex-1 bg-[#614a9e] h-[3px]" />
  
-    <p className="mx-[10px] text-[#614a9e]">Links</p>
+    <p className="mx-[10px] text-[#614a9e] font-spaceGrotesk">Links</p>
  
     <div className="flex-1 bg-[#614a9e] h-[3px]" />
 </div>
     <div className="flex gap-6">
-    <A><AiFillGithub /></A>
+    <A><AiFillGithub /></A>                             
     <A><AiFillLinkedin/></A>
    <A><FiMail/></A> 
     </div>

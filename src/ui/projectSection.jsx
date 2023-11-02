@@ -11,7 +11,7 @@ align-items: center;
 width: fit-content;
 gap: 0.5rem;
 font-size: 1.4rem;
-font-family: 'Roboto', sans-serif;
+font-family: "Space Grotesk", sans-serif;
 padding: 1rem 0rem;
 margin: 1rem 0rem 0rem 0rem;
 transition: color 0.25s;
@@ -30,7 +30,7 @@ const H1 = styled.h1`
 font-size: 2rem;
 font-weight: 600;
 color: #553c9a;
-font-family: 'Roboto', sans-serif;
+font-family: "Space Grotesk", sans-serif;
 
 `
 const StyledDiv = styled.div`
@@ -44,6 +44,7 @@ const projectList = [
 id:0,
 orientation: 0,
 projectTitle: "Monument Recognition App",
+projectType: "ml",
 projectCategory: ["Machine Learning","Mobile Application"],
 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
 techUsed: [{alt: "Python Programming Language", title: "Python Programming Language", src: "python-icon.png"},
@@ -63,6 +64,7 @@ projectLink: "/",
   id:1,
   orientation: 1,
   projectTitle: "Samay Baji Web Application",
+  projectType: "web",
   projectCategory: ["Full Stack","Web Application"],
   description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
   techUsed: [{alt: "HTML", title: "HTML", src: "html-icon.png"},
@@ -82,6 +84,7 @@ projectLink: "/",
     id:2,
     orientation: 0,
     projectTitle: "Med Test Application",
+    projectType: "mobile",
     projectCategory: ["Android Platform","Mobile Application"],
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
     techUsed: [{alt: "Flutter Framework", title: "Flutter Framework", src: "flutter-icon.png"},
@@ -100,6 +103,7 @@ projectLink: "/",
       id:3,
       orientation: 1,
       projectTitle: "Debris Destroyer Game",
+      projectType: "game",
       projectCategory: ["Game Development","Executable Game"],
       description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
       techUsed: [{alt: "Unity Engine", title: "Unity Engine", src: "unity-icon.png"},

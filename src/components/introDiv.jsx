@@ -11,12 +11,12 @@ const H1 = styled.h1`
 font-size: 3.6rem;
 font-weight: 600;
 color: #222;
-margin: 0rem 0rem -0.5rem 0rem;
+margin-bottom: -0.5rem;
 background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
 color: transparent;
 background-clip: text;
 -webkit-background-clip: text;
-font-family: 'Lato', sans-serif;
+font-family: "Space Grotesk", sans-serif;
 `
 const H2 = styled.h2`
 font-size: 1.8rem;
@@ -24,22 +24,22 @@ font-weight: 500;
 color: #553c9a;
 background-clip: text;
 -webkit-background-clip: text;
-font-family: 'Lato', sans-serif;
+font-family: "Space Grotesk", sans-serif;
 `
 const H3 = styled.h3`
 font-size: 1.3rem;
 font-weight: 400;
 color: #553c9a;
-margin: 0rem 0rem -0.7rem 0.8rem;
+margin: 0rem 0rem -0.5rem 0.8rem;
 background-clip: text;
 -webkit-background-clip: text;
-font-family: 'Lato', sans-serif;
+font-family: "Space Grotesk", sans-serif;
 `
 const H4 = styled.h4`
 font-size: 1.3rem;
 font-weight: 400;
 color: #553c9a;
-font-family: 'Lato', sans-serif;
+font-family: "Space Grotesk", sans-serif;
 `
 const IMG = styled.img`
 display: inline;
@@ -59,7 +59,7 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 2.5;

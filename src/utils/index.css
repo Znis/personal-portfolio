@@ -27,8 +27,8 @@
     height: 60px;
     width: 280px;
     font-size: 20px;
-    font-weight: 888;
-    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
     overflow-y: hidden;
     color: #FFF;
 }
@@ -48,15 +48,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
   }
   
-  li .active{
+  header li .active{
     font-weight: 500;
-color: rgba(238, 75, 43, 0.7);
+    color: rgba(238, 75, 43, 0.7);
   }
 
-  li:hover{
+  header li:hover{
     color: #147efb;
   }
 
@@ -71,7 +72,6 @@ color: rgba(238, 75, 43, 0.7);
   
   header .navbar ul li {
     font-size: 1rem;
-   
     margin-left: 3rem;
   }
   

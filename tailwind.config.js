@@ -12,7 +12,11 @@ export default {
         
     //   },
     // },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'spaceGrotesk': ['Space Grotesk', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
