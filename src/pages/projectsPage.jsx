@@ -26,7 +26,8 @@ const Container = styled.div`
 
 function ProjectsPage() {
   return (
-    <StyledAppLayout>
+    
+         <StyledAppLayout>
       <Header />
       <Sidebar />
       <Main>
@@ -35,6 +36,8 @@ function ProjectsPage() {
         </Container>
       </Main>
     </StyledAppLayout>
+
+ 
   );
 }
 

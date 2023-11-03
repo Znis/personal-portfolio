@@ -26,7 +26,7 @@ const CardDiv = styled.div`
 
 const ProjectCategory = styled.div`
   border-radius: 24px;
-  background: rgba(238, 75, 43, 1);
+  background: #fa8128;
   color: #ffffff;
   height: auto;
   width: fit-content;

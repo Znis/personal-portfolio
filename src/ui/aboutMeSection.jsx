@@ -104,7 +104,7 @@ const A = styled.a`
 
 function AboutMeSection() {
   return (
-    <section className="px-8 py-16 flex justify-center items-center bg-center bg-fixed bg-gradient-to-br from-slate-100  to-slate-200  ">
+    <section className="px-8 py-16 flex justify-center items-center bg-center bg-fixed bg-gradient-to-br from-slate-50  to-slate-100  ">
       <div className="columns-1 w-4/5">
         <H1>About Me</H1>
         <div className=" flex flex-col flex-wrap lg:flex-row">

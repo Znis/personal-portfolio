@@ -294,7 +294,7 @@ function AboutMePage() {
   ));
 
   return (
-    <div className="w-3/5 pb-20 flex flex-col items-center justify-center">
+    <div className="w-3/5 pb-20 flex flex-col items-center justify-center ">
       <Carousel
         cards={cards}
         height="500px"

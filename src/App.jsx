@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import AppLayout from "./ui/appLayout"
 import Home from "./pages/homePage"
 import AboutMePage from "./pages/aboutMePage"
+import ContactMePage from "./pages/contactMePage"
 import ProjectsPage from "./pages/projectsPage"
 import Samaybaji from "./pages/projectPage/samaybaji"
 
@@ -43,6 +44,19 @@ function App() {
              <Route index element={
               <>
               <AboutMePage/>
+             
+             </>
+             
+             } />
+             </Route>
+
+             <Route path="/personal-portfolio/contact" element={
+              <AppLayout showPreloader={false} />
+              }
+            >
+             <Route index element={
+              <>
+              <ContactMePage/>
              
              </>
              

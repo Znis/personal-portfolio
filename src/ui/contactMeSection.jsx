@@ -82,7 +82,7 @@ const Button = styled.button`
 function ContactMeSection() {
    
   return (
-    <section className="px-8 py-16 flex justify-center items-center bg-center bg-fixed bg-gradient-to-br from-slate-200  to-slate-300">
+    <section className="px-8 py-16 flex justify-center items-center bg-center bg-fixed bg-gradient-to-br from-slate-50  to-slate-100">
 <div className="flex flex-col items-center lg:flex-row w-4/5">
     <div className="w-full lg:w-3/5">
 <H1>Need A Developer? Need A Friend?</H1>

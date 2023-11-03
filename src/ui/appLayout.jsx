@@ -14,7 +14,7 @@ function AppLayout({showPreloader}) {
       <Header />
 
      
-        <main className="flex flex-col items-center  pt-12">
+        <main className="flex flex-col items-center  pt-12 bg-center bg-fixed bg-gradient-to-br from-slate-50  to-slate-100">
           <Outlet />
         </main>
     

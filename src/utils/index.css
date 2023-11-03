@@ -112,4 +112,14 @@
 
 
 
+  form {
+  font-family: "Space Grotesk", sans-serif;
+  }
+  
 
+  @media (max-width: 768px) {
+    .submit-message {
+      width: 125px;
+      margin-left: 200px;
+    }
+  }
