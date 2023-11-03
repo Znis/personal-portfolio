@@ -8,10 +8,14 @@ const StyledCard = styled.div`
     flex-direction: column;
     justify-content: center;
     background-color: bisque;
-    width: 20rem;
+    width: 14rem;
     height: fit-content;
     border-radius: 20px;
-
+    
+    @media (min-width: 1024px) {
+      width: 20rem;
+     
+    }
   
   & img {
     border-radius: 20px;

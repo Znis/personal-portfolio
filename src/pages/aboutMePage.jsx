@@ -297,9 +297,6 @@ function AboutMePage() {
     <div className="w-3/5 pb-20 flex flex-col items-center justify-center ">
       <Carousel
         cards={cards}
-        height="500px"
-        width="50%"
-        margin="2rem 0rem"
         offset={2}
         showArrows={false}
       />

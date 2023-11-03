@@ -80,7 +80,7 @@ function Header() {
         <ul>
           <li>
             
-            <a className={activePage === ("/personal-portfolio/") ? "active" : ""}   href="/">
+            <a className={activePage === ("/personal-portfolio/") ? "active" : ""}   href="/personal-portfolio/">
               Home
             </a>
           </li>

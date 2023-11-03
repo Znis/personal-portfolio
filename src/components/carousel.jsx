@@ -19,8 +19,7 @@ export default function Carroussel(props) {
 
   return (
     <div
-      style={{ width: props.width, height: props.height, margin: props.margin }}
-    >
+      className=" w-[320px]  h-[500px] md:w-[340px] lg:w-[400px] lg:my-8">
       <Carousel
         slides={cards}
         goToSlide={goToSlide}
