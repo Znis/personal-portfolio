@@ -4,7 +4,7 @@ export default function CarouselSlider({isPhone, carouselImgSrc}) {
   const imgClass = isPhone ? "max-h-[13.4rem] max-w-[6rem] rounded-[10px] object-contain" : "max-w-[18.5rem] max-h-[11.35rem] object-contain" ;
 
 
-  const carouselItems = carouselImgSrc.map((img) => <div key={img} > <img className={imgClass} src={"/" + img}/> </div>);
+  const carouselItems = carouselImgSrc.map((img) => <div key={img} > <img className={imgClass} src={img}/> </div>);
   
   return (
     

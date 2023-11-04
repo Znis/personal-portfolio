@@ -8,9 +8,7 @@ export default function ProjectList() {
       projectType: "ml",
       projectCategory: ["Machine Learning", "Mobile Application"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, impedit at animi ipsa facere iure cumque corrupti sit optio esse error temporibus cupiditate? Nemo iste ad error illo quasi iusto!" +
-        <br></br> +
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
+       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
 
       miniDescription:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",

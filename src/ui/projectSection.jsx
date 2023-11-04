@@ -43,7 +43,8 @@ margin-bottom: 4rem;
 const projectList = ProjectList();
 
 function Projects() {
-  const renderProjectList = projectList.filter(project => project.isFeatured).map((project) => <ProjectCard key= {project.id} techUsed={project.techUsed} ghubLink={project.ghubLink} carouselImg={project.carouselImg} demoLink={project.demoLink} orientation={project.orientation} projectCategory={project.projectCategory} videoDemo={project.videoDemo} projectTitle={project.projectTitle} description={project.description}/>
+
+  const renderProjectList = projectList.filter(project => project.isFeatured).map((project) => <ProjectCard key= {project.id} techUsed={(project.techUsed).reduce((acc, tech) => acc.concat(tech.technologies),[])} ghubLink={project.ghubLink} carouselImg={project.carouselImg} demoLink={project.demoLink} orientation={project.orientation} projectCategory={project.projectCategory} videoDemo={project.videoDemo} projectTitle={project.projectTitle} description={project.description}/>
   )
     return (
       <section className="px-8 py-16 flex justify-center items-center content-center bg-center bg-fixed  bg-gradient-to-br from-slate-50  to-slate-100 "  >

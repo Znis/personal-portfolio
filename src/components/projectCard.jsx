@@ -196,7 +196,7 @@ function ProjectCard({
     <ProjectCategory key={cat}>{cat}</ProjectCategory>
   ));
   const listTechUsed = techUsed.map((tech) => (
-    <IconDiv key={tech} alt={tech.alt} title={tech.title} src={tech.src} />
+    <IconDiv key={tech} alt={tech.imgAlt} title={tech.imgTitle} src={tech.imgSrc} />
   ));
 
   if (orientation !== 0 && mediaQuery) {

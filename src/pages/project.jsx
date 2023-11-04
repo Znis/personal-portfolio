@@ -126,7 +126,7 @@ function Project({projectTitle}) {
             className="flex flex-col px-2 items-center text-center  mb-8 "
           >
             <IconDiv
-              src={"/" + tech.imgSrc}
+              src={tech.imgSrc}
               alt={tech.imgAlt}
               title={tech.imgTitle}
             ></IconDiv>
@@ -143,7 +143,7 @@ function Project({projectTitle}) {
       className="flex flex-col px-2 items-center text-center  "
     >
       <IconDiv
-        src={"/" + platform.src}
+        src={platform.src}
         alt={platform.alt}
         title={platform.title}
       ></IconDiv>
@@ -178,7 +178,7 @@ function Project({projectTitle}) {
 <div className="flex p-1 absolute justify-center  ml-[2.75rem]  w-[18.5rem] mt-[0.5rem] h-[11.35rem] ">
 <CarouselSlider isPhone={false} carouselImgSrc={projectData.carouselImg} />
 </div>
-<img className="absolute h-[14rem] w-[24rem]"  src="/macbook.png"></img>
+<img className="absolute h-[14rem] w-[24rem]"  src="macbook.png"></img>
 </div> : ""}
 
 {projectData.targetDevice === "phone" || projectData.targetDevice === "both" ? 
@@ -188,7 +188,7 @@ function Project({projectTitle}) {
 <CarouselSlider isPhone={true} carouselImgSrc={projectData.carouselImg} />
 
 </div>
-<img className="absolute h-[14rem] w-[7.4rem] "  src="/iphone.png"></img> 
+<img className="absolute h-[14rem] w-[7.4rem] "  src="iphone.png"></img> 
 </div> : ""
 }
 
@@ -203,17 +203,11 @@ function Project({projectTitle}) {
 
 
       <P>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi tenetur
-        cupiditate exercitationem nam dolorum, aut voluptatibus animi voluptatum
-        laudantium voluptatem aspernatur! Explicabo nesciunt soluta recusandae
-        et incidunt ea id ratione.
+      {projectData.description}
       </P>
       <br></br>
       <P>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi tenetur
-        cupiditate exercitationem nam dolorum, aut voluptatibus animi voluptatum
-        laudantium voluptatem aspernatur! Explicabo nesciunt soluta recusandae
-        et incidunt ea id ratione.
+      {projectData.description}
       </P>
       <div className="flex flex-col gap-4 mt-8 mb-12 items-center md:flex-row">
         <H2>Targeted Platform</H2>
