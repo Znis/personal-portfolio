@@ -157,10 +157,10 @@ ProjectCard.propTypes = {
   projectCategory: PropTypes.node.isRequired,
   description: PropTypes.node.isRequired,
   techUsed: PropTypes.node.isRequired,
-  codeLink: PropTypes.node.isRequired,
-  demoSrc: PropTypes.node.isRequired,
+  ghubLink: PropTypes.node.isRequired,
+  carouselImg: PropTypes.node.isRequired,
   demoLink: PropTypes.node.isRequired,
-  projectLink: PropTypes.node.isRequired,
+
 };
 
 function ProjectCard({
@@ -169,10 +169,10 @@ function ProjectCard({
   projectCategory,
   description,
   techUsed,
-  codeLink,
-  demoSrc,
+  ghubLink,
+  carouselImg,
   demoLink,
-  projectLink,
+ 
 }) {
   const [mediaQuery, setMediaQuery] = useState(
     window.matchMedia("(min-width: 1024px)").matches,
@@ -204,12 +204,12 @@ function ProjectCard({
       <CardDiv>
         <ProjectDemoDiv>
           <IMGFRAME>
-            {/* <IMGFRAME_IMG src={demoSrc}/> */}
-            <HoverCarousel images={demoSrc}></HoverCarousel>
+            {/* <IMGFRAME_IMG src={carouselImg}/> */}
+            <HoverCarousel images={carouselImg}></HoverCarousel>
           </IMGFRAME>
 
           <div className="  h-1/5 flex flex-wrap justify-center items-end gap-16">
-            <A href={codeLink}>
+            <A href={ghubLink}>
               Code <FiGithub />
             </A>
             <A href={demoLink}>
@@ -230,7 +230,7 @@ function ProjectCard({
 
             {listTechUsed}
           </div>
-          <A orientation={orientation} href={projectLink}>
+          <A orientation={orientation} href={demoLink}>
             Learn More <AiOutlineArrowRight />
           </A>
         </ProjectIntroDiv>
@@ -254,18 +254,18 @@ function ProjectCard({
 
             {listTechUsed}
           </div>
-          <A orientation={orientation} href={projectLink}>
+          <A orientation={orientation} href={demoLink}>
             Learn More <AiOutlineArrowRight />
           </A>
         </ProjectIntroDiv>
         <ProjectDemoDiv>
           <IMGFRAME>
-            {/* <IMGFRAME_IMG src={demoSrc}/> */}
-            <HoverCarousel images={demoSrc}></HoverCarousel>
+            {/* <IMGFRAME_IMG src={carouselImg}/> */}
+            <HoverCarousel images={carouselImg}></HoverCarousel>
           </IMGFRAME>
 
           <div className="h-1/5 flex flex-wrap justify-center items-end gap-16 mt-8 lg:mt-0 ">
-            <A href={codeLink}>
+            <A href={ghubLink}>
               Code <FiGithub />
             </A>
             <A href={demoLink}>

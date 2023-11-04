@@ -71,7 +71,7 @@ function Header() {
 
   return (
     <header>
-      <a href="/" className="logo">
+      <a href="/personal-portfolio/" className="logo">
         <img src="logo.svg" title="website logo" alt="website logo" />
       </a>
 
@@ -103,7 +103,7 @@ function Header() {
         </StyledBtn>
 
         <StyledDropdownDivContent className= {showDropdown ? "block" : "hidden"} >
-          <StyledDropdownDivContentA isActive={activePage === ("/personal-portfolio/")} href="/">Home</StyledDropdownDivContentA>
+          <StyledDropdownDivContentA isActive={activePage === ("/personal-portfolio/")} href="/personal-portfolio/">Home</StyledDropdownDivContentA>
           <StyledDropdownDivContentA isActive={activePage.includes("/personal-portfolio/projects")} href="/personal-portfolio/projects">Project</StyledDropdownDivContentA>
           <StyledDropdownDivContentA isActive={activePage.includes("/personal-portfolio/about-me")}  href="/personal-portfolio/about-me">About Me</StyledDropdownDivContentA>
           <StyledDropdownDivContentA isActive={activePage.includes("/personal-portfolio/contact")} href="/personal-portfolio/contact">Contact</StyledDropdownDivContentA>

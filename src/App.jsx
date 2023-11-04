@@ -1,11 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/appLayout";
 import Home from "./pages/homePage";
 import AboutMePage from "./pages/aboutMePage";
 import ContactMePage from "./pages/contactMePage";
 import ProjectsPage from "./pages/projectsPage";
 import ErrorPage from "./pages/errorPage";
-import Samaybaji from "./pages/projectPage/samaybaji";
+import Project from "./pages/project";
 
 
 function App() {
@@ -26,13 +26,21 @@ function App() {
           />
         </Route>
         <Route path="/personal-portfolio/projects" element={<ProjectsPage />}>
-          <Route path="samay-baji" element={<Samaybaji />} />
-          <Route path="gpuv" element={<Samaybaji />} />
-          <Route path="med-test" element={<Samaybaji />} />
-          <Route path="crop-wiki" element={<Samaybaji />} />
-          <Route path="debris-destroyer" element={<Samaybaji />} />
-          <Route path="monument-recognition" element={<Samaybaji />} />
-          <Route path="movie-ticket-booking-bot" element={<Samaybaji />} />
+        <Route
+            index
+            element={
+              <Navigate to="/personal-portfolio/projects/samay-baji"/>
+           
+              
+            }
+          />
+          <Route path="samay-baji" element={<Project projectTitle={"samay-baji"} />} />
+          <Route path="gpuv" element={<Project  projectTitle={"gpuv"} />} />
+          <Route path="med-test" element={<Project  projectTitle={"med-test"}  />} />
+          <Route path="crop-wiki" element={<Project   projectTitle={"crop-wiki"} />} />
+          <Route path="debris-destroyer" element={<Project  projectTitle={"debris-destroyer"}  />} />
+          <Route path="monument-recognition" element={<Project  projectTitle={"monument-recognition"} />} />
+          <Route path="movie-ticket-booking-bot" element={<Project projectTitle={"movie-ticket-booking-bot"}  />} />
         </Route>
 
         <Route

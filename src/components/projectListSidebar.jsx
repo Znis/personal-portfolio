@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import ProjectList from "../data/data";
+import { NavLink } from "react-router-dom";
 import { MdWeb } from "react-icons/md";
 import { BsPhone } from "react-icons/bs";
 import { IoGameControllerOutline } from "react-icons/io5";
@@ -7,230 +8,8 @@ import { GiArtificialHive } from "react-icons/gi";
 import { TbSettingsAutomation } from "react-icons/tb";
 import { PiArrowElbowDownRight } from "react-icons/pi";
 
-const projectList = [
-  {
-    id: 0,
-    orientation: 0,
-    projectTitle: "Monument Recognition",
-    projectType: "ml",
-    projectCategory: ["Machine Learning", "Mobile Application"],
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
-    techUsed: [
-      {
-        alt: "Python Programming Language",
-        title: "Python Programming Language",
-        src: "python-icon.png",
-      },
-      {
-        alt: "Tensorflow Framework",
-        title: "Tensorflow Framework",
-        src: "tensorflow-icon.png",
-      },
-      {
-        alt: "Microsoft Azure",
-        title: "Microsoft Azure",
-        src: "azure-icon.png",
-      },
-      {
-        alt: "Pytorch Framework",
-        title: "Pytorch Framework",
-        src: "pytorch-icon.png",
-      },
-      {
-        alt: "PostgreSQL Database",
-        title: "PostgreSQL Database",
-        src: "postgres-icon.png",
-      },
-      {
-        alt: "Android Studio IDE",
-        title: "Android Studio IDE",
-        src: "android-studio-icon.png",
-      },
-    ],
-    codeLink: "/",
-    demoSrc: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(
-      (elem) => "monument-recognition-application-images/" + elem + ".jpg",
-    ),
-    demoLink: "/",
-    projectLink: "/",
-    navlink: "monument-recognition",
-  },
 
-  {
-    id: 1,
-    orientation: 1,
-    projectTitle: "Samay Baji",
-    projectType: "web",
-    projectCategory: ["Full Stack", "Web Application"],
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
-    techUsed: [
-      { alt: "HTML", title: "HTML", src: "html-icon.png" },
-      { alt: "CSS", title: "CSS", src: "css-icon.png" },
-      {
-        alt: "Vanilla Javascript",
-        title: "Vanilla Javascript",
-        src: "js-icon.png",
-      },
-      {
-        alt: "Python Programming Language",
-        title: "Python Programming Language",
-        src: "python-icon.png",
-      },
-      {
-        alt: "Django Framework",
-        title: "Django Framework",
-        src: "django-icon.png",
-      },
-    ],
-    codeLink: "/",
-    demoSrc: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(
-      (elem) => "samaybaji-web-application-images/" + elem + ".jpg",
-    ),
-    demoLink: "",
-    projectLink: "/",
-    navlink: "samay-baji",
-  },
-
-  {
-    id: 2,
-    orientation: 0,
-    projectTitle: "Med Test",
-    projectType: "mobile",
-    projectCategory: ["Android Platform", "Mobile Application"],
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
-    techUsed: [
-      {
-        alt: "Flutter Framework",
-        title: "Flutter Framework",
-        src: "flutter-icon.png",
-      },
-      {
-        alt: "Dart Programming Language",
-        title: "Dart Programming Language",
-        src: "dart-icon.png",
-      },
-      {
-        alt: "Google Firebase",
-        title: "Google Firebase",
-        src: "firebase-icon.png",
-      },
-      {
-        alt: "OpenStreetMaps Library",
-        title: "OpenStreetMaps Library",
-        src: "openstreetmaps-icon.png",
-      },
-      {
-        alt: "Android Studio IDE",
-        title: "Android Studio IDE",
-        src: "android-studio-icon.png",
-      },
-    ],
-    codeLink: "/",
-    demoSrc: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(
-      (elem) => "med-test-application-images/" + elem + ".jpg",
-    ),
-    demoLink: "/",
-    projectLink: "/",
-    navlink: "med-test",
-  },
-
-  {
-    id: 3,
-    orientation: 1,
-    projectTitle: "Debris Destroyer",
-    projectType: "game",
-    projectCategory: ["Game Development", "Executable Game"],
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
-    techUsed: [
-      { alt: "Unity Engine", title: "Unity Engine", src: "unity-icon.png" },
-      {
-        alt: "C# Programming Language",
-        title: "C# Programming Language",
-        src: "csharp-icon.png",
-      },
-    ],
-    codeLink: "/",
-    demoSrc: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(
-      (elem) => "debris-destroyer-game-images/" + elem + ".jpg",
-    ),
-    demoLink: "/",
-    projectLink: "/",
-    navlink: "debris-destroyer",
-  },
-  {
-    id: 4,
-    orientation: 1,
-    projectTitle: "Crop Wiki",
-    projectType: "mobile",
-    projectCategory: ["Android Platform", "Mobile Application"],
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
-    techUsed: [
-      {
-        alt: "Android Studio",
-        title: "Android Studio",
-        src: "android-studio-icon.png",
-      },
-    ],
-    codeLink: "/",
-    demoSrc: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(
-      (elem) => "crop-wiki-application-images/" + elem + ".jpg",
-    ),
-    demoLink: "/",
-    projectLink: "/",
-    navlink: "crop-wiki",
-  },
-  {
-    id: 5,
-    orientation: 1,
-    projectTitle: "GpuV",
-    projectType: "web",
-    projectCategory: ["Linux", "Web Application"],
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
-    techUsed: [
-      {
-        alt: "Django Framework",
-        title: "Django Framework",
-        src: "django-icon.png",
-      },
-    ],
-    codeLink: "/",
-    demoSrc: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(
-      (elem) => "gpuv-web-application-images/" + elem + ".jpg",
-    ),
-    demoLink: "/",
-    projectLink: "/",
-    navlink: "gpuv",
-  },
-  {
-    id: 6,
-    orientation: 1,
-    projectTitle: "Movie Ticket Booking Bot",
-    projectType: "browserAutomation",
-    projectCategory: ["Browser Automation", "Bot"],
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
-    techUsed: [
-      {
-        alt: "Python Programming Language",
-        title: "Python Programming Language",
-        src: "python-icon.png",
-      },
-    ],
-    codeLink: "/",
-    demoSrc: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(
-      (elem) => "qfx-bot-images/" + elem + ".jpg",
-    ),
-    demoLink: "/",
-    projectLink: "/",
-    navlink: "movie-ticket-booking-bot",
-  },
-];
+const projectList = ProjectList();
 
 const NavList = styled.ul`
   display: flex;
@@ -313,7 +92,7 @@ const webAppProjects = projectList
   <li  key= {filteredProject.id}>
     <StyledNavLink to={filteredProject.navlink}>
       <PiArrowElbowDownRight />
-      <span>{filteredProject.projectTitle}</span>
+      <span>{filteredProject.projectSmallTitle}</span>
     </StyledNavLink>
   </li>
 );
@@ -325,7 +104,7 @@ const mobileAppProjects = projectList
   <li  key= {filteredProject.id}>
     <StyledNavLink to={filteredProject.navlink}>
       <PiArrowElbowDownRight />
-      <span>{filteredProject.projectTitle}</span>
+      <span>{filteredProject.projectSmallTitle}</span>
     </StyledNavLink>
   </li>
 );
@@ -337,7 +116,7 @@ const mlProjects = projectList
   <li  key= {filteredProject.id}>
     <StyledNavLink to={filteredProject.navlink}>
       <PiArrowElbowDownRight />
-      <span>{filteredProject.projectTitle}</span>
+      <span>{filteredProject.projectSmallTitle}</span>
     </StyledNavLink>
   </li>
 );
@@ -349,7 +128,7 @@ const gameProjects = projectList
   <li  key= {filteredProject.id}>
     <StyledNavLink to={filteredProject.navlink}>
       <PiArrowElbowDownRight />
-      <span>{filteredProject.projectTitle}</span>
+      <span>{filteredProject.projectSmallTitle}</span>
     </StyledNavLink>
   </li>
 );
@@ -361,7 +140,7 @@ const automationProjects = projectList
   <li  key= {filteredProject.id}>
     <StyledNavLink to={filteredProject.navlink}>
       <PiArrowElbowDownRight />
-      <span>{filteredProject.projectTitle}</span>
+      <span>{filteredProject.projectSmallTitle}</span>
     </StyledNavLink>
   </li>
 );
