@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiWindowOpen } from "react-icons/bi";
+import { RoutingLinks } from "../data/data";
 
 const H1 = styled.h1`
   font-size: 2rem;
@@ -18,7 +19,7 @@ const P = styled.p`
   text-align: justify;
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   background: linear-gradient(to bottom right, #553c9a, #ee4b2b);
   border: 0;
   border-radius: 24px;
@@ -26,6 +27,7 @@ const Button = styled.button`
   cursor: pointer;
   display: flex;
   gap: 0.5rem;
+  width: fit-content;
   align-items: center;
   font-family: "Space Grotesk", sans-serif;
     sans-serif;
@@ -122,11 +124,11 @@ function AboutMeSection() {
               tenetur saepe quia minus nisi repellendus necessitatibus doloribus
               ut optio quas ullam enim vitae.
             </P>
-            <A href="">
+            <A href={RoutingLinks.about}>
               Learn More <AiOutlineArrowRight />
             </A>
             <div className=" flex flex-col mt-16 place-items-end py-6">
-              <Button>
+              <Button href={RoutingLinks.resume} target="_blank">
                 <BiWindowOpen /> Resume
               </Button>
             </div>

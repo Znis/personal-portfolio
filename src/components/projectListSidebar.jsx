@@ -8,7 +8,6 @@ import { GiArtificialHive } from "react-icons/gi";
 import { TbSettingsAutomation } from "react-icons/tb";
 import { PiArrowElbowDownRight } from "react-icons/pi";
 
-
 const projectList = ProjectList();
 
 const NavList = styled.ul`
@@ -80,74 +79,64 @@ const StyledNavLink = styled(NavLink)`
 
 const StyledDiv = styled.div`
   margin: -0.4rem 4.8rem 0.5rem 4.8rem;
-
 `;
 
-
-
 const webAppProjects = projectList
-.filter((cat) => cat.projectType == "web")
-.map((filteredProject) => 
-
-  <li  key= {filteredProject.id}>
-    <StyledNavLink to={filteredProject.navlink}>
-      <PiArrowElbowDownRight />
-      <span>{filteredProject.projectSmallTitle}</span>
-    </StyledNavLink>
-  </li>
-);
+  .filter((cat) => cat.projectType == "web")
+  .map((filteredProject) => (
+    <li key={filteredProject.id}>
+      <StyledNavLink to={filteredProject.navlink}>
+        <PiArrowElbowDownRight />
+        <span>{filteredProject.projectSmallTitle}</span>
+      </StyledNavLink>
+    </li>
+  ));
 
 const mobileAppProjects = projectList
-.filter((cat) => cat.projectType == "mobile")
-.map((filteredProject) => 
-
-  <li  key= {filteredProject.id}>
-    <StyledNavLink to={filteredProject.navlink}>
-      <PiArrowElbowDownRight />
-      <span>{filteredProject.projectSmallTitle}</span>
-    </StyledNavLink>
-  </li>
-);
+  .filter((cat) => cat.projectType == "mobile")
+  .map((filteredProject) => (
+    <li key={filteredProject.id}>
+      <StyledNavLink to={filteredProject.navlink}>
+        <PiArrowElbowDownRight />
+        <span>{filteredProject.projectSmallTitle}</span>
+      </StyledNavLink>
+    </li>
+  ));
 
 const mlProjects = projectList
-.filter((cat) => cat.projectType == "ml")
-.map((filteredProject) => 
-
-  <li  key= {filteredProject.id}>
-    <StyledNavLink to={filteredProject.navlink}>
-      <PiArrowElbowDownRight />
-      <span>{filteredProject.projectSmallTitle}</span>
-    </StyledNavLink>
-  </li>
-);
+  .filter((cat) => cat.projectType == "ml")
+  .map((filteredProject) => (
+    <li key={filteredProject.id}>
+      <StyledNavLink to={filteredProject.navlink}>
+        <PiArrowElbowDownRight />
+        <span>{filteredProject.projectSmallTitle}</span>
+      </StyledNavLink>
+    </li>
+  ));
 
 const gameProjects = projectList
-.filter((cat) => cat.projectType == "game")
-.map((filteredProject) => 
-
-  <li  key= {filteredProject.id}>
-    <StyledNavLink to={filteredProject.navlink}>
-      <PiArrowElbowDownRight />
-      <span>{filteredProject.projectSmallTitle}</span>
-    </StyledNavLink>
-  </li>
-);
+  .filter((cat) => cat.projectType == "game")
+  .map((filteredProject) => (
+    <li key={filteredProject.id}>
+      <StyledNavLink to={filteredProject.navlink}>
+        <PiArrowElbowDownRight />
+        <span>{filteredProject.projectSmallTitle}</span>
+      </StyledNavLink>
+    </li>
+  ));
 
 const automationProjects = projectList
-.filter((cat) => cat.projectType == "browserAutomation")
-.map((filteredProject) => 
-
-  <li  key= {filteredProject.id}>
-    <StyledNavLink to={filteredProject.navlink}>
-      <PiArrowElbowDownRight />
-      <span>{filteredProject.projectSmallTitle}</span>
-    </StyledNavLink>
-  </li>
-);
+  .filter((cat) => cat.projectType == "browserAutomation")
+  .map((filteredProject) => (
+    <li key={filteredProject.id}>
+      <StyledNavLink to={filteredProject.navlink}>
+        <PiArrowElbowDownRight />
+        <span>{filteredProject.projectSmallTitle}</span>
+      </StyledNavLink>
+    </li>
+  ));
 
 function ProjectListSidebar() {
- 
-
   return (
     <nav>
       <NavList>
@@ -158,9 +147,7 @@ function ProjectListSidebar() {
           </StyledProjectCategory>
 
           <StyledDiv>
-            <ul>
-              {webAppProjects}
-            </ul>
+            <ul>{webAppProjects}</ul>
           </StyledDiv>
         </li>
         <li>
@@ -170,9 +157,7 @@ function ProjectListSidebar() {
           </StyledProjectCategory>
 
           <StyledDiv>
-          <ul>
-              {mobileAppProjects}
-            </ul>
+            <ul>{mobileAppProjects}</ul>
           </StyledDiv>
         </li>
         <li>
@@ -181,9 +166,7 @@ function ProjectListSidebar() {
             <span>Executable Game</span>
           </StyledProjectCategory>
           <StyledDiv>
-          <ul>
-              {gameProjects}
-            </ul>
+            <ul>{gameProjects}</ul>
           </StyledDiv>
         </li>
         <li>
@@ -193,9 +176,7 @@ function ProjectListSidebar() {
           </StyledProjectCategory>
 
           <StyledDiv>
-          <ul>
-              {mlProjects}
-            </ul>
+            <ul>{mlProjects}</ul>
           </StyledDiv>
         </li>
         <li>
@@ -205,9 +186,7 @@ function ProjectListSidebar() {
           </StyledProjectCategory>
 
           <StyledDiv>
-          <ul>
-              {automationProjects}
-            </ul>
+            <ul>{automationProjects}</ul>
           </StyledDiv>
         </li>
       </NavList>

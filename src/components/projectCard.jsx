@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { BiWindowOpen } from "react-icons/bi";
+import { BiWindowOpen, BiDownload } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 import HoverCarousel from "hover-carousel";
 import { useState } from "react";
@@ -54,7 +54,7 @@ const H1 = styled.h1`
   font-weight: 500;
   color: #553c9a;
   font-family: "Space Grotesk", sans-serif;
-  text-align: ${(props) => (props.orientation === 0 ? "left" : "right")};
+  text-align: ${(props) => (props.$orientation === 0 ? "left" : "right")};
 `;
 
 const P = styled.p`
@@ -85,7 +85,7 @@ const IconDiv = styled.img`
   -webkit-transition: transform 0.2s;
 
   &:hover {
-    transform: scale(1.4);
+    transform: scale(1.25);
   }
 `;
 const A = styled.a`
@@ -93,7 +93,7 @@ const A = styled.a`
   text-align: center;
   align-items: center;
   width: fit-content;
-  float: ${(props) => (props.orientation === 0 ? "left" : "right")};
+  float: ${(props) => (props.$orientation === 0 ? "left" : "right")};
   gap: 0.5rem;
   font-size: 1.2rem;
   color: rgba(238, 75, 43, 1);
@@ -113,9 +113,10 @@ height: 100%;
 margin: 0 auto;
 width: 100%;
 
-padding-${(props) => (props.orientation === 0 ? "right" : "left")}: 2rem;
-border-${(props) => (props.orientation === 0 ? "right" : "left")}: ${(props) =>
-  props.mediaQuery ? "2px solid rgba(85, 60, 154, 0.5)" : "none"};
+padding-${(props) => (props.$orientation === 0 ? "right" : "left")}: 2rem;
+border-${(props) => (props.$orientation === 0 ? "right" : "left")}: ${(
+  props,
+) => (props.$mediaQuery ? "2px solid rgba(85, 60, 154, 0.5)" : "none")};
 
 
   @media (min-width: 1024px) {
@@ -155,24 +156,26 @@ ProjectCard.propTypes = {
   orientation: PropTypes.node.isRequired,
   projectTitle: PropTypes.node.isRequired,
   projectCategory: PropTypes.node.isRequired,
-  description: PropTypes.node.isRequired,
-  techUsed: PropTypes.node.isRequired,
+  miniDescription: PropTypes.node.isRequired,
+  techUsed: PropTypes.array.isRequired,
   ghubLink: PropTypes.node.isRequired,
   carouselImg: PropTypes.node.isRequired,
   demoLink: PropTypes.node.isRequired,
-
+  projectRoute: PropTypes.node.isRequired,
+  isLive: PropTypes.bool.isRequired,
 };
 
 function ProjectCard({
   orientation = 0,
   projectTitle,
   projectCategory,
-  description,
+  miniDescription,
   techUsed,
   ghubLink,
   carouselImg,
   demoLink,
- 
+  projectRoute,
+  isLive,
 }) {
   const [mediaQuery, setMediaQuery] = useState(
     window.matchMedia("(min-width: 1024px)").matches,
@@ -195,9 +198,16 @@ function ProjectCard({
   const listProjectCategory = projectCategory.map((cat) => (
     <ProjectCategory key={cat}>{cat}</ProjectCategory>
   ));
-  const listTechUsed = techUsed.map((tech) => (
-    <IconDiv key={tech} alt={tech.imgAlt} title={tech.imgTitle} src={tech.imgSrc} />
-  ));
+  const listTechUsed = techUsed
+    .reduce((acc, tech) => acc.concat(tech.technologies), [])
+    .map((tech) => (
+      <IconDiv
+        key={tech.imgTitle}
+        alt={tech.imgAlt}
+        title={tech.imgTitle}
+        src={tech.imgSrc}
+      />
+    ));
 
   if (orientation !== 0 && mediaQuery) {
     return (
@@ -213,24 +223,25 @@ function ProjectCard({
               Code <FiGithub />
             </A>
             <A href={demoLink}>
-              Demo <BiWindowOpen />
+              {isLive ? "Live Demo" : "Demo"}
+              {isLive ? <BiWindowOpen /> : <BiDownload />}
             </A>
           </div>
         </ProjectDemoDiv>
-        <ProjectIntroDiv mediaQuery={mediaQuery} orientation={orientation}>
+        <ProjectIntroDiv $mediaQuery={mediaQuery} $orientation={orientation}>
           <H1 orientation={orientation}>{projectTitle}</H1>
 
           <div className="flex flex-wrap gap-6 my-6 justify-end">
             {listProjectCategory}
           </div>
-          <P orientation={orientation}>{description}</P>
+          <P $orientation={orientation}>{miniDescription}</P>
           <div className=" my-8 flex flex-wrap gap-6 items-center justify-end">
             <SPAN>Tech Used</SPAN>
             <VL />
 
             {listTechUsed}
           </div>
-          <A orientation={orientation} href={demoLink}>
+          <A $orientation={orientation} href={projectRoute}>
             Learn More <AiOutlineArrowRight />
           </A>
         </ProjectIntroDiv>
@@ -241,20 +252,20 @@ function ProjectCard({
 
     return (
       <CardDiv>
-        <ProjectIntroDiv mediaQuery={mediaQuery} orientation={orientation}>
-          <H1 orientation={orientation}>{projectTitle}</H1>
+        <ProjectIntroDiv $mediaQuery={mediaQuery} $orientation={orientation}>
+          <H1 $orientation={orientation}>{projectTitle}</H1>
 
           <div className={"flex flex-wrap gap-6 my-8 lg:my-6 "}>
             {listProjectCategory}
           </div>
-          <P orientation={orientation}>{description}</P>
+          <P $orientation={orientation}>{miniDescription}</P>
           <div className=" my-12 flex flex-wrap gap-6 items-center lg:my-8">
             <SPAN>Tech Used</SPAN>
             <VL />
 
             {listTechUsed}
           </div>
-          <A orientation={orientation} href={demoLink}>
+          <A $orientation={orientation} href={projectRoute}>
             Learn More <AiOutlineArrowRight />
           </A>
         </ProjectIntroDiv>
@@ -268,8 +279,10 @@ function ProjectCard({
             <A href={ghubLink}>
               Code <FiGithub />
             </A>
+
             <A href={demoLink}>
-              Demo <BiWindowOpen />
+              {isLive ? "Live Demo" : "Demo"}
+              {isLive ? <BiWindowOpen /> : <BiDownload />}
             </A>
           </div>
         </ProjectDemoDiv>

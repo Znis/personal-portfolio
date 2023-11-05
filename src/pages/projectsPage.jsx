@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const StyledAppLayout = styled.div`
   display: grid;
-  grid-template-columns: 26rem 1fr;
+  grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   height: 100vh;
 `;
@@ -26,8 +26,7 @@ const Container = styled.div`
 
 function ProjectsPage() {
   return (
-    
-         <StyledAppLayout>
+    <StyledAppLayout>
       <Header />
       <Sidebar />
       <Main>
@@ -36,8 +35,6 @@ function ProjectsPage() {
         </Container>
       </Main>
     </StyledAppLayout>
-
- 
   );
 }
 

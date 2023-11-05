@@ -2,7 +2,6 @@ import styled from "styled-components";
 import ProjectList from "../data/data";
 import CarouselSlider from "../components/carouselSlider";
 
-
 const IconDiv = styled.img`
   height: 3.2rem;
   width: fit-content;
@@ -11,7 +10,7 @@ const IconDiv = styled.img`
   -webkit-transition: transform 0.2s;
 
   &:hover {
-    transform: scale(1.5);
+    transform: scale(1.25);
   }
 `;
 
@@ -58,10 +57,6 @@ const H4 = styled.h1`
   font-size: 1rem;
 `;
 
-
-
-
-
 const VL = styled.div`
   display: none;
   height: 5rem;
@@ -102,24 +97,20 @@ const H5 = styled.h5`
 `;
 const projectList = ProjectList();
 
+function Project({ projectTitle }) {
+  const projectData = projectList.filter(
+    (project) => project.navlink === projectTitle,
+  )[0];
 
-
-
-
-function Project({projectTitle}) {
-  const projectData = projectList.filter(project => project.navlink === projectTitle)[0];
-
-  
-  
   const techStackUsedCard = projectData.techUsed.map((cat) => (
     <div
       key={cat.title}
-      className="flex flex-col flex-auto items-center scale-75 md:scale-100 "
+      className="flex flex-col  items-center  scale-75 md:scale-100 "
     >
       <div className="border-b-2 border-[#553c9a] w-full text-center">
         <H3>{cat.title}</H3>
       </div>
-      <div className="flex flex-wrap mt-8 gap-4 ">
+      <div className="flex flex-wrap mt-8 gap-4 justify-center ">
         {cat.technologies.map((tech) => (
           <div
             key={tech.title}
@@ -154,13 +145,13 @@ function Project({projectTitle}) {
   const youtubeEmbed = (videoDemo, title) => (
     <div className="overflow-hidden h-0 pb-[56.25%] relative">
       <iframe
-      className="left-0 top-0 h-full w-full absolute rounded-[1.7rem]"
+        className="left-0 top-0 h-full w-full absolute rounded-[1.7rem]"
         width="800px"
         height="500px"
         src={videoDemo}
         title={title}
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
     </div>
   );
@@ -168,47 +159,48 @@ function Project({projectTitle}) {
   return (
     <div>
       <H1>{projectData.projectSmallTitle}</H1>
-   
 
-<div className="flex py-8 flex-wrap gap-16 justify-center grow lg:gap-32 ">
+      <div className="flex py-8 flex-wrap gap-16 justify-center grow lg:gap-32 ">
+        {projectData.targetDevice === "web" ||
+        projectData.targetDevice === "both" ? (
+          <div className="relative min-h-[14rem] min-w-[24rem] max-h-[14rem] max-w-[24rem]">
+            <div className="flex p-1 absolute justify-center  ml-[2.75rem]  w-[18.5rem] mt-[0.5rem] h-[11.35rem] ">
+              <CarouselSlider
+                isPhone={false}
+                carouselImgSrc={projectData.carouselImg}
+              />
+            </div>
+            <img
+              className="absolute h-[14rem] w-[24rem]"
+              src="macbook.png"
+            ></img>
+          </div>
+        ) : (
+          ""
+        )}
 
-{projectData.targetDevice === "web" || projectData.targetDevice === "both" ?
-<div  className="relative min-h-[14rem] min-w-[24rem] max-h-[14rem] max-w-[24rem]"  >
+        {projectData.targetDevice === "phone" ||
+        projectData.targetDevice === "both" ? (
+          <div className="flex relative min-h-[14rem] min-w-[7.4rem] max-h-[14rem] max-w-[7.4rem] items-center ">
+            <div className="flex p-2 absolute justify-center items-center">
+              <CarouselSlider
+                isPhone={true}
+                carouselImgSrc={projectData.carouselImg}
+              />
+            </div>
+            <img
+              className="absolute h-[14rem] w-[7.4rem] "
+              src="iphone.png"
+            ></img>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
 
-<div className="flex p-1 absolute justify-center  ml-[2.75rem]  w-[18.5rem] mt-[0.5rem] h-[11.35rem] ">
-<CarouselSlider isPhone={false} carouselImgSrc={projectData.carouselImg} />
-</div>
-<img className="absolute h-[14rem] w-[24rem]"  src="macbook.png"></img>
-</div> : ""}
-
-{projectData.targetDevice === "phone" || projectData.targetDevice === "both" ? 
- <div  className="flex relative min-h-[14rem] min-w-[7.4rem] max-h-[14rem] max-w-[7.4rem] items-center "  >   
-  
-<div className="flex p-2 absolute justify-center items-center">
-<CarouselSlider isPhone={true} carouselImgSrc={projectData.carouselImg} />
-
-</div>
-<img className="absolute h-[14rem] w-[7.4rem] "  src="iphone.png"></img> 
-</div> : ""
-}
-
-
-
-
-
-</div>
-       
-
-
-
-
-      <P>
-      {projectData.description}
-      </P>
+      <P>{projectData.description}</P>
       <br></br>
-      <P>
-      {projectData.description}
-      </P>
+      <P>{projectData.description}</P>
       <div className="flex flex-col gap-4 mt-8 mb-12 items-center md:flex-row">
         <H2>Targeted Platform</H2>
         <VL />
@@ -219,17 +211,32 @@ function Project({projectTitle}) {
 
       <CardDiv>{techStackUsedCard}</CardDiv>
       <H2>Demo</H2>
-      <div className="mb-16 mt-4">{youtubeEmbed(projectData.videoDemo, projectData.projectTitle)}</div>
+      <div className="mb-16 mt-4">
+        {youtubeEmbed(projectData.videoDemo, projectData.projectTitle)}
+      </div>
 
-      {projectData.hasNote ? <P>
-        <b>Note: </b> {projectData.note}
-      </P> : ""} 
-{projectData.demoLink !== "" ? <div><H5>For Live demo,</H5>
-      <A href={projectData.demoLink}>
-        <u>Click here to visit the Live Site.</u>
-      </A> </div>
-      : ""}
-      
+      {projectData.hasNote ? (
+        <P>
+          <b>Note: </b> {projectData.note}
+        </P>
+      ) : (
+        ""
+      )}
+      {projectData.isLive ? (
+        <div>
+          <H5>For Live demo,</H5>
+          <A href={projectData.demoLink}>
+            <u>Click here to visit the Live Site.</u>
+          </A>{" "}
+        </div>
+      ) : (
+        <div>
+          <H5>For Demo,</H5>
+          <A href={projectData.demoLink}>
+            <u>Click here to download the application.</u>
+          </A>{" "}
+        </div>
+      )}
 
       <H5>For source code and more information,</H5>
       <A href={projectData.ghubLink}>

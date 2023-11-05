@@ -3,7 +3,7 @@ import Card from "../components/card";
 import Carousel from "../components/carousel";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiWindowOpen } from "react-icons/bi";
-import { TechnologyList } from "../data/data";
+import { RoutingLinks, TechnologyList } from "../data/data";
 
 const techStackData = TechnologyList();
 
@@ -27,7 +27,7 @@ const IconDiv = styled.img`
   -webkit-transition: transform 0.2s;
 
   &:hover {
-    transform: scale(1.5);
+    transform: scale(1.25);
   }
 `;
 
@@ -62,7 +62,7 @@ const H4 = styled.h1`
   font-size: 1rem;
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   background: linear-gradient(to bottom right, #553c9a, #ee4b2b);
   border: 0;
   border-radius: 24px;
@@ -106,7 +106,9 @@ const Button = styled.button`
 function AboutMePage() {
   const cards = [1, 2, 3].map((imgName) => ({
     key: imgName,
-    content: <Card imageSrc={"gallery/" + imgName + ".jpg"} imageAlt="" />,
+    content: (
+      <Card imageSrc={RoutingLinks.gallery + imgName + ".jpg"} imageAlt="" />
+    ),
   }));
 
   const techStackCardList = techStackData.map((cat) => (
@@ -114,11 +116,11 @@ function AboutMePage() {
       <div className="border-b-2 border-[#553c9a] w-full ">
         <H3>{cat.title}</H3>
       </div>
-      <div className="flex flex-wrap mt-8 ">
+      <div className="flex flex-wrap mt-8 place-content-evenly gap-8">
         {cat.technologies.map((tech) => (
           <div
             key={tech.title}
-            className="flex flex-col w-1/3 px-2 items-center text-center grow mb-8 md:w-1/5 md:grow-0"
+            className="flex flex-col  px-2 items-center text-center grow mb-8  md:grow-0"
           >
             <IconDiv
               src={tech.imgSrc}
@@ -134,11 +136,7 @@ function AboutMePage() {
 
   return (
     <div className="w-3/5 pb-20 flex flex-col items-center justify-center ">
-      <Carousel
-        cards={cards}
-        offset={2}
-        showArrows={false}
-      />
+      <Carousel cards={cards} offset={2} showArrows={false} />
       <H1>About Me</H1>
       <P>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius earum,
@@ -157,14 +155,14 @@ function AboutMePage() {
         delectus error.
       </P>
       <H2>Technologies I am familar with</H2>
-      <div className="flex flex-col w-full my-8 gap-8">
-      {techStackCardList}
-      </div>
-    
-      <Button>
-        Resume <BiWindowOpen />
+      <div className="flex flex-col w-full my-8 gap-8">{techStackCardList}</div>
+
+      <Button href={RoutingLinks.resume} target="_blank">
+        Resume
+        <BiWindowOpen />
       </Button>
-      <Button>
+
+      <Button href={RoutingLinks.contact}>
         Lets Connect <AiOutlineArrowRight />
       </Button>
     </div>

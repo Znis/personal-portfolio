@@ -1,7 +1,8 @@
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+import { RoutingLinks } from "../data/data";
 
 const StyledDropdownDiv = styled.div`
   position: relative;
@@ -9,32 +10,28 @@ const StyledDropdownDiv = styled.div`
   justify-content: center;
 `;
 
-
 const StyledDropdownDivContent = styled.div`
-
   position: absolute;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   min-width: 12rem;
   border-radius: 0.4rem;
   margin-top: 2.4rem;
   box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.2);
   z-index: 1;
- 
 `;
 
 const StyledDropdownDivContentA = styled.a`
-display: block;
-font-weight: 500;  
-font-size: 1rem;
-color: ${props => props.isActive ? " rgba(238, 75, 43, 0.7)" : " #222"}; 
-padding: 0.8rem 4rem 0.8rem 2rem;
-font-family: 'Lato', sans-serif;
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+  color: ${(props) => (props.$isactive ? " rgba(238, 75, 43, 0.7)" : " #222")};
+  padding: 0.8rem 4rem 0.8rem 2rem;
+  font-family: "Lato", sans-serif;
 
-&:hover{
-  color: ${props => props.isActive ? " rgba(238, 75, 43, 0.7)" : " #147efb"}; 
+  &:hover {
+    color: ${(props) =>
+      props.$isactive ? " rgba(238, 75, 43, 0.7)" : " #147efb"};
   }
-
-  
 `;
 
 const StyledBtn = styled.button`
@@ -52,65 +49,99 @@ const StyledBtn = styled.button`
   }
 `;
 
-
-
-
-
 function Header() {
   const location = useLocation();
   const [showDropdown, setShow] = useState(false);
   const [activePage, setActive] = useState("/");
 
-  useEffect(() => 
-  {
+  useEffect(() => {
     setActive(location.pathname);
-  },[location]);
+  }, [location]);
 
- 
   const handleShowDropdown = () => setShow(!showDropdown);
 
   return (
     <header>
-      <a href="/personal-portfolio/" className="logo">
+      <a href={RoutingLinks.home} className="logo">
         <img src="logo.svg" title="website logo" alt="website logo" />
       </a>
-
 
       <nav className="navbar">
         <ul>
           <li>
-            
-            <a className={activePage === ("/personal-portfolio/") ? "active" : ""}   href="/personal-portfolio/">
+            <a
+              className={activePage === RoutingLinks.home ? "active" : ""}
+              href={RoutingLinks.home}
+            >
               Home
             </a>
           </li>
 
           <li>
-            <a  className={activePage.includes("/personal-portfolio/projects") ? "active" : ""} href="/personal-portfolio/projects">Project</a>
+            <a
+              className={
+                activePage.includes(RoutingLinks.projects) ? "active" : ""
+              }
+              href={RoutingLinks.projects}
+            >
+              Project
+            </a>
           </li>
           <li>
-            <a className={activePage.includes("/personal-portfolio/about-me") ? "active" : ""}  href="/personal-portfolio/about-me">About</a>
+            <a
+              className={
+                activePage.includes(RoutingLinks.about) ? "active" : ""
+              }
+              href={RoutingLinks.about}
+            >
+              About
+            </a>
           </li>
           <li>
-            <a className={activePage.includes("/personal-portfolio/contact") ? "active" : ""} href="/personal-portfolio/contact">Contact</a>
+            <a
+              className={
+                activePage.includes(RoutingLinks.contact) ? "active" : ""
+              }
+              href={RoutingLinks.contact}
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
-     
-        <StyledDropdownDiv className="flex md:hidden">
+
+      <StyledDropdownDiv className="flex md:hidden">
         <StyledBtn onClick={handleShowDropdown}>
-          {showDropdown ?  <FaTimes/> : <FaBars />}
+          {showDropdown ? <FaTimes /> : <FaBars />}
         </StyledBtn>
 
-        <StyledDropdownDivContent className= {showDropdown ? "block" : "hidden"} >
-          <StyledDropdownDivContentA isActive={activePage === ("/personal-portfolio/")} href="/personal-portfolio/">Home</StyledDropdownDivContentA>
-          <StyledDropdownDivContentA isActive={activePage.includes("/personal-portfolio/projects")} href="/personal-portfolio/projects">Project</StyledDropdownDivContentA>
-          <StyledDropdownDivContentA isActive={activePage.includes("/personal-portfolio/about-me")}  href="/personal-portfolio/about-me">About Me</StyledDropdownDivContentA>
-          <StyledDropdownDivContentA isActive={activePage.includes("/personal-portfolio/contact")} href="/personal-portfolio/contact">Contact</StyledDropdownDivContentA>
+        <StyledDropdownDivContent className={showDropdown ? "block" : "hidden"}>
+          <StyledDropdownDivContentA
+            $isactive={activePage === RoutingLinks.home}
+            href={RoutingLinks.home}
+          >
+            Home
+          </StyledDropdownDivContentA>
+          <StyledDropdownDivContentA
+            $isactive={activePage.includes(RoutingLinks.projects)}
+            href={RoutingLinks.projects}
+          >
+            Project
+          </StyledDropdownDivContentA>
+          <StyledDropdownDivContentA
+            $isactive={activePage.includes(RoutingLinks.about)}
+            href={RoutingLinks.about}
+          >
+            About Me
+          </StyledDropdownDivContentA>
+          <StyledDropdownDivContentA
+            $isactive={activePage.includes(RoutingLinks.contact)}
+            href={RoutingLinks.contact}
+          >
+            Contact
+          </StyledDropdownDivContentA>
         </StyledDropdownDivContent>
-      </StyledDropdownDiv> 
-      
-      
+      </StyledDropdownDiv>
     </header>
   );
 }
