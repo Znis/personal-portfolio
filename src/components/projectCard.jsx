@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiWindowOpen, BiDownload } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
-import HoverCarousel from "hover-carousel";
 import { useState } from "react";
+import { Carousel } from "react-responsive-carousel";
 
 const CardDiv = styled.div`
   background-color: #fff;
@@ -30,6 +30,7 @@ const ProjectCategory = styled.div`
   color: #ffffff;
   height: auto;
   width: fit-content;
+
   padding: 0.4rem 0.8rem;
   font-size: 0.85rem;
   text-align: center;
@@ -214,8 +215,22 @@ function ProjectCard({
       <CardDiv>
         <ProjectDemoDiv>
           <IMGFRAME>
-            {/* <IMGFRAME_IMG src={carouselImg}/> */}
-            <HoverCarousel images={carouselImg}></HoverCarousel>
+            <Carousel
+              autoPlay={2}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop={true}
+            >
+              {carouselImg.map((img) => (
+                <div key={img}>
+                  {" "}
+                  <img
+                    className=" h-[17rem]  rounded-[10px] object-contain"
+                    src={img}
+                  />{" "}
+                </div>
+              ))}
+            </Carousel>
           </IMGFRAME>
 
           <div className="  h-1/5 flex flex-wrap justify-center items-end gap-16">
@@ -271,8 +286,22 @@ function ProjectCard({
         </ProjectIntroDiv>
         <ProjectDemoDiv>
           <IMGFRAME>
-            {/* <IMGFRAME_IMG src={carouselImg}/> */}
-            <HoverCarousel images={carouselImg}></HoverCarousel>
+            <Carousel
+              autoPlay={2}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop={true}
+            >
+              {carouselImg.map((img) => (
+                <div key={img}>
+                  {" "}
+                  <img
+                    className=" h-[17rem] rounded-[10px] object-contain"
+                    src={img}
+                  />{" "}
+                </div>
+              ))}
+            </Carousel>
           </IMGFRAME>
 
           <div className="h-1/5 flex flex-wrap justify-center items-end gap-16 mt-8 lg:mt-0 ">
