@@ -15,7 +15,7 @@ const IconDiv = styled.img`
 `;
 
 const CardDiv = styled.div`
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 1.7rem;
   box-shadow: 0 0 10px rgba(85, 60, 154, 0.4);
   display: flex;
@@ -32,6 +32,7 @@ const P = styled.p`
   font-size: 1.2rem;
   line-height: 28px;
   text-align: justify;
+  color: var(--text);
 `;
 
 const H1 = styled.h1`
@@ -39,29 +40,33 @@ const H1 = styled.h1`
   font-size: 2.2rem;
   margin-bottom: 1rem;
   font-weight: 500;
+  color: var(--purple);
 `;
 
 const H2 = styled.h1`
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
+  color: var(--purple);
 `;
 
 const H3 = styled.h1`
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.4rem;
+  color: var(--purple);
 `;
 
 const H4 = styled.h1`
   font-family: "Space Grotesk", sans-serif;
   font-size: 1rem;
+  color: var(--text);
 `;
 
 const VL = styled.div`
   display: none;
   height: 5rem;
   width: 0.1rem;
-  background: rgba(85, 60, 154, 0.5);
+  background:  var(--mild-purple);
   border-radius: 0.5rem;
   box-shadow: 0 0 1px rgba(85, 60, 154, 0.25);
   @media (min-width: 1024px) {
@@ -75,21 +80,21 @@ const A = styled.a`
   width: fit-content;
   margin: 1rem 0rem 0rem 0rem;
   gap: 0.5rem;
-  color: #553c9a;
+  color: var(--purple);
   font-size: 1.2rem;
   font-family: "Space Grotesk", sans-serif;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
 
   &:hover {
-    color: #147efb;
+    color: var(--blue);
   }
 `;
 
 const H5 = styled.h5`
   display: inline-block;
   margin: 1rem 0.25rem 0rem 0rem;
-  color: #553c9a;
+  color: var(--purple);
   font-size: 1.2rem;
   font-family: "Space Grotesk", sans-serif;
   transition: color 0.25s;
@@ -107,7 +112,7 @@ function Project({ projectTitle }) {
       key={cat.title}
       className="flex flex-col  items-center  scale-75 md:scale-100 "
     >
-      <div className="border-b-2 border-[#553c9a] w-full text-center">
+      <div className="border-b-2 border-[var(--purple)] w-full text-center">
         <H3>{cat.title}</H3>
       </div>
       <div className="flex flex-wrap mt-8 gap-4 justify-center ">

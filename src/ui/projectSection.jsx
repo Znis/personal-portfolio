@@ -16,18 +16,18 @@ const A = styled.a`
   margin: 1rem 0rem 0rem 0rem;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
-  color: rgba(238, 75, 43, 1);
+  color: var(--accent);
   float: right;
 
   &:hover {
-    color: #147efb;
+    color: var(--blue);
   }
 `;
 
 const H1 = styled.h1`
   font-size: 2rem;
   font-weight: 600;
-  color: #553c9a;
+  color: var(--purple);
   font-family: "Space Grotesk", sans-serif;
 `;
 const StyledDiv = styled.div`
@@ -58,7 +58,7 @@ function Projects() {
       />
     ));
   return (
-    <section className="px-8 py-16 flex justify-center items-center content-center bg-center bg-fixed  bg-gradient-to-br from-slate-50  to-slate-100 ">
+    <section className="px-8 py-16 flex justify-center items-center content-center bg-center bg-fixed  bg-[var(--background)] ">
       <div className="w-4/5">
         <H1>Featured Projects</H1>
         <StyledDiv>

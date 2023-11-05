@@ -8,18 +8,22 @@ import Project from "./pages/project";
 import { RoutingLinks } from "./data/data";
 import { AnimatePresence } from "framer-motion";
 
-let page_load = sessionStorage.getItem("page_load") === "true" ? true : false;
-!page_load ? sessionStorage.setItem("page_load", "true") : "";
+
 
 function App() {
+
+
+
   const location = useLocation();
 
   return (
+  
     <AnimatePresence mode="wait">
+        
       <Routes location={location} key={location.pathname}>
         <Route
           path={RoutingLinks.home}
-          element={<AppLayout showPreloader={!page_load} />}
+          element={<AppLayout  />}
         >
           <Route
             index
@@ -89,6 +93,7 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </AnimatePresence>
+  
   );
 }
 

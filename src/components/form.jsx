@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const CardDiv = styled.div`
-  background-color: #fff;
+  background-color:  var(--white);
   border-radius: 1.7rem;
   box-shadow: 0 0 10px rgba(85, 60, 154, 0.28);
   display: flex;
@@ -13,18 +13,20 @@ const CardDiv = styled.div`
   flex-direction: column;
   padding: 2rem 2rem;
   width: 100%;
+  color: var(--text);
 `;
 const H1 = styled.h1`
   font-size: 2.2rem;
   font-weight: 500;
   font-family: "Space Grotesk", sans-serif;
+  color: var(--purple);
 `;
 
 const Button = styled.button`
-  background: linear-gradient(to bottom right, #553c9a, #ee4b2b);
+  background: linear-gradient(to bottom right, var(--purple), var(--accent));
   border: 0;
   border-radius: 24px;
-  color: #ffffff;
+  color: var(--btntext);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -47,18 +49,18 @@ const Button = styled.button`
   &:not([disabled]):focus {
     box-shadow:
       0 0 0.25rem rgba(0, 0, 0, 0.5),
-      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.5),
-      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.5);
+      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.25),
+      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.25);
   }
 
   &:not([disabled]):hover {
     box-shadow:
       0 0 0.25rem rgba(0, 0, 0, 0.5),
-      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.5),
-      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.5);
+      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.25),
+      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.25);
   }
   &:disabled {
-    color: #888;
+    color: var(--text);
   }
 `;
 

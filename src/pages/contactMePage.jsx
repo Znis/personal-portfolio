@@ -10,12 +10,15 @@ import { GrLocation } from "react-icons/gr";
 import { FaXTwitter } from "react-icons/fa6";
 import Form from "../components/form";
 import { RoutingLinks } from "../data/data";
+import { useEffect } from "react";
 
 const H1 = styled.h1`
   font-family: "Space Grotesk", sans-serif;
   font-size: 2.2rem;
   font-weight: 500;
+  color: var(--purple);
   margin-left: -0.2rem;
+  
 `;
 
 const H4 = styled.h4`
@@ -24,15 +27,16 @@ const H4 = styled.h4`
   gap: 1rem;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1rem;
+  color: var(--text);
   &:hover {
-    color: #147efb;
+    color: var(--blue);
   }
 `;
 
 const H5 = styled.h5`
   font-family: "Space Grotesk", sans-serif;
   font-size: 1rem;
-  color: #555;
+  color: var(--purple);
   padding: 0.2rem 0.2rem;
 `;
 
@@ -43,22 +47,24 @@ const StyledA = styled.a`
   font-family: "Space Grotesk", sans-serif;
   font-size: 1rem;
   &:hover {
-    color: #147efb;
+    color: var(--blue);
   }
 `;
 const HLdiv = styled.div`
   height: 2px;
   width: 10rem;
-  background-color: #888;
+  background-color: var(--purple);
 
   @media (min-width: 1024px) {
     height: 50%;
     width: 2px;
-    background-color: #888;
+    background-color: var(--purple);
   }
 `;
 
 function ContactMePage() {
+
+  useEffect(() => {document.title = "Contact | Portfolio";}, []);
   return (
     <div className="flex flex-col items-center gap-8 w-4/5 py-8 lg:flex-row lg:items-stretch">
       <div className="flex flex-col items-center gap-8 grow  lg:w-1/2">

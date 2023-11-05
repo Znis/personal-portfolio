@@ -22,8 +22,7 @@ const StyledProjectCategory = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
-
-    color: #553c9a;
+    color: var(--purple);
     font-size: 1.2rem;
     font-weight: 600;
     font-family: "Space Grotesk", sans-serif;
@@ -44,10 +43,10 @@ const StyledNavLink = styled(NavLink)`
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    color: var(--color-grey-600);
     font-size: 1rem;
     font-weight: 500;
     font-family: "Space Grotesk", sans-serif;
+    color: var(--text);
     padding: 0.5rem 0rem;
     transition: all 0.3s;
   }
@@ -57,15 +56,12 @@ const StyledNavLink = styled(NavLink)`
   &:active,
   &.active:link,
   &.active:visited {
-    color: #147efb;
-    background-color: var(--color-grey-50);
-    border-radius: var(--border-radius-sm);
+    color: var(--blue);
   }
 
   & svg {
     width: 1.4rem;
     height: 1.4rem;
-    color: var(--color-grey-400);
     transition: all 0.3s;
   }
 
@@ -73,7 +69,7 @@ const StyledNavLink = styled(NavLink)`
   &:active svg,
   &.active:link svg,
   &.active:visited svg {
-    color: #147efb;
+    color: var(--blue);
   }
 `;
 

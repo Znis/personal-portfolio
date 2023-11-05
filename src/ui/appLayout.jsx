@@ -1,17 +1,16 @@
 import Header from "./header";
-import Preloader from "../components/preloader";
 import { motion } from "framer-motion";
 import { Outlet, useLocation } from "react-router-dom";
 import ProjectsPage from "../pages/projectsPage";
 import { RoutingLinks } from "../data/data";
 
-function AppLayout({ showPreloader = false, isProjectPage = false }) {
+function AppLayout({  isProjectPage = false }) {
   const location = useLocation();
 
   return (
     <>
       {!isProjectPage || location.pathname === RoutingLinks.projects ? (
-        !showPreloader ? (
+         
           <motion.div
             className="slide-out"
             initial={{ scaleY: 1 }}
@@ -19,9 +18,9 @@ function AppLayout({ showPreloader = false, isProjectPage = false }) {
             exit={{ scaleY: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           />
-        ) : (
-          ""
-        )
+        
+          
+        
       ) : (
         ""
       )}
@@ -30,10 +29,10 @@ function AppLayout({ showPreloader = false, isProjectPage = false }) {
         <ProjectsPage />
       ) : (
         <div>
-          {showPreloader ? <Preloader /> : ""}
+          
           <Header />
 
-          <main className="flex flex-col items-center  pt-12 bg-center bg-fixed bg-gradient-to-br from-slate-50  to-slate-100">
+          <main className="flex flex-col items-center  pt-12 bg-center bg-fixed bg-[var(--background)]">
             <Outlet />
           </main>
         </div>

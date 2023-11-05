@@ -12,7 +12,7 @@ const StyledDropdownDiv = styled.div`
 
 const StyledDropdownDivContent = styled.div`
   position: absolute;
-  background-color: #ffffff;
+  background-color: var(--background);
   min-width: 12rem;
   border-radius: 0.4rem;
   margin-top: 2.4rem;
@@ -24,13 +24,13 @@ const StyledDropdownDivContentA = styled.a`
   display: block;
   font-weight: 500;
   font-size: 1rem;
-  color: ${(props) => (props.$isactive ? " rgba(238, 75, 43, 0.7)" : " #222")};
+  color: ${(props) => (props.$isactive ? " var(--accent)" : " var(--text)")};
   padding: 0.8rem 4rem 0.8rem 2rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 
   &:hover {
     color: ${(props) =>
-      props.$isactive ? " rgba(238, 75, 43, 0.7)" : " #147efb"};
+      props.$isactive ? " var(--accent)" : "var(--blue)"};
   }
 `;
 
@@ -39,13 +39,13 @@ const StyledBtn = styled.button`
   align-items: center;
   width: fit-content;
   font-size: 1.6rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
-  color: rgba(238, 75, 43, 1);
+  color: var(--accent);
 
   &:hover {
-    color: #147efb;
+    color: var(--blue);
   }
 `;
 

@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 
 const CardDiv = styled.div`
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 1.7rem;
   box-shadow: 0 0 10px rgba(85, 60, 154, 0.25);
   display: flex;
@@ -26,8 +26,8 @@ const CardDiv = styled.div`
 
 const ProjectCategory = styled.div`
   border-radius: 24px;
-  background: #fa8128;
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--btntext);
   height: auto;
   width: fit-content;
 
@@ -43,7 +43,9 @@ const ProjectDemoDiv = styled.div`
   height: auto;
   margin: 1rem 0rem;
   width: 100%;
-
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
   @media (min-width: 1024px) {
     width: 40%;
     margin: 0 auto;
@@ -53,7 +55,7 @@ const ProjectDemoDiv = styled.div`
 const H1 = styled.h1`
   font-size: 1.6rem;
   font-weight: 500;
-  color: #553c9a;
+  color: var(--purple);
   font-family: "Space Grotesk", sans-serif;
   text-align: ${(props) => (props.$orientation === 0 ? "left" : "right")};
 `;
@@ -61,6 +63,7 @@ const H1 = styled.h1`
 const P = styled.p`
   font-size: 1rem;
   font-weight: 400;
+  color: var(--text);
   font-family: "Space Grotesk", sans-serif;
   text-align: justify;
 `;
@@ -68,16 +71,16 @@ const P = styled.p`
 const SPAN = styled.span`
   font-size: 1.1rem;
   font-weight: 500;
-  color: #553c9a;
+  color: var(--purple);
   font-family: "Space Grotesk", sans-serif;
 `;
 const VL = styled.div`
   display: inline-block;
   height: 2rem;
   width: 0.1rem;
-  background: rgba(85, 60, 154, 0.5);
+  background: var(--mild-purple);
   border-radius: 0.5rem;
-  box-shadow: 0 0 1px rgba(85, 60, 154, 0.25);
+  box-shadow: 0 0 1px var(--mild-purple);
 `;
 const IconDiv = styled.img`
   height: 2rem;
@@ -97,13 +100,13 @@ const A = styled.a`
   float: ${(props) => (props.$orientation === 0 ? "left" : "right")};
   gap: 0.5rem;
   font-size: 1.2rem;
-  color: rgba(238, 75, 43, 1);
+  color: var(--accent);
   font-family: "Space Grotesk", sans-serif;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
 
   &:hover {
-    color: #147efb;
+    color: var(--blue);
   }
 `;
 
@@ -117,7 +120,7 @@ width: 100%;
 padding-${(props) => (props.$orientation === 0 ? "right" : "left")}: 2rem;
 border-${(props) => (props.$orientation === 0 ? "right" : "left")}: ${(
   props,
-) => (props.$mediaQuery ? "2px solid rgba(85, 60, 154, 0.5)" : "none")};
+) => (props.$mediaQuery ? "2px solid var(--mild-purple)" : "none")};
 
 
   @media (min-width: 1024px) {
@@ -131,11 +134,12 @@ const IMGFRAME = styled.div`
   justify-content: center;
   background: linear-gradient(
     0deg,
-    rgba(238, 75, 43, 0.2),
-    rgba(85, 60, 154, 0.2)
+    var(--light-accent),
+    var(--light-purple)
   );
   border-radius: 16px;
   height: 80%;
+  max-height: 17rem;
   width: 100%;
   overflow: hidden;
   cursor: pointer;

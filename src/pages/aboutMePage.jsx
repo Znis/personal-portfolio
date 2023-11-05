@@ -4,11 +4,12 @@ import Carousel from "../components/carousel";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiWindowOpen } from "react-icons/bi";
 import { RoutingLinks, TechnologyList } from "../data/data";
+import { useEffect } from "react";
 
 const techStackData = TechnologyList();
 
 const CardDiv = styled.div`
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 1.7rem;
   box-shadow: 0 0 10px rgba(85, 60, 154, 0.4);
   display: flex;
@@ -36,6 +37,7 @@ const P = styled.p`
   font-size: 1.2rem;
   line-height: 28px;
   text-align: justify;
+  color: var(--text);
 `;
 
 const H1 = styled.h1`
@@ -43,27 +45,31 @@ const H1 = styled.h1`
   font-size: 2.2rem;
   margin-bottom: 1rem;
   font-weight: 500;
+  color: var(--purple);
 `;
 
 const H2 = styled.h1`
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
+  color: var(--purple);
   margin: 4rem 0rem 0rem 0rem;
 `;
 
 const H3 = styled.h1`
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.4rem;
+  color: var(--purple);
 `;
 
 const H4 = styled.h1`
   font-family: "Space Grotesk", sans-serif;
   font-size: 1rem;
+  color: var(--text);
 `;
 
 const Button = styled.a`
-  background: linear-gradient(to bottom right, #553c9a, #ee4b2b);
+  background: linear-gradient(to bottom right, var(--purple), var(--accent));
   border: 0;
   border-radius: 24px;
   color: #ffffff;
@@ -92,18 +98,19 @@ const Button = styled.a`
   &:not([disabled]):focus {
     box-shadow:
       0 0 0.25rem rgba(0, 0, 0, 0.5),
-      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.5),
-      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.5);
+      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.25),
+      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.25);
   }
 
   &:not([disabled]):hover {
     box-shadow:
       0 0 0.25rem rgba(0, 0, 0, 0.5),
-      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.5),
-      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.5);
+      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.25),
+      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.25);
   }
 `;
 function AboutMePage() {
+  useEffect(() => {document.title = "About | Portfolio";}, []);
   const cards = [1, 2, 3].map((imgName) => ({
     key: imgName,
     content: (

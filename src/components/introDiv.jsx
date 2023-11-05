@@ -8,9 +8,8 @@ const StyledDiv = styled.div`
 const H1 = styled.h1`
   font-size: 3.6rem;
   font-weight: 600;
-  color: #222;
   margin-bottom: -0.5rem;
-  background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+  background-image: linear-gradient(45deg, var(--purple), var(--accent));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -19,7 +18,7 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   font-size: 1.8rem;
   font-weight: 500;
-  color: #553c9a;
+  color: var(--purple);
   background-clip: text;
   -webkit-background-clip: text;
   font-family: "Space Grotesk", sans-serif;
@@ -27,7 +26,7 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-size: 1.3rem;
   font-weight: 400;
-  color: #553c9a;
+  color: var(--purple);
   margin: 0rem 0rem -0.5rem 0.8rem;
   background-clip: text;
   -webkit-background-clip: text;
@@ -36,7 +35,7 @@ const H3 = styled.h3`
 const H4 = styled.h4`
   font-size: 1.3rem;
   font-weight: 400;
-  color: #553c9a;
+  color: var(--purple);
   font-family: "Space Grotesk", sans-serif;
 `;
 const IMG = styled.img`
@@ -47,10 +46,10 @@ const IMG = styled.img`
 `;
 
 const Button = styled.a`
-  background: linear-gradient(to bottom right, #553c9a, #ee4b2b);
+  background: linear-gradient(to bottom right, var(--purple), var(--accent));
   border: 0;
   border-radius: 24px;
-  color: #ffffff;
+  color: var(--btntext);
   cursor: pointer;
   display: flex;
   width: fit-content;
@@ -74,15 +73,15 @@ const Button = styled.a`
   &:not([disabled]):focus {
     box-shadow:
       0 0 0.25rem rgba(0, 0, 0, 0.5),
-      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.5),
-      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.5);
+      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.25),
+      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.25);
   }
 
   &:not([disabled]):hover {
     box-shadow:
       0 0 0.25rem rgba(0, 0, 0, 0.5),
-      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.5),
-      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.5);
+      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.25),
+      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.25);
   }
 `;
 

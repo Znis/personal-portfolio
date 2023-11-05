@@ -6,7 +6,7 @@ import { RoutingLinks } from "../data/data";
 const H1 = styled.h1`
   font-size: 2rem;
   font-weight: 600;
-  color: #553c9a;
+  color: var(--purple);
   font-family: "Space Grotesk", sans-serif;
   margin-bottom: 2rem;
   text-align: end;
@@ -15,15 +15,16 @@ const H1 = styled.h1`
 const P = styled.p`
   font-size: 1rem;
   font-weight: 400;
+  color: var(--text);
   font-family: "Space Grotesk", sans-serif;
   text-align: justify;
 `;
 
 const Button = styled.a`
-  background: linear-gradient(to bottom right, #553c9a, #ee4b2b);
+  background: linear-gradient(to bottom right, var(--purple), var(--accent));
   border: 0;
   border-radius: 24px;
-  color: #ffffff;
+  color: var(--btntext);
   cursor: pointer;
   display: flex;
   gap: 0.5rem;
@@ -47,15 +48,15 @@ const Button = styled.a`
   &:not([disabled]):focus {
     box-shadow:
       0 0 0.25rem rgba(0, 0, 0, 0.5),
-      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.5),
-      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.5);
+      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.25),
+      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.25);
   }
 
   &:not([disabled]):hover {
     box-shadow:
       0 0 0.25rem rgba(0, 0, 0, 0.5),
-      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.5),
-      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.5);
+      -0.125rem -0.125rem 1rem rgba(85, 60, 154, 0.25),
+      0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.25);
   }
 `;
 
@@ -93,20 +94,20 @@ const A = styled.a`
   width: fit-content;
   gap: 0.5rem;
   font-size: 1.2rem;
-  color: rgba(238, 75, 43, 1);
+  color: var(--accent);
   font-family: "Space Grotesk", sans-serif;
   padding: 1rem 0rem;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
 
   &:hover {
-    color: #147efb;
+    color: var(--blue);
   }
 `;
 
 function AboutMeSection() {
   return (
-    <section className="px-8 py-16 flex justify-center items-center bg-center bg-fixed bg-gradient-to-br from-slate-50  to-slate-100  ">
+    <section className="px-8 py-16 flex justify-center items-center bg-center bg-fixed bg-[var(--background)]">
       <div className="columns-1 w-4/5">
         <H1>About Me</H1>
         <div className=" flex flex-col flex-wrap lg:flex-row">
