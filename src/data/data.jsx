@@ -836,18 +836,57 @@ export function TechnologyList() {
         },
       ],
     },
-
     {
-      title: "Cloud Infrastructure",
+      title: "Library",
       technologies: [
         {
-          title: "Microsoft Azure",
-          imgSrc: "azure-icon.png",
-          imgAlt: "Microsoft Azure",
-          imgTitle: "Microsoft Azure",
+          title: "React",
+          imgSrc: "react-icon.png",
+          imgAlt: "React",
+          imgTitle: "React",
         },
+        {
+          title: "OpenStreetMap",
+          imgSrc: "openstreetmaps-icon.png",
+          imgAlt: "OpenStreetMap",
+          imgTitle: "OpenStreetMap",
+        },
+
+        {
+          title: "Selenium",
+          imgSrc: "selenium-icon.png",
+          imgAlt: "Selenium",
+          imgTitle: "Selenium",
+        },
+       
       ],
     },
+    {
+      title: "Web Technologies",
+      technologies: [
+        {
+          title: "HTML",
+          imgSrc: "html-icon.png",
+          imgAlt: "HTML",
+          imgTitle: "HTML",
+        },
+        {
+          title: "CSS",
+          imgSrc: "css-icon.png",
+          imgAlt: "CSS",
+          imgTitle: "CSS",
+        },
+
+        {
+          title: "Tailwind CSS",
+          imgSrc: "tailwind-icon.png",
+          imgAlt: "Tailwind CSS",
+          imgTitle: "Tailwind CSS",
+        },
+       
+      ],
+    },
+    
     {
       title: "Database",
       technologies: [
@@ -868,6 +907,17 @@ export function TechnologyList() {
           imgSrc: "firebase-icon.png",
           imgAlt: "Firebase Database",
           imgTitle: "Firebase Database",
+        },
+      ],
+    },
+    {
+      title: "Cloud Infrastructure",
+      technologies: [
+        {
+          title: "Microsoft Azure",
+          imgSrc: "azure-icon.png",
+          imgAlt: "Microsoft Azure",
+          imgTitle: "Microsoft Azure",
         },
       ],
     },
@@ -919,6 +969,8 @@ export function TechnologyList() {
         },
       ],
     },
+   
+   
   ];
 }
 
