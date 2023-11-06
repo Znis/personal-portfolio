@@ -140,10 +140,15 @@ const IMGFRAME = styled.div`
   border-radius: 16px;
   height: 80%;
   max-height: 17rem;
-  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   cursor: pointer;
+  margin: 0 auto;
   box-shadow: 0 0 10px rgba(85, 60, 154, 0.4);
+
+  @media only screen and (min-width: 640px) and (max-width: 1024px) {
+    max-width: 80%;
+  }
 `;
 
 // const IMGFRAME_IMG = styled.img`

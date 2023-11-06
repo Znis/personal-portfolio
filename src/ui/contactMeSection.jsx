@@ -98,7 +98,7 @@ function ContactMeSection() {
           </Button>
         </div>
 
-        <div className="flex gap-8 w-full justify-end pt-20 lg:w-2/5 lg:pt-0">
+        <div className="flex gap-8 w-full justify-center  pt-20 lg:w-2/5 lg:pt-0  lg:justify-end">
           <div className="columns-1">
             <div className="flex items-center">
               <div className="flex-1 bg-[var(--purple)] h-[3px]" />

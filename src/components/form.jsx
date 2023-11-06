@@ -60,7 +60,7 @@ const Button = styled.button`
       0.125rem 0.125rem 1rem rgba(238, 75, 43, 0.25);
   }
   &:disabled {
-    color: var(--text);
+    opacity: 0.8;
   }
 `;
 
@@ -85,7 +85,7 @@ const Form = () => {
     // Hide alert after 5 seconds
     setTimeout(() => {
       setAlertInfo({ display: false, message: "", type: "" });
-    }, 5000);
+    }, 8000);
   };
 
   // Function called on submit that uses emailjs to send email of valid contact form
@@ -225,7 +225,7 @@ const Form = () => {
         </div>
 
         <Button disabled={disabled} type="submit">
-          Submit <AiOutlineArrowRight />
+          {disabled ? "Submitting ..." : "Submit"} <AiOutlineArrowRight />
         </Button>
       </form>
 
