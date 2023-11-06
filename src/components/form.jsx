@@ -233,8 +233,9 @@ const Form = () => {
         <div
           className={
             alertInfo.type === "success"
-              ? "text-green-500 text-[16px] flex gap-2 items-center "
-              : "text-[#f45532] text-[16px] flex gap-2 items-center "
+              ? "text-[#28a745] text-[16px] flex gap-2 items-center font-spaceGrotesk "
+              : "text-[#dc3545] text-[16px] flex gap-2 items-center font-spaceGrotesk "
+              
           }
         >
           {alertInfo.message}

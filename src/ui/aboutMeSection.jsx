@@ -116,14 +116,13 @@ function AboutMeSection() {
           </div>
           <div className="w-full lg:w-1/2">
             <P>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, quod eius nesciunt, distinctio quibusdam dolorem
-              repellat, officia hic officiis accusamus explicabo quas? Corporis
-              dolorum fugiat praesentium veritatis animi! Dolor, tempore?
-              <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sit, non fugiat dolor dolores voluptatibus molestiae maxime
-              tenetur saepe quia minus nisi repellendus necessitatibus doloribus
-              ut optio quas ullam enim vitae.
+              I&apos;m a senior year computer engineering student 🎓 on a path to becoming a proficient software developer. I have hands-on experience in full-stack web development and mobile app development through self-initiated projects. 
+              I&apos;m currently delving into the fascinating field of machine learning as part of my ongoing studies.<br></br>My passion lies in solving
+              real-world problems through creative coding. I&apos;m dedicated to
+              continuous learning, teamwork, and crafting efficient,
+              user-friendly solutions. My goal is to make a positive impact in
+              the software development world by pushing boundaries and
+              delivering excellence in every project. And yeah, I love cats. 😸
             </P>
             <A href={RoutingLinks.about}>
               Learn More <AiOutlineArrowRight />

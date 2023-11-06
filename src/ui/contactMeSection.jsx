@@ -87,10 +87,8 @@ function ContactMeSection() {
         <div className="w-full lg:w-3/5">
           <H1>Need A Developer? Need A Friend?</H1>
           <P>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-            reprehenderit quibusdam repellendus a distinctio tempora ex.
-            Obcaecati nesciunt a error officiis delectus maiores quod sint culpa
-            corrupti facere, ipsum alias!
+           
+If you&apos;re interested 🤩, shoot me an email or hit me up on social media. Best case scenario, we become friends; worst case scenario, I&apos;ll bring a smile 😋 to your face and drift apart.
           </P>
 
           <Button href={RoutingLinks.contact}>

@@ -204,8 +204,7 @@ function Project({ projectTitle }) {
       </div>
 
       <P>{projectData.description}</P>
-      <br></br>
-      <P>{projectData.description}</P>
+      
       <div className="flex flex-col gap-4 mt-8 mb-12 items-center md:flex-row">
         <H2>Targeted Platform</H2>
         <VL />

@@ -146,20 +146,12 @@ function AboutMePage() {
       <Carousel cards={cards} offset={2} showArrows={false} />
       <H1>About Me</H1>
       <P>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius earum,
-        fugiat vero provident similique aperiam omnis possimus deserunt,
-        molestiae exercitationem nihil magnam nulla soluta non a officia unde
-        dolore? Ab! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Possimus ullam mollitia similique est eaque, reprehenderit error numquam
-        dolorum natus voluptatem. Cum distinctio aperiam optio illo non ipsam
-        blanditiis delectus error.
+      I&apos;m a senior year computer engineering student with a passion for software development, currently residing in Bhaktapur, Nepal. At 22 years old, I&apos;ve embarked on an exciting journey in the tech world.
+      I&apos;ve honed my skills on software development through personal projects and academic coursework. In addition to my software endeavors, I have a keen interest in hardware technologies. Staying updated with the latest trends in the tech industry is a true passion of mine. Whether it&apos;s software or hardware, I find the ever-evolving world of technology endlessly fascinating and enjoy exploring both sides of this dynamic field. I&apos;m eagerly looking forward to applying my knowledge and creativity as I take the next step in my software development career.
       </P>
       <br />
       <P>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ullam
-        mollitia similique est eaque, reprehenderit error numquam dolorum natus
-        voluptatem. Cum distinctio aperiam optio illo non ipsam blanditiis
-        delectus error.
+      When I&apos;m not immersed in code, I enjoy exploring the great outdoors, hiking through scenic trails, and pretend to be a photographer 📷. I also indulge in the simple pleasure of watching movies 🍿, especially the Sci-fi genre. I like eating food too so, please invite me over for a dinner, hehe 😂. As for my personality, I&apos;m an introvert, finding comfort in quieter settings, but hey I love parties too 🎉. My love for technology extends beyond work; I enjoy playing video games 🎮, often finding inspiration in the intricate design and working mechanism of video games. 
       </P>
       <H2>Technologies I am familar with</H2>
       <div className="flex flex-col w-full my-8 gap-8">{techStackCardList}</div>
