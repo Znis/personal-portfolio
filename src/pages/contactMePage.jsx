@@ -18,7 +18,6 @@ const H1 = styled.h1`
   font-weight: 500;
   color: var(--purple);
   margin-left: -0.2rem;
-  
 `;
 
 const H4 = styled.h4`
@@ -63,8 +62,9 @@ const HLdiv = styled.div`
 `;
 
 function ContactMePage() {
-
-  useEffect(() => {document.title = "Contact | Portfolio";}, []);
+  useEffect(() => {
+    document.title = "Contact | Portfolio";
+  }, []);
   return (
     <div className="flex flex-col items-center gap-8 w-4/5 py-8 lg:flex-row lg:items-stretch">
       <div className="flex flex-col items-center gap-8 grow  lg:w-1/2">
@@ -91,16 +91,16 @@ function ContactMePage() {
             <H1>Social Media Links</H1>
             <StyledA href={RoutingLinks.ghub} target="_blank">
               <AiOutlineLinkedin />
-              LinkedIn
+              Jenish Twayana
             </StyledA>
             <StyledA href={RoutingLinks.ghub} target="_blank">
               <AiOutlineGithub />
-              Github
+              Znis
             </StyledA>
             <StyledA href={RoutingLinks.twitter} target="_blank">
-              <FaXTwitter />X (Twitter)
+              <FaXTwitter />
+              Zentw11
             </StyledA>
-           
           </div>
         </div>
       </div>

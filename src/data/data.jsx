@@ -7,14 +7,35 @@ export default function ProjectList() {
       projectSmallTitle: "Monument Recognition",
       projectType: "ml",
       projectCategory: ["Machine Learning", "Mobile Application"],
-      description:
-<p>
-The Monument Recognition Application is a mobile app driven by machine learning and object detection technology. It enables real-time identification of historical monuments using your phone&apos;s camera. Additionally, it provides in-depth information about the recognized monuments. This app was a collaborative effort, developed as part of a group project during the third year of our computer engineering program, aiming to fulfill our minor project requirements.
-  <br></br><br></br>
-  The mobile app employs a MobileNetSSD V2 object detection model, which has been trained on a custom dataset, to initially identify monuments in the camera feed. Once detected, the app does an API call to the server hosted on virtual machine in Microsoft Azure where the inferencing model named YOLO V7 is deployed which does the identification of the monument. Monument information and location coordinates are stored in a PostgreSQL database. An intelligent feature validates the monument&apos;s identification by comparing real-time device coordinates with monument location coordinates.
-<br></br><br></br>
-Moreover, the app offers recommendations for nearby amenities such as hotels and ATMs based on location coordinates. The machine learning models were trained using a custom dataset created by our team. For further project details, including the proposal and report, please visit the project&apos;s GitHub link.
-  </p>,
+      description: (
+        <p>
+          The Monument Recognition Application is a mobile app driven by machine
+          learning and object detection technology. It enables real-time
+          identification of historical monuments using your phone&apos;s camera.
+          Additionally, it provides in-depth information about the recognized
+          monuments. This app was a collaborative effort, developed as part of a
+          group project during the third year of our computer engineering
+          program, aiming to fulfill our minor project requirements.
+          <br></br>
+          <br></br>
+          The mobile app employs a MobileNetSSD V2 object detection model, which
+          has been trained on a custom dataset, to initially identify monuments
+          in the camera feed. Once detected, the app does an API call to the
+          server hosted on virtual machine in Microsoft Azure where the
+          inferencing model named YOLO V7 is deployed which does the
+          identification of the monument. Monument information and location
+          coordinates are stored in a PostgreSQL database. An intelligent
+          feature validates the monument&apos;s identification by comparing
+          real-time device coordinates with monument location coordinates.
+          <br></br>
+          <br></br>
+          Moreover, the app offers recommendations for nearby amenities such as
+          hotels and ATMs based on location coordinates. The machine learning
+          models were trained using a custom dataset created by our team. For
+          further project details, including the proposal and report, please
+          visit the project&apos;s GitHub link.
+        </p>
+      ),
       miniDescription: (
         <p>
           The Monument Recognition App is like a magic camera on your phone. It
@@ -139,16 +160,23 @@ Moreover, the app offers recommendations for nearby amenities such as hotels and
       projectCategory: ["Full Stack", "Web Application"],
       description: (
         <p>
-          Samay Baji&apos;s web app is your virtual gateway to a Newari feast! This
-          online platform lets you order mouthwatering Newari delicacies and
-          ensures the restaurant receives your choices. It&apos;s not just about the
-          food; the app comes with account sign-in and sign-up features for a convenient experience and order tracking feature.
+          Samay Baji&apos;s web app is your virtual gateway to a Newari feast!
+          This online platform lets you order mouthwatering Newari delicacies
+          and ensures the restaurant receives your choices. It&apos;s not just
+          about the food; the app comes with account sign-in and sign-up
+          features for a convenient experience and order tracking feature.
           What&apos;s more, the restaurant can effortlessly update its menu and
           manage users as needed, making the entire process seamless. So,
-          whether you&apos;re craving traditional Newari dishes or just exploring the
-          options, Samay Baji has you covered, all at your fingertips.
-          <br></br><br></br>
-          This application is crafted using a mix of HTML, CSS, and JavaScript for the user interface, with Python Django powering the backend. It features an integrated database and admin control panel, both running within the Django framework. In its initial phase, the application was hosted on the Microsoft Azure platform.
+          whether you&apos;re craving traditional Newari dishes or just
+          exploring the options, Samay Baji has you covered, all at your
+          fingertips.
+          <br></br>
+          <br></br>
+          This application is crafted using a mix of HTML, CSS, and JavaScript
+          for the user interface, with Python Django powering the backend. It
+          features an integrated database and admin control panel, both running
+          within the Django framework. In its initial phase, the application was
+          hosted on the Microsoft Azure platform.
         </p>
       ),
       miniDescription: (
@@ -240,13 +268,27 @@ Moreover, the app offers recommendations for nearby amenities such as hotels and
       projectSmallTitle: "Med Test",
       projectType: "mobile",
       projectCategory: ["Android Platform", "Mobile Application"],
-      description:<p>
+      description: (
+        <p>
+          The Med Test Mobile App simplifies the process of scheduling medical
+          tests. Users can book tests through the app and receive their reports
+          conveniently within the same app. A medical officer collects the
+          required samples from the user at their preferred location. The app
+          also includes account sign-in and signup features for a personalized
+          experience. With this app, users can easily book tests, track their
+          progress, view results, and access their test history. The location
+          feature ensures accurate client information, making it easier and more
+          reliable to locate users when needed.
+          <br></br>
+          <br></br>
+          The application is built using the Flutter framework, utilizing the
+          Dart programming language. It incorporates a location feature powered
+          by the OpenStreetMaps library. Firebase by Google serves as both the
+          backend and database for the app, ensuring seamless functionality and
+          data management.
+        </p>
+      ),
 
-The Med Test Mobile App simplifies the process of scheduling medical tests. Users can book tests through the app and receive their reports conveniently within the same app. A medical officer collects the required samples from the user at their preferred location. The app also includes account sign-in and signup features for a personalized experience. With this app, users can easily book tests, track their progress, view results, and access their test history. The location feature ensures accurate client information, making it easier and more reliable to locate users when needed.
-        <br></br><br></br>
-        The application is built using the Flutter framework, utilizing the Dart programming language. It incorporates a location feature powered by the OpenStreetMaps library. Firebase by Google serves as both the backend and database for the app, ensuring seamless functionality and data management.
-      </p>,
-      
       miniDescription: (
         <p>
           The Med Test Mobile App is your healthcare companion on your phone.
@@ -339,13 +381,25 @@ The Med Test Mobile App simplifies the process of scheduling medical tests. User
       projectSmallTitle: "Debris Destroyer",
       projectType: "game",
       projectCategory: ["Game Development", "Executable Game"],
-      description:
-      <p>
-The Debris Destroyer game, designed for Windows platform, lets players pilot a spaceship to shoot space debris, earning points. While doing so, players must also manage the spaceship&apos;s health and fuel levels, refilling them at checkpoint satellites. This game not only entertains but also educates players about the critical global issue of space debris.
-        <br></br><br></br>
-        The game was crafted in Unity Engine with the C# programming language. Its assets, such as spaceships, satellites, planets, and the moon, were sourced from NASA&apos;s official resources. Our team of four exceptional individuals created this game as part of the NASA Space Apps Challenge 2019 Hackathon, where it achieved the remarkable feat of securing the 2nd runner-up position in this fantastic event.
-      </p>,
-     
+      description: (
+        <p>
+          The Debris Destroyer game, designed for Windows platform, lets players
+          pilot a spaceship to shoot space debris, earning points. While doing
+          so, players must also manage the spaceship&apos;s health and fuel
+          levels, refilling them at checkpoint satellites. This game not only
+          entertains but also educates players about the critical global issue
+          of space debris.
+          <br></br>
+          <br></br>
+          The game was crafted in Unity Engine with the C# programming language.
+          Its assets, such as spaceships, satellites, planets, and the moon,
+          were sourced from NASA&apos;s official resources. Our team of four
+          exceptional individuals created this game as part of the NASA Space
+          Apps Challenge 2019 Hackathon, where it achieved the remarkable feat
+          of securing the 2nd runner-up position in this fantastic event.
+        </p>
+      ),
+
       miniDescription: (
         <p>
           The Debris Destroyer game is an interactive game that you can play on
@@ -409,12 +463,20 @@ The Debris Destroyer game, designed for Windows platform, lets players pilot a s
       projectSmallTitle: "Crop Wiki",
       projectType: "mobile",
       projectCategory: ["Android Platform", "Mobile Application"],
-      description:
-      <p>
-      Crop Wiki is a simple mobile app designed to suggest suitable crops for your farm. All it takes is a bit of information from you, such as humidity, temperature, rainfall, and the season, and the app will provide a tailored list of crops that can thrive in your specific conditions.
-      <br></br><br></br>
-      The application is created using Android Studio and programmed in Java. It contains an integrated database to store crop data, ensuring a smooth and efficient user experience.
-      </p>,    
+      description: (
+        <p>
+          Crop Wiki is a simple mobile app designed to suggest suitable crops
+          for your farm. All it takes is a bit of information from you, such as
+          humidity, temperature, rainfall, and the season, and the app will
+          provide a tailored list of crops that can thrive in your specific
+          conditions.
+          <br></br>
+          <br></br>
+          The application is created using Android Studio and programmed in
+          Java. It contains an integrated database to store crop data, ensuring
+          a smooth and efficient user experience.
+        </p>
+      ),
       miniDescription:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
 
@@ -494,12 +556,29 @@ The Debris Destroyer game, designed for Windows platform, lets players pilot a s
       projectSmallTitle: "GpuV",
       projectType: "web",
       projectCategory: ["Linux", "Web Application"],
-      description:
+      description: (
         <p>
-The GpuV web app is much like Google Colab (a cloud-based Jupyter notebook environment for Python coding). In this web app, users can sign in, gaining access to a Jupyter notebook interface to run their code. The app allows users to execute notebook files, upload files, and more. Importantly, the code runs on the server, not on the user&apos;s local machine. The server is equipped with multiple virtual machines and dedicated GPUs, providing the necessary hardware resources for accelerating data and machine learning projects and scripts.
-          <br></br><br></br>
-          The web application is built with HTML, CSS, and JavaScript for the frontend, while Django powers the backend. Django handles user authentication, the database, and provides an admin control panel. The platform for Jupyter notebook is hosted on virtual machines managed by the QEMU virtual machine manager in a Linux operating system. Communication between the Django server and the virtual machine manager is facilitated by a message broker software called RabbitMQ. For additional details, please visit the GitHub repository.
-        </p>,
+          The GpuV web app is much like Google Colab (a cloud-based Jupyter
+          notebook environment for Python coding). In this web app, users can
+          sign in, gaining access to a Jupyter notebook interface to run their
+          code. The app allows users to execute notebook files, upload files,
+          and more. Importantly, the code runs on the server, not on the
+          user&apos;s local machine. The server is equipped with multiple
+          virtual machines and dedicated GPUs, providing the necessary hardware
+          resources for accelerating data and machine learning projects and
+          scripts.
+          <br></br>
+          <br></br>
+          The web application is built with HTML, CSS, and JavaScript for the
+          frontend, while Django powers the backend. Django handles user
+          authentication, the database, and provides an admin control panel. The
+          platform for Jupyter notebook is hosted on virtual machines managed by
+          the QEMU virtual machine manager in a Linux operating system.
+          Communication between the Django server and the virtual machine
+          manager is facilitated by a message broker software called RabbitMQ.
+          For additional details, please visit the GitHub repository.
+        </p>
+      ),
       miniDescription:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
 
@@ -604,13 +683,27 @@ The GpuV web app is much like Google Colab (a cloud-based Jupyter notebook envir
       projectSmallTitle: "Movie Ticket Booking Bot",
       projectType: "browserAutomation",
       projectCategory: ["Browser Automation", "Bot"],
-      description:
-      <p>
-The Movie Ticket Booking Bot is a script designed to streamline the process of reserving movie tickets from QFX Cinemas&apos; website in Nepal. Users input essential details like the movie name, showtime, and cinema location, and the bot takes care of booking or reserving the seats for that specific movie at the designated time and cinema by opening a automated browser tab. Furthermore, the bot can also monitor ticket availability on the website and secure seats as soon as they become available for booking, ensuring users don&apos;t miss out on their preferred shows.
-<br></br><br></br>
-The bot is coded in Python, using the Selenium library for its functionality. This bot was created as a fun side project while I was learning about web scraping and browser automation. Its purpose is solely for learning and enjoyment, and it is not intended for any harmful or malicious use.
-      </p>,
-      
+      description: (
+        <p>
+          The Movie Ticket Booking Bot is a script designed to streamline the
+          process of reserving movie tickets from QFX Cinemas&apos; website in
+          Nepal. Users input essential details like the movie name, showtime,
+          and cinema location, and the bot takes care of booking or reserving
+          the seats for that specific movie at the designated time and cinema by
+          opening a automated browser tab. Furthermore, the bot can also monitor
+          ticket availability on the website and secure seats as soon as they
+          become available for booking, ensuring users don&apos;t miss out on
+          their preferred shows.
+          <br></br>
+          <br></br>
+          The bot is coded in Python, using the Selenium library for its
+          functionality. This bot was created as a fun side project while I was
+          learning about web scraping and browser automation. Its purpose is
+          solely for learning and enjoyment, and it is not intended for any
+          harmful or malicious use.
+        </p>
+      ),
+
       miniDescription:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
 
@@ -835,9 +928,17 @@ export const RoutingLinks = {
   about: "/personal-portfolio/about-me",
   contact: "/personal-portfolio/contact",
   resume: "resume.pdf",
-  gallery: "gallery/",
   ghub: "https://github.com/Znis",
   linkedin: "https://www.linkedin.com/in/jenish-twayana-5673981b6/",
   twitter: "https://twitter.com/zentw11",
   mail: "mailto:metwayana@gmail.com",
+};
+
+export const Gallery = {
+  path: "gallery/",
+  img: [
+    { imgSrc: "1.jpg", imgAlt: "Silu Lake", imgTitle: "Silu Lake" },
+    { imgSrc: "2.jpg", imgAlt: "Lake", imgTitle: "Lake" },
+    { imgSrc: "3.jpg", imgAlt: "Trek Route", imgTitle: "Trek Route" },
+  ],
 };

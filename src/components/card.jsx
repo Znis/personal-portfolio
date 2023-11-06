@@ -20,7 +20,7 @@ const StyledCard = styled.div`
   }
 `;
 
-function Card({ imageSrc, imageAlt }) {
+function Card({ imageSrc, imageAlt, imageTitle }) {
   const [show, setShown] = useState(false);
 
   const props3 = useSpring({
@@ -36,7 +36,7 @@ function Card({ imageSrc, imageAlt }) {
       onMouseEnter={() => setShown(true)}
       onMouseLeave={() => setShown(false)}
     >
-      <img src={imageSrc} alt={imageAlt} />
+      <img src={imageSrc} alt={imageAlt} title={imageTitle} />
     </StyledCard>
   );
 }
