@@ -235,7 +235,9 @@ function ProjectCard({
                   {" "}
                   <img
                     className=" h-[17rem]  rounded-[10px] object-contain"
-                    src={img}
+                    src={img.imgSrc}
+                    alt={img.imgTitle}
+                    title={img.imgTitle}
                   />{" "}
                 </div>
               ))}
@@ -243,10 +245,10 @@ function ProjectCard({
           </IMGFRAME>
 
           <div className="  h-1/5 flex flex-wrap justify-center items-end gap-16">
-            <A href={ghubLink}>
+            <A href={ghubLink} target="_blank">
               Code <FiGithub />
             </A>
-            <A href={demoLink}>
+            <A href={demoLink} target="_blank">
               {isLive ? "Live Demo" : "Demo"}
               {isLive ? <BiWindowOpen /> : <BiDownload />}
             </A>
@@ -306,7 +308,9 @@ function ProjectCard({
                   {" "}
                   <img
                     className=" h-[17rem] rounded-[10px] object-contain"
-                    src={img}
+                    src={img.imgSrc}
+                    alt={img.imgTitle}
+                    title={img.imgTitle}
                   />{" "}
                 </div>
               ))}
@@ -314,14 +318,15 @@ function ProjectCard({
           </IMGFRAME>
 
           <div className="h-1/5 flex flex-wrap justify-center items-end gap-16 mt-8 lg:mt-0 ">
-            <A href={ghubLink}>
+            <A href={ghubLink} target="_blank">
               Code <FiGithub />
             </A>
-
-            <A href={demoLink}>
+            
+            {demoLink !== "" ?  <A href={demoLink} target="_blank">
               {isLive ? "Live Demo" : "Demo"}
               {isLive ? <BiWindowOpen /> : <BiDownload />}
-            </A>
+            </A> : ""}
+           
           </div>
         </ProjectDemoDiv>
       </CardDiv>

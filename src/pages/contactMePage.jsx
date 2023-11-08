@@ -89,7 +89,7 @@ function ContactMePage() {
           </div>
           <div className="flex flex-col gap-4">
             <H1>Social Media Links</H1>
-            <StyledA href={RoutingLinks.ghub} target="_blank">
+            <StyledA href={RoutingLinks.linkedin} target="_blank">
               <AiOutlineLinkedin />
               Jenish Twayana
             </StyledA>

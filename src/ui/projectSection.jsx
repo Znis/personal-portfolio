@@ -47,7 +47,7 @@ function Projects() {
         projectRoute={project.projectRoute}
         techUsed={project.techUsed}
         ghubLink={project.ghubLink}
-        carouselImg={project.carouselImg}
+        carouselImg={ project.targetDevice === "phone" ? project.carouselImg.phone : project.carouselImg.web}
         demoLink={project.demoLink}
         orientation={project.orientation}
         projectCategory={project.projectCategory}

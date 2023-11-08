@@ -147,7 +147,8 @@ function Project({ projectTitle }) {
     </div>
   ));
 
-  const youtubeEmbed = (videoDemo, title) => (
+  const youtubeEmbed = (show=true, videoDemo, title) => (
+    show ? 
     <div className="overflow-hidden h-0 pb-[56.25%] relative">
       <iframe
         className="left-0 top-0 h-full w-full absolute rounded-[1.7rem]"
@@ -158,7 +159,7 @@ function Project({ projectTitle }) {
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
-    </div>
+    </div> : ""
   );
 
   return (
@@ -168,11 +169,11 @@ function Project({ projectTitle }) {
       <div className="flex py-8 flex-wrap gap-16 justify-center grow lg:gap-32 ">
         {projectData.targetDevice === "web" ||
         projectData.targetDevice === "both" ? (
-          <div className="relative min-h-[14rem] min-w-[24rem] max-h-[14rem] max-w-[24rem]">
-            <div className="flex p-1 absolute justify-center  ml-[2.75rem]  w-[18.5rem] mt-[0.5rem] h-[11.35rem] ">
+          <div className="relative min-h-[14rem] min-w-[24rem]  max-h-[14rem] max-w-[24rem]">
+            <div className="flex p-1 absolute justify-center  ml-[2.75rem] w-[18.5rem] mt-[0.5rem] h-[11.35rem] ">
               <CarouselSlider
                 isPhone={false}
-                carouselImgSrc={projectData.carouselImg}
+                carouselImg={projectData.carouselImg.web}
               />
             </div>
             <img
@@ -186,11 +187,11 @@ function Project({ projectTitle }) {
 
         {projectData.targetDevice === "phone" ||
         projectData.targetDevice === "both" ? (
-          <div className="flex relative min-h-[14rem] min-w-[7.4rem] max-h-[14rem] max-w-[7.4rem] items-center ">
-            <div className="flex p-2 absolute justify-center items-center">
+          <div className="flex relative  min-h-[14rem] min-w-[7.4rem] max-h-[14rem] max-w-[7.4rem] items-center ">
+            <div className="flex p-2 absolute justify-center items-center ">
               <CarouselSlider
                 isPhone={true}
-                carouselImgSrc={projectData.carouselImg}
+                carouselImg={projectData.carouselImg.phone}
               />
             </div>
             <img
@@ -214,36 +215,47 @@ function Project({ projectTitle }) {
       <H2>Technologies Used</H2>
 
       <CardDiv>{techStackUsedCard}</CardDiv>
+     
+      {projectData.videoDemo !== "" ?
+      <> 
       <H2>Demo</H2>
       <div className="mb-16 mt-4">
-        {youtubeEmbed(projectData.videoDemo, projectData.projectTitle)}
+        {youtubeEmbed(true,projectData.videoDemo, projectData.projectTitle)}
       </div>
+      </>
+         : youtubeEmbed(false, projectData.videoDemo, projectData.projectTitle)
+      }
+      
 
       {projectData.hasNote ? (
+        <div className="my-4">
         <P>
           <b>Note: </b> {projectData.note}
         </P>
+        </div>
       ) : (
         ""
       )}
       {projectData.isLive ? (
         <div>
           <H5>For Live demo,</H5>
-          <A href={projectData.demoLink}>
+          <A href={projectData.demoLink} target="_blank">
             <u>Click here to visit the Live Site.</u>
           </A>{" "}
         </div>
-      ) : (
+      ) : ""}
+      
+      {!projectData.isLive && projectData.demoLink !== "" ? (
         <div>
           <H5>For Demo,</H5>
-          <A href={projectData.demoLink}>
+          <A href={projectData.demoLink} target="_blank">
             <u>Click here to download the application.</u>
           </A>{" "}
         </div>
-      )}
+      ) : ""}
 
       <H5>For source code and more information,</H5>
-      <A href={projectData.ghubLink}>
+      <A href={projectData.ghubLink} target="_blank">
         <u>Click here to visit the Github repository.</u>
       </A>
     </div>
