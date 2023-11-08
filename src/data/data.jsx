@@ -269,7 +269,7 @@ export default function ProjectList() {
       ],
       ghubLink: "https://github.com/Znis/samay-baji.git",
       carouselImg:{
-        web:[{imgSrc: "samaybaji-web-application-images/phone/1.jpg", imgTitle:"Home Page"},
+        web:[{imgSrc: "samaybaji-web-application-images/web/1.jpg", imgTitle:"Home Page"},
         {imgSrc: "samaybaji-web-application-images/web/2.jpg", imgTitle:"Menu Section"},
         {imgSrc: "samaybaji-web-application-images/web/3.jpg", imgTitle:"About Us Section"},
         {imgSrc: "samaybaji-web-application-images/web/4.jpg", imgTitle:"Sign In Section"},
