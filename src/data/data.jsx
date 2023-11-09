@@ -1136,7 +1136,7 @@ export const RoutingLinks = {
   contact: "/personal-portfolio/contact",
   resume: "resume.pdf",
   ghub: "https://github.com/Znis",
-  linkedin: "https://www.linkedin.com/in/jenish-twayana-5673981b6/",
+  linkedin: "www.linkedin.com/in/jenish-twayana",
   twitter: "https://twitter.com/zentw11",
   mail: "mailto:metwayana@gmail.com",
 };
