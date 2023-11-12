@@ -31,7 +31,7 @@ function WobbleCircle() {
   return (
     <div
       className="wobble"
-      style={{ borderRadius: borderRadius, backgroundImage: `url("gojo.gif")` }}
+      style={{ borderRadius: borderRadius, backgroundImage: `url("jenish.jpg")` }}
     ></div>
   );
 }
