@@ -66,7 +66,7 @@ const VL = styled.div`
   display: none;
   height: 5rem;
   width: 0.1rem;
-  background:  var(--mild-purple);
+  background: var(--mild-purple);
   border-radius: 0.5rem;
   box-shadow: 0 0 1px rgba(85, 60, 154, 0.25);
   @media (min-width: 1024px) {
@@ -147,20 +147,22 @@ function Project({ projectTitle }) {
     </div>
   ));
 
-  const youtubeEmbed = (show=true, videoDemo, title) => (
-    show ? 
-    <div className="overflow-hidden h-0 pb-[56.25%] relative">
-      <iframe
-        className="left-0 top-0 h-full w-full absolute rounded-[1.7rem]"
-        width="800px"
-        height="500px"
-        src={videoDemo}
-        title={title}
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    </div> : ""
-  );
+  const youtubeEmbed = (show = true, videoDemo, title) =>
+    show ? (
+      <div className="overflow-hidden h-0 pb-[56.25%] relative">
+        <iframe
+          className="left-0 top-0 h-full w-full absolute rounded-[1.7rem]"
+          width="800px"
+          height="500px"
+          src={videoDemo}
+          title={title}
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
+    ) : (
+      ""
+    );
 
   return (
     <div>
@@ -205,7 +207,7 @@ function Project({ projectTitle }) {
       </div>
 
       <P>{projectData.description}</P>
-      
+
       <div className="flex flex-col gap-4 mt-8 mb-12 items-center md:flex-row">
         <H2>Targeted Platform</H2>
         <VL />
@@ -215,23 +217,27 @@ function Project({ projectTitle }) {
       <H2>Technologies Used</H2>
 
       <CardDiv>{techStackUsedCard}</CardDiv>
-     
-      {projectData.videoDemo !== "" ?
-      <> 
-      <H2>Demo</H2>
-      <div className="mb-16 mt-4">
-        {youtubeEmbed(true,projectData.videoDemo, projectData.projectTitle)}
-      </div>
-      </>
-         : youtubeEmbed(false, projectData.videoDemo, projectData.projectTitle)
-      }
-      
+
+      {projectData.videoDemo !== "" ? (
+        <>
+          <H2>Demo</H2>
+          <div className="mb-16 mt-4">
+            {youtubeEmbed(
+              true,
+              projectData.videoDemo,
+              projectData.projectTitle,
+            )}
+          </div>
+        </>
+      ) : (
+        youtubeEmbed(false, projectData.videoDemo, projectData.projectTitle)
+      )}
 
       {projectData.hasNote ? (
         <div className="my-4">
-        <P>
-          <b>Note: </b> {projectData.note}
-        </P>
+          <P>
+            <b>Note: </b> {projectData.note}
+          </P>
         </div>
       ) : (
         ""
@@ -243,8 +249,10 @@ function Project({ projectTitle }) {
             <u>Click here to visit the Live Site.</u>
           </A>{" "}
         </div>
-      ) : ""}
-      
+      ) : (
+        ""
+      )}
+
       {!projectData.isLive && projectData.demoLink !== "" ? (
         <div>
           <H5>For Demo,</H5>
@@ -252,7 +260,9 @@ function Project({ projectTitle }) {
             <u>Click here to download the application.</u>
           </A>{" "}
         </div>
-      ) : ""}
+      ) : (
+        ""
+      )}
 
       <H5>For source code and more information,</H5>
       <A href={projectData.ghubLink} target="_blank">

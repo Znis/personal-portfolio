@@ -8,23 +8,13 @@ import Project from "./pages/project";
 import { RoutingLinks } from "./data/data";
 import { AnimatePresence } from "framer-motion";
 
-
-
 function App() {
-
-
-
   const location = useLocation();
 
   return (
-  
     <AnimatePresence mode="wait">
-        
       <Routes location={location} key={location.pathname}>
-        <Route
-          path={RoutingLinks.home}
-          element={<AppLayout  />}
-        >
+        <Route path={RoutingLinks.home} element={<AppLayout />}>
           <Route
             index
             element={
@@ -93,7 +83,6 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </AnimatePresence>
-  
   );
 }
 

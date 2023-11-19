@@ -43,8 +43,8 @@ const ProjectDemoDiv = styled.div`
   height: auto;
   margin: 1rem 0rem;
   width: 100%;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   @media (min-width: 1024px) {
     width: 40%;
@@ -132,11 +132,7 @@ const IMGFRAME = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    0deg,
-    var(--light-accent),
-    var(--light-purple)
-  );
+  background: linear-gradient(0deg, var(--light-accent), var(--light-purple));
   border-radius: 16px;
   height: 80%;
   max-height: 17rem;
@@ -321,12 +317,15 @@ function ProjectCard({
             <A href={ghubLink} target="_blank">
               Code <FiGithub />
             </A>
-            
-            {demoLink !== "" ?  <A href={demoLink} target="_blank">
-              {isLive ? "Live Demo" : "Demo"}
-              {isLive ? <BiWindowOpen /> : <BiDownload />}
-            </A> : ""}
-           
+
+            {demoLink !== "" ? (
+              <A href={demoLink} target="_blank">
+                {isLive ? "Live Demo" : "Demo"}
+                {isLive ? <BiWindowOpen /> : <BiDownload />}
+              </A>
+            ) : (
+              ""
+            )}
           </div>
         </ProjectDemoDiv>
       </CardDiv>

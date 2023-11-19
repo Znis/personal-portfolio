@@ -2,6 +2,6 @@
 
 /** @type {import("prettier").Config} */
 module.export = {
-  plugins: [('prettier-plugin-tailwindcss')],
+  plugins: ["prettier-plugin-tailwindcss"],
   singleQuote: true,
 };

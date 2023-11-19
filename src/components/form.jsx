@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const CardDiv = styled.div`
-  background-color:  var(--white);
+  background-color: var(--white);
   border-radius: 1.7rem;
   box-shadow: 0 0 10px rgba(85, 60, 154, 0.28);
   display: flex;
@@ -235,7 +235,6 @@ const Form = () => {
             alertInfo.type === "success"
               ? "text-[#28a745] text-[16px] flex gap-2 items-center font-spaceGrotesk "
               : "text-[#dc3545] text-[16px] flex gap-2 items-center font-spaceGrotesk "
-              
           }
         >
           {alertInfo.message}

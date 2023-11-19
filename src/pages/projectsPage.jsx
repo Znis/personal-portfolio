@@ -4,13 +4,11 @@ import Header from "../ui/header";
 import styled from "styled-components";
 import { useEffect } from "react";
 
-
 const StyledAppLayout = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   height: 100vh;
-  
 `;
 
 const Main = styled.main`
@@ -27,9 +25,9 @@ const Container = styled.div`
 `;
 
 function ProjectsPage() {
-useEffect(() => {document.title = "Project | Portfolio";}, []);
-
-
+  useEffect(() => {
+    document.title = "Project | Portfolio";
+  }, []);
 
   return (
     <StyledAppLayout>

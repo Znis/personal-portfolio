@@ -1,4 +1,4 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 export default function CarouselSlider({ isPhone, carouselImg }) {
@@ -9,7 +9,12 @@ export default function CarouselSlider({ isPhone, carouselImg }) {
   const carouselItems = carouselImg.map((img) => (
     <div key={img}>
       {" "}
-      <img className={imgClass} src={img.imgSrc} alt={img.imgTitle} title={img.imgTitle} />{" "}
+      <img
+        className={imgClass}
+        src={img.imgSrc}
+        alt={img.imgTitle}
+        title={img.imgTitle}
+      />{" "}
     </div>
   ));
 
@@ -19,7 +24,6 @@ export default function CarouselSlider({ isPhone, carouselImg }) {
       showThumbs={false}
       showStatus={false}
       infiniteLoop={true}
-    
     >
       {carouselItems}
     </Carousel>

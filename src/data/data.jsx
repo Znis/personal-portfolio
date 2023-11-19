@@ -137,31 +137,50 @@ export default function ProjectList() {
       ],
 
       ghubLink: "https://github.com/Znis/monument-recognition.git",
-      carouselImg:{
-        web:[],
-      
+      carouselImg: {
+        web: [],
 
-      
-      phone:[
-
-        {imgSrc: "monument-recognition-application-images/phone/1.jpg", imgTitle:"Splash Screen"},
-        {imgSrc: "monument-recognition-application-images/phone/2.jpg", imgTitle:"Camera Screen"},
-        {imgSrc: "monument-recognition-application-images/phone/3.jpg", imgTitle:"Monument Recognition"},
-        {imgSrc: "monument-recognition-application-images/phone/4.jpg", imgTitle:"Monument Details"},
-        {imgSrc: "monument-recognition-application-images/phone/5.jpg", imgTitle:"App Settings"},
-        {imgSrc: "monument-recognition-application-images/phone/6.jpg", imgTitle:"Nearby Services Page"},
-        {imgSrc: "monument-recognition-application-images/phone/7.jpg", imgTitle:"Nearby Hotels Page"},
-        {imgSrc: "monument-recognition-application-images/phone/8.jpg", imgTitle:"Nearby ATMs Page"},
-        {imgSrc: "monument-recognition-application-images/phone/9.jpg", imgTitle:"Redirect to Google Map"},
-      ],
-      
-      
-      
-      
-   
-    
-    },
-      demoLink: "https://github.com/Znis/monument-recognition/releases/tag/apkfile",
+        phone: [
+          {
+            imgSrc: "monument-recognition-application-images/phone/1.jpg",
+            imgTitle: "Splash Screen",
+          },
+          {
+            imgSrc: "monument-recognition-application-images/phone/2.jpg",
+            imgTitle: "Camera Screen",
+          },
+          {
+            imgSrc: "monument-recognition-application-images/phone/3.jpg",
+            imgTitle: "Monument Recognition",
+          },
+          {
+            imgSrc: "monument-recognition-application-images/phone/4.jpg",
+            imgTitle: "Monument Details",
+          },
+          {
+            imgSrc: "monument-recognition-application-images/phone/5.jpg",
+            imgTitle: "App Settings",
+          },
+          {
+            imgSrc: "monument-recognition-application-images/phone/6.jpg",
+            imgTitle: "Nearby Services Page",
+          },
+          {
+            imgSrc: "monument-recognition-application-images/phone/7.jpg",
+            imgTitle: "Nearby Hotels Page",
+          },
+          {
+            imgSrc: "monument-recognition-application-images/phone/8.jpg",
+            imgTitle: "Nearby ATMs Page",
+          },
+          {
+            imgSrc: "monument-recognition-application-images/phone/9.jpg",
+            imgTitle: "Redirect to Google Map",
+          },
+        ],
+      },
+      demoLink:
+        "https://github.com/Znis/monument-recognition/releases/tag/apkfile",
       videoDemo: "https://www.youtube.com/embed/JQKLWwSyBII",
       projectRoute: RoutingLinks.projects + "/monument-recognition",
       hasNote: true,
@@ -268,40 +287,85 @@ export default function ProjectList() {
         { alt: "Web Platform", title: "Web Platform", src: "web-icon.png" },
       ],
       ghubLink: "https://github.com/Znis/samay-baji.git",
-      carouselImg:{
-        web:[{imgSrc: "samaybaji-web-application-images/web/1.jpg", imgTitle:"Home Page"},
-        {imgSrc: "samaybaji-web-application-images/web/2.jpg", imgTitle:"Menu Section"},
-        {imgSrc: "samaybaji-web-application-images/web/3.jpg", imgTitle:"About Us Section"},
-        {imgSrc: "samaybaji-web-application-images/web/4.jpg", imgTitle:"Sign In Section"},
-        {imgSrc: "samaybaji-web-application-images/web/5.jpg", imgTitle:"Sign Up Page"},
-        {imgSrc: "samaybaji-web-application-images/web/6.jpg", imgTitle:"Order Page"},
-        {imgSrc: "samaybaji-web-application-images/web/7.jpg", imgTitle:"Delivery Detail Page"},
-        {imgSrc: "samaybaji-web-application-images/web/8.jpg", imgTitle:"Location Maps Section"},
-        {imgSrc: "samaybaji-web-application-images/web/9.jpg", imgTitle:"Order Place Success Message"},
-        {imgSrc: "samaybaji-web-application-images/web/10.jpg", imgTitle:"Customer Orders Dashboard"},
-      ],
-      
+      carouselImg: {
+        web: [
+          {
+            imgSrc: "samaybaji-web-application-images/web/1.jpg",
+            imgTitle: "Home Page",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/web/2.jpg",
+            imgTitle: "Menu Section",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/web/3.jpg",
+            imgTitle: "About Us Section",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/web/4.jpg",
+            imgTitle: "Sign In Section",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/web/5.jpg",
+            imgTitle: "Sign Up Page",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/web/6.jpg",
+            imgTitle: "Order Page",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/web/7.jpg",
+            imgTitle: "Delivery Detail Page",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/web/8.jpg",
+            imgTitle: "Location Maps Section",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/web/9.jpg",
+            imgTitle: "Order Place Success Message",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/web/10.jpg",
+            imgTitle: "Customer Orders Dashboard",
+          },
+        ],
 
-      
-      phone:[
-
-        {imgSrc: "samaybaji-web-application-images/phone/1.jpg", imgTitle:"Home Page"},
-        {imgSrc: "samaybaji-web-application-images/phone/2.jpg", imgTitle:"Menu Section"},
-        {imgSrc: "samaybaji-web-application-images/phone/3.jpg", imgTitle:"About Us Section"},
-        {imgSrc: "samaybaji-web-application-images/phone/4.jpg", imgTitle:"Feedback Form Section"},
-        {imgSrc: "samaybaji-web-application-images/phone/5.jpg", imgTitle:"Download App Section"},
-        {imgSrc: "samaybaji-web-application-images/phone/6.jpg", imgTitle:"Footer Section"},
-        {imgSrc: "samaybaji-web-application-images/phone/7.jpg", imgTitle:"Sign Up Page"},
-        {imgSrc: "samaybaji-web-application-images/phone/8.jpg", imgTitle:"Cart"},
-       
-      ],
-      
-      
-      
-      
-   
-    
-    },
+        phone: [
+          {
+            imgSrc: "samaybaji-web-application-images/phone/1.jpg",
+            imgTitle: "Home Page",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/phone/2.jpg",
+            imgTitle: "Menu Section",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/phone/3.jpg",
+            imgTitle: "About Us Section",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/phone/4.jpg",
+            imgTitle: "Feedback Form Section",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/phone/5.jpg",
+            imgTitle: "Download App Section",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/phone/6.jpg",
+            imgTitle: "Footer Section",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/phone/7.jpg",
+            imgTitle: "Sign Up Page",
+          },
+          {
+            imgSrc: "samaybaji-web-application-images/phone/8.jpg",
+            imgTitle: "Cart",
+          },
+        ],
+      },
       demoLink: "https://samaybaji.pythonanywhere.com",
       videoDemo: "https://www.youtube.com/embed/qCfTGYsHJEc",
       projectRoute: RoutingLinks.projects + "/samay-baji",
@@ -412,37 +476,76 @@ export default function ProjectList() {
         },
       ],
       ghubLink: "https://github.com/Znis/medtest.git",
-      carouselImg:{
-        web:[],
-      
+      carouselImg: {
+        web: [],
 
-      
-      phone:[
-
-        {imgSrc: "med-test-application-images/phone/1.jpg", imgTitle:"Splash Screen"},
-        {imgSrc: "med-test-application-images/phone/2.jpg", imgTitle:"Login Screen"},
-        {imgSrc: "med-test-application-images/phone/3.jpg", imgTitle:"Home Screen"},
-        {imgSrc: "med-test-application-images/phone/4.jpg", imgTitle:"Test Detail Screen"},
-        {imgSrc: "med-test-application-images/phone/5.jpg", imgTitle:"Cart"},
-        {imgSrc: "med-test-application-images/phone/6.jpg", imgTitle:"Patient Detail Page"},
-        {imgSrc: "med-test-application-images/phone/7.jpg", imgTitle:"Location Loading Page"},
-        {imgSrc: "med-test-application-images/phone/8.jpg", imgTitle:"Location Page"},
-        {imgSrc: "med-test-application-images/phone/9.jpg", imgTitle:"Confirm Page"},
-        {imgSrc: "med-test-application-images/phone/10.jpg", imgTitle:"Booking Success Page"},
-        {imgSrc: "med-test-application-images/phone/11.jpg", imgTitle:"Active Order Page"},
-        {imgSrc: "med-test-application-images/phone/12.jpg", imgTitle:"Order Detail page"},
-        {imgSrc: "med-test-application-images/phone/13.jpg", imgTitle:"Past Orders Page"},
-        {imgSrc: "med-test-application-images/phone/14.jpg", imgTitle:"Order Detail page"},
-        {imgSrc: "med-test-application-images/phone/15.jpg", imgTitle:"Lab Reports Page"},
-        {imgSrc: "med-test-application-images/phone/16.jpg", imgTitle:"Report Detail Page"},
-      ],
-      
-      
-      
-      
-   
-    
-    },
+        phone: [
+          {
+            imgSrc: "med-test-application-images/phone/1.jpg",
+            imgTitle: "Splash Screen",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/2.jpg",
+            imgTitle: "Login Screen",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/3.jpg",
+            imgTitle: "Home Screen",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/4.jpg",
+            imgTitle: "Test Detail Screen",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/5.jpg",
+            imgTitle: "Cart",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/6.jpg",
+            imgTitle: "Patient Detail Page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/7.jpg",
+            imgTitle: "Location Loading Page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/8.jpg",
+            imgTitle: "Location Page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/9.jpg",
+            imgTitle: "Confirm Page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/10.jpg",
+            imgTitle: "Booking Success Page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/11.jpg",
+            imgTitle: "Active Order Page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/12.jpg",
+            imgTitle: "Order Detail page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/13.jpg",
+            imgTitle: "Past Orders Page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/14.jpg",
+            imgTitle: "Order Detail page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/15.jpg",
+            imgTitle: "Lab Reports Page",
+          },
+          {
+            imgSrc: "med-test-application-images/phone/16.jpg",
+            imgTitle: "Report Detail Page",
+          },
+        ],
+      },
       demoLink: "https://github.com/Znis/medtest/releases/tag/apkfile",
       videoDemo: "https://www.youtube.com/embed/tmWcNpkbHy0",
       projectRoute: RoutingLinks.projects + "/med-test",
@@ -524,27 +627,51 @@ export default function ProjectList() {
       ],
       ghubLink: "https://github.com/Znis/debris-destroyer.git",
       carouselImg: {
-        web:[{imgSrc: "debris-destroyer-game-images/web/1.jpg", imgTitle:"Game Screen"},
-        {imgSrc: "debris-destroyer-game-images/web/2.jpg", imgTitle:"Game Screen"},
-        {imgSrc: "debris-destroyer-game-images/web/3.jpg", imgTitle:"Satellite"},
-        {imgSrc: "debris-destroyer-game-images/web/4.jpg", imgTitle:"Game Screen"},
-        {imgSrc: "debris-destroyer-game-images/web/5.jpg", imgTitle:"Game over Screen"},
-        {imgSrc: "debris-destroyer-game-images/web/6.jpg", imgTitle:"Projectile Shoot"},
-        {imgSrc: "debris-destroyer-game-images/web/7.jpg", imgTitle:"Projectile Explosion"},
-        {imgSrc: "debris-destroyer-game-images/web/8.jpg", imgTitle:"Game Screen"},
-        {imgSrc: "debris-destroyer-game-images/web/9.jpg", imgTitle:"Game Screen"},
-        {imgSrc: "debris-destroyer-game-images/web/10.jpg", imgTitle:"Game Screen"},],
-      
+        web: [
+          {
+            imgSrc: "debris-destroyer-game-images/web/1.jpg",
+            imgTitle: "Game Screen",
+          },
+          {
+            imgSrc: "debris-destroyer-game-images/web/2.jpg",
+            imgTitle: "Game Screen",
+          },
+          {
+            imgSrc: "debris-destroyer-game-images/web/3.jpg",
+            imgTitle: "Satellite",
+          },
+          {
+            imgSrc: "debris-destroyer-game-images/web/4.jpg",
+            imgTitle: "Game Screen",
+          },
+          {
+            imgSrc: "debris-destroyer-game-images/web/5.jpg",
+            imgTitle: "Game over Screen",
+          },
+          {
+            imgSrc: "debris-destroyer-game-images/web/6.jpg",
+            imgTitle: "Projectile Shoot",
+          },
+          {
+            imgSrc: "debris-destroyer-game-images/web/7.jpg",
+            imgTitle: "Projectile Explosion",
+          },
+          {
+            imgSrc: "debris-destroyer-game-images/web/8.jpg",
+            imgTitle: "Game Screen",
+          },
+          {
+            imgSrc: "debris-destroyer-game-images/web/9.jpg",
+            imgTitle: "Game Screen",
+          },
+          {
+            imgSrc: "debris-destroyer-game-images/web/10.jpg",
+            imgTitle: "Game Screen",
+          },
+        ],
 
-      
-      phone:[],
-      
-      
-      
-      
-   
-    
-    },
+        phone: [],
+      },
       demoLink: "https://github.com/Znis/debris-destroyer/releases/tag/exefile",
       videoDemo: "https://www.youtube.com/embed/zEqrxhE9ag0",
       projectRoute: RoutingLinks.projects + "/debris-destroyer",
@@ -635,31 +762,52 @@ export default function ProjectList() {
         },
       ],
       ghubLink: "https://github.com/Znis/crop-wiki.git",
-      carouselImg:{
-        web:[],
-      
+      carouselImg: {
+        web: [],
 
-      
-      phone:[
-
-        {imgSrc: "crop-wiki-application-images/phone/1.jpg", imgTitle:"Splash Screen"},
-        {imgSrc: "crop-wiki-application-images/phone/2.jpg", imgTitle:"Home Screen"},
-        {imgSrc: "crop-wiki-application-images/phone/3.jpg", imgTitle:"Create New Profile Screen"},
-        {imgSrc: "crop-wiki-application-images/phone/4.jpg", imgTitle:"Profiles Screen"},
-        {imgSrc: "crop-wiki-application-images/phone/5.jpg", imgTitle:"Profile Login"},
-        {imgSrc: "crop-wiki-application-images/phone/6.jpg", imgTitle:"Suitable Crop List"},
-        {imgSrc: "crop-wiki-application-images/phone/7.jpg", imgTitle:"Query Crop List"},
-        {imgSrc: "crop-wiki-application-images/phone/8.jpg", imgTitle:"Crop List Query Result"},
-        {imgSrc: "crop-wiki-application-images/phone/9.jpg", imgTitle:"Crop Data"},
-        {imgSrc: "crop-wiki-application-images/phone/10.jpg", imgTitle:"Add New Crop Page"},
-      ],
-      
-      
-      
-      
-   
-    
-    },
+        phone: [
+          {
+            imgSrc: "crop-wiki-application-images/phone/1.jpg",
+            imgTitle: "Splash Screen",
+          },
+          {
+            imgSrc: "crop-wiki-application-images/phone/2.jpg",
+            imgTitle: "Home Screen",
+          },
+          {
+            imgSrc: "crop-wiki-application-images/phone/3.jpg",
+            imgTitle: "Create New Profile Screen",
+          },
+          {
+            imgSrc: "crop-wiki-application-images/phone/4.jpg",
+            imgTitle: "Profiles Screen",
+          },
+          {
+            imgSrc: "crop-wiki-application-images/phone/5.jpg",
+            imgTitle: "Profile Login",
+          },
+          {
+            imgSrc: "crop-wiki-application-images/phone/6.jpg",
+            imgTitle: "Suitable Crop List",
+          },
+          {
+            imgSrc: "crop-wiki-application-images/phone/7.jpg",
+            imgTitle: "Query Crop List",
+          },
+          {
+            imgSrc: "crop-wiki-application-images/phone/8.jpg",
+            imgTitle: "Crop List Query Result",
+          },
+          {
+            imgSrc: "crop-wiki-application-images/phone/9.jpg",
+            imgTitle: "Crop Data",
+          },
+          {
+            imgSrc: "crop-wiki-application-images/phone/10.jpg",
+            imgTitle: "Add New Crop Page",
+          },
+        ],
+      },
       demoLink: "https://github.com/Znis/crop-wiki/releases/tag/apkfile",
       videoDemo: "https://www.youtube.com/embed/SOb-XXryWm8",
       projectRoute: RoutingLinks.projects + "/crop-wiki",
@@ -784,34 +932,61 @@ export default function ProjectList() {
         { alt: "Web Platform", title: "Web Platform", src: "web-icon.png" },
       ],
       ghubLink: "https://github.com/Znis/gpuv.git",
-      carouselImg:{
-        web:[{imgSrc: "gpuv-web-application-images/web/1.jpg", imgTitle:"Login Page"},
-        {imgSrc: "gpuv-web-application-images/web/2.jpg", imgTitle:"Home Page"},
-        {imgSrc: "gpuv-web-application-images/web/3.jpg", imgTitle:"Notebook Login"},
-        {imgSrc: "gpuv-web-application-images/web/4.jpg", imgTitle:"Notebook Dashboard"},
-        {imgSrc: "gpuv-web-application-images/web/5.jpg", imgTitle:"Notebook Dashboard"},
-        {imgSrc: "gpuv-web-application-images/web/6.jpg", imgTitle:"Inactivity Logout Warning"},
-        {imgSrc: "gpuv-web-application-images/web/7.jpg", imgTitle:"Inactivity Logout"},
-        {imgSrc: "gpuv-web-application-images/web/8.jpg", imgTitle:"Server Terminal Logs Screen"},
-       ],
-      
+      carouselImg: {
+        web: [
+          {
+            imgSrc: "gpuv-web-application-images/web/1.jpg",
+            imgTitle: "Login Page",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/web/2.jpg",
+            imgTitle: "Home Page",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/web/3.jpg",
+            imgTitle: "Notebook Login",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/web/4.jpg",
+            imgTitle: "Notebook Dashboard",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/web/5.jpg",
+            imgTitle: "Notebook Dashboard",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/web/6.jpg",
+            imgTitle: "Inactivity Logout Warning",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/web/7.jpg",
+            imgTitle: "Inactivity Logout",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/web/8.jpg",
+            imgTitle: "Server Terminal Logs Screen",
+          },
+        ],
 
-      
-      phone:[
-
-        {imgSrc: "gpuv-web-application-images/phone/1.jpg", imgTitle:"Login Page"},
-        {imgSrc: "gpuv-web-application-images/phone/2.jpg", imgTitle:"Home Page"},
-        {imgSrc: "gpuv-web-application-images/phone/3.jpg", imgTitle:"Notebook Login"},
-        {imgSrc: "gpuv-web-application-images/phone/4.jpg", imgTitle:"Notebook Dashboard"},
-        
-      ],
-      
-      
-      
-      
-   
-    
-    },
+        phone: [
+          {
+            imgSrc: "gpuv-web-application-images/phone/1.jpg",
+            imgTitle: "Login Page",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/phone/2.jpg",
+            imgTitle: "Home Page",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/phone/3.jpg",
+            imgTitle: "Notebook Login",
+          },
+          {
+            imgSrc: "gpuv-web-application-images/phone/4.jpg",
+            imgTitle: "Notebook Dashboard",
+          },
+        ],
+      },
       demoLink: "",
       videoDemo: "https://www.youtube.com/embed/TGWBT7ZajAw",
       projectRoute: RoutingLinks.projects + "/gpuv",
@@ -894,21 +1069,13 @@ export default function ProjectList() {
       ],
       ghubLink: "https://github.com/Znis/movie-ticket-booking-bot.git",
       carouselImg: {
-        web:[
-        {imgSrc: "qfx-bot-images/web/1.jpg", imgTitle:"Script Running"},
-        {imgSrc: "qfx-bot-images/web/2.jpg", imgTitle:"Bot in Action"},
-       ],
-      
+        web: [
+          { imgSrc: "qfx-bot-images/web/1.jpg", imgTitle: "Script Running" },
+          { imgSrc: "qfx-bot-images/web/2.jpg", imgTitle: "Bot in Action" },
+        ],
 
-      
-      phone:[],
-      
-      
-      
-      
-   
-    
-    },
+        phone: [],
+      },
       demoLink: "",
       videoDemo: "",
       projectRoute: RoutingLinks.projects + "/movie-ticket-booking-bot",
