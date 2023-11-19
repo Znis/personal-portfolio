@@ -1130,10 +1130,10 @@ export function TechnologyList() {
 }
 
 export const RoutingLinks = {
-  home: "/personal-portfolio/",
-  projects: "/personal-portfolio/projects",
-  about: "/personal-portfolio/about-me",
-  contact: "/personal-portfolio/contact",
+  home: "/",
+  projects: "/projects",
+  about: "/about-me",
+  contact: "/contact",
   resume: "resume.pdf",
   ghub: "https://github.com/Znis",
   linkedin: "https://linkedin.com/in/jenish-twayana",
