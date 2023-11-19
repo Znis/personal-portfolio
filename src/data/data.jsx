@@ -440,7 +440,7 @@ export default function ProjectList() {
         },
 
         {
-          title: "Database and Backend Service",
+          title: "Database",
           technologies: [
             {
               title: "Firebase",
@@ -1226,7 +1226,6 @@ export function TechnologyList() {
           imgAlt: "PostgreSQL Database",
           imgTitle: "PostgreSQL Database",
         },
-      
       ],
     },
     {
