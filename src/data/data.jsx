@@ -440,7 +440,7 @@ export default function ProjectList() {
         },
 
         {
-          title: "Database",
+          title: "Database and Backend Service",
           technologies: [
             {
               title: "Firebase",
@@ -1226,22 +1226,23 @@ export function TechnologyList() {
           imgAlt: "PostgreSQL Database",
           imgTitle: "PostgreSQL Database",
         },
-        {
-          title: "Firebase",
-          imgSrc: "firebase-icon.png",
-          imgAlt: "Firebase Database",
-          imgTitle: "Firebase Database",
-        },
+      
       ],
     },
     {
-      title: "Cloud Infrastructure",
+      title: "Cloud Infrastructure and Service",
       technologies: [
         {
           title: "Microsoft Azure",
           imgSrc: "azure-icon.png",
           imgAlt: "Microsoft Azure",
           imgTitle: "Microsoft Azure",
+        },
+        {
+          title: "Firebase",
+          imgSrc: "firebase-icon.png",
+          imgAlt: "Firebase Database",
+          imgTitle: "Firebase Database",
         },
       ],
     },
