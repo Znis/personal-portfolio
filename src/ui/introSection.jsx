@@ -3,7 +3,7 @@ import IntroDiv from "../components/introDiv";
 function IntroSection() {
   return (
     <section
-      className="h-auto lg:h-full w-full bg-center bg-fixed bg-cover bg-no-repeat"
+      className="h-auto lg:h-screen w-full bg-center bg-fixed bg-cover bg-no-repeat"
       style={{ backgroundImage: `url("bg.jpg")` }}
     >
       <div className="flex flex-wrap py-20">
