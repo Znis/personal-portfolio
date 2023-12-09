@@ -6,7 +6,7 @@ import {
   AiOutlineGithub,
   AiOutlineLinkedin,
 } from "react-icons/ai";
-import { GrLocation } from "react-icons/gr";
+import { HiOutlineLocationMarker } from "react-icons/hi";
 import { FaXTwitter } from "react-icons/fa6";
 import Form from "../components/form";
 import { RoutingLinks } from "../data/data";
@@ -83,7 +83,7 @@ function ContactMePage() {
               +977 9841394852
             </H4>
             <H4>
-              <GrLocation />
+              <HiOutlineLocationMarker />
               Bhaktapur, Nepal
             </H4>
           </div>
