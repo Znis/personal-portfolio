@@ -5,11 +5,11 @@ import ProjectsPage from "../pages/projectsPage";
 import { RoutingLinks } from "../data/data";
 
 function AppLayout({ isProjectPage = false }) {
-  const location = useLocation().pathname;
+  const location = useLocation();
 
   return (
     <>
-      {!isProjectPage || location === RoutingLinks.projects ? (
+      {!isProjectPage || location.pathname === RoutingLinks.projects ? (
         <motion.div
           className="slide-out"
           initial={{ scaleY: 1 }}
