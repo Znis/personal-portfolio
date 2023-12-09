@@ -10,11 +10,12 @@ const P = styled.p`
 const StyledDiv = styled.div`
   margin: 0 auto;
   width: fit-content;
+  text-align: center;
 `;
 
 function FooterSection() {
   return (
-    <section className="w-full py-8 flex justify-center items-center bg-center bg-fixed bg-gradient-to-br from-[var(--background)]  to-[var(--secondary)] ">
+    <section className="w-full py-8 flex justify-center items-center bg-center bg-fixed bg-gradient-to-br from-[var(--background)]  to-[var(--secondary)]">
       <div className="w-4/5">
         <StyledDiv>
           <P>Copyright © 2023. All rights are reserved</P>

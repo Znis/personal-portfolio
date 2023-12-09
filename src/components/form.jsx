@@ -223,10 +223,11 @@ const Form = () => {
             </span>
           )}
         </div>
-
-        <Button disabled={disabled} type="submit">
-          {disabled ? "Submitting ..." : "Submit"} <AiOutlineArrowRight />
-        </Button>
+        <div className="flex justify-center lg:justify-start">
+          <Button disabled={disabled} type="submit">
+            {disabled ? "Submitting ..." : "Submit"} <AiOutlineArrowRight />
+          </Button>
+        </div>
       </form>
 
       {alertInfo.display && (

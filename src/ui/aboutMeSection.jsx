@@ -9,7 +9,10 @@ const H1 = styled.h1`
   color: var(--purple);
   font-family: "Space Grotesk", sans-serif;
   margin-bottom: 2rem;
-  text-align: end;
+  text-align: center;
+  @media (min-width: 1024px) {
+    text-align: end;
+  }
 `;
 
 const P = styled.p`
@@ -107,27 +110,31 @@ const A = styled.a`
 
 function AboutMeSection() {
   return (
-    <section className="px-8 py-16 flex justify-center items-center bg-center bg-fixed bg-[var(--background)]">
-      <div className="columns-1 w-4/5">
+    <section className="px-8 py-8 flex justify-center items-center bg-center bg-fixed bg-[var(--background)]">
+      <div className="flex flex-col w-full md:w-4/5 lg:w-4/5">
         <H1>About Me</H1>
         <div className=" flex flex-col flex-wrap lg:flex-row">
           <div className="py-8 w-full lg:w-1/2">
             <StyledImg src="portfolio-code-snippet.png" />
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full flex flex-col items-center gap-4 lg:w-1/2 lg:items-start lg:gap-0">
             <P>
-              I&apos;m a senior year computer engineering student 🎓 on a path to becoming a proficient software developer. I have hands-on experience in full-stack web development and mobile app development through self-initiated projects. 
-              I&apos;m currently delving into the fascinating field of machine learning as part of my ongoing studies.<br></br>My passion lies in solving
-              real-world problems through creative coding. I&apos;m dedicated to
-              continuous learning, teamwork, and crafting efficient,
-              user-friendly solutions. My goal is to make a positive impact in
-              the software development world by pushing boundaries and
-              delivering excellence in every project. And yeah, I love cats. 😸
+              I&apos;m a senior year computer engineering student 🎓 on a path
+              to becoming a proficient software developer. I have hands-on
+              experience in full-stack web development and mobile app
+              development through self-initiated projects. I&apos;m currently
+              delving into the fascinating field of machine learning as part of
+              my ongoing studies.<br></br>My passion lies in solving real-world
+              problems through creative coding. I&apos;m dedicated to continuous
+              learning, teamwork, and crafting efficient, user-friendly
+              solutions. My goal is to make a positive impact in the software
+              development world by pushing boundaries and delivering excellence
+              in every project. 😸
             </P>
             <A href={RoutingLinks.about}>
               Learn More <AiOutlineArrowRight />
             </A>
-            <div className=" flex flex-col mt-16 place-items-end py-6">
+            <div className="w-full flex flex-col items-center py-6 lg:mt-4 lg:items-end">
               <Button href={RoutingLinks.resume} target="_blank">
                 <BiWindowOpen /> Resume
               </Button>

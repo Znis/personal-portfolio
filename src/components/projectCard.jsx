@@ -12,6 +12,7 @@ const CardDiv = styled.div`
   border-radius: 1.7rem;
   box-shadow: 0 0 10px rgba(85, 60, 154, 0.25);
   display: flex;
+  align-items: center;
   gap: 3rem;
   height: auto;
   flex-direction: column;
@@ -21,6 +22,7 @@ const CardDiv = styled.div`
 
   @media (min-width: 1024px) {
     flex-direction: row;
+    align-items: normal;
   }
 `;
 
@@ -57,7 +59,10 @@ const H1 = styled.h1`
   font-weight: 500;
   color: var(--purple);
   font-family: "Space Grotesk", sans-serif;
-  text-align: ${(props) => (props.$orientation === 0 ? "left" : "right")};
+  text-align: center;
+  @media (min-width: 1024px) {
+    text-align: ${(props) => (props.$orientation === 0 ? "left" : "right")};
+  }
 `;
 
 const P = styled.p`
@@ -69,10 +74,13 @@ const P = styled.p`
 `;
 
 const SPAN = styled.span`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--purple);
   font-family: "Space Grotesk", sans-serif;
+  @media (min-width: 1024px) {
+    font-size: 1.1rem;
+  }
 `;
 const VL = styled.div`
   display: inline-block;
@@ -112,19 +120,23 @@ const A = styled.a`
 
 const ProjectIntroDiv = styled.div`
 
-display: column;
+display: flex;
+flex-direction: column;
 height: 100%;
 margin: 0 auto;
 width: 100%;
+align-items: center;
 
-padding-${(props) => (props.$orientation === 0 ? "right" : "left")}: 2rem;
+
 border-${(props) => (props.$orientation === 0 ? "right" : "left")}: ${(
   props,
 ) => (props.$mediaQuery ? "2px solid var(--mild-purple)" : "none")};
 
 
   @media (min-width: 1024px) {
+    align-items: ${(props) => (props.$orientation === 0 ? "start" : "end")};
     width: 60%;
+    padding-${(props) => (props.$orientation === 0 ? "right" : "left")}: 2rem;
    
   }
 `;
@@ -253,7 +265,7 @@ function ProjectCard({
         <ProjectIntroDiv $mediaQuery={mediaQuery} $orientation={orientation}>
           <H1 orientation={orientation}>{projectTitle}</H1>
 
-          <div className="flex flex-wrap gap-6 my-6 justify-end">
+          <div className="flex flex-wrap justify-center gap-4 my-8 lg:my-6 lg:justify-end lg:gap-6">
             {listProjectCategory}
           </div>
           <P $orientation={orientation}>{miniDescription}</P>
@@ -277,19 +289,38 @@ function ProjectCard({
         <ProjectIntroDiv $mediaQuery={mediaQuery} $orientation={orientation}>
           <H1 $orientation={orientation}>{projectTitle}</H1>
 
-          <div className={"flex flex-wrap gap-6 my-8 lg:my-6 "}>
+          <div
+            className={
+              "flex flex-wrap justify-center gap-4 my-8 lg:my-6 lg:justify-normal lg:gap-6"
+            }
+          >
             {listProjectCategory}
           </div>
           <P $orientation={orientation}>{miniDescription}</P>
-          <div className=" my-12 flex flex-wrap gap-6 items-center lg:my-8">
-            <SPAN>Tech Used</SPAN>
-            <VL />
+          {mediaQuery ? (
+            <div className=" my-12 flex flex-wrap gap-6 items-center lg:my-8">
+              <SPAN>Tech Used</SPAN>
+              <VL />
 
-            {listTechUsed}
-          </div>
-          <A $orientation={orientation} href={projectRoute}>
-            Learn More <AiOutlineArrowRight />
-          </A>
+              {listTechUsed}
+            </div>
+          ) : (
+            <div className=" mt-8 flex flex-col gap-4 items-center">
+              <SPAN>Tech Used</SPAN>
+
+              <div className="flex flex-wrap my-4 justify-center gap-6">
+                {" "}
+                {listTechUsed}
+              </div>
+            </div>
+          )}
+          {mediaQuery ? (
+            <A $orientation={orientation} href={projectRoute}>
+              Learn More <AiOutlineArrowRight />
+            </A>
+          ) : (
+            ""
+          )}
         </ProjectIntroDiv>
         <ProjectDemoDiv>
           <IMGFRAME>
@@ -313,14 +344,19 @@ function ProjectCard({
             </Carousel>
           </IMGFRAME>
 
-          <div className="h-1/5 flex flex-wrap justify-center items-end gap-16 mt-8 lg:mt-0 ">
-            <A href={ghubLink} target="_blank">
-              Code <FiGithub />
+          <div className="h-1/5 flex flex-wrap justify-center items-end gap-12 mt-8 lg:mt-0 lg:gap-16 ">
+            <A title="Github Repository" href={ghubLink} target="_blank">
+              {mediaQuery ? "Code" : ""} <FiGithub />
             </A>
 
             {demoLink !== "" ? (
-              <A href={demoLink} target="_blank">
-                {isLive ? "Live Demo" : "Demo"}
+              <A
+                title={isLive ? "Live Demo" : "Download App"}
+                href={demoLink}
+                target="_blank"
+              >
+                {mediaQuery ? (isLive ? "Live Demo" : "Demo") : ""}
+
                 {isLive ? <BiWindowOpen /> : <BiDownload />}
               </A>
             ) : (
@@ -328,6 +364,13 @@ function ProjectCard({
             )}
           </div>
         </ProjectDemoDiv>
+        {!mediaQuery ? (
+          <A $orientation={orientation} href={projectRoute}>
+            Learn More <AiOutlineArrowRight />
+          </A>
+        ) : (
+          ""
+        )}
       </CardDiv>
     );
   }

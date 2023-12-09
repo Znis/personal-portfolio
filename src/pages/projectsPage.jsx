@@ -2,7 +2,10 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../components/sidebar";
 import Header from "../ui/header";
 import styled from "styled-components";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { LuPanelRightClose } from "react-icons/lu";
+import ProjectList from "../data/data";
 
 const StyledAppLayout = styled.div`
   display: grid;
@@ -12,19 +15,62 @@ const StyledAppLayout = styled.div`
 `;
 
 const Main = styled.main`
-  padding: 4rem 4.8rem 6.4rem;
+  padding: 4rem 2rem 6.4rem 2rem;
   overflow: scroll;
+  @media (min-width: 1024px) {
+    padding: 4rem 4.8rem 6.4rem 4.8rem;
+  }
 `;
 
 const Container = styled.div`
   max-width: 120rem;
+  min-width: 16rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 3.2rem;
+  gap: 2rem;
 `;
 
+const H6 = styled.h6`
+  display: inline-block;
+  color: var(--purple);
+  font-size: 1rem;
+  font-family: "Space Grotesk", sans-serif;
+`;
+
+const Styledbtn = styled.button`
+  display: inline-block;
+
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: color 0.25s;
+  -webkit-transition: color 0.25s;
+  color: var(--purple);
+
+  &:hover {
+    color: var(--blue);
+  }
+`;
+
+const projectList = ProjectList();
+
 function ProjectsPage() {
+  const location = useLocation().pathname;
+  const closeSidebar = () => setShow(false);
+  const projectData =
+    projectList.filter(
+      (project) =>
+        project.navlink === location.slice(location.lastIndexOf("/") + 1),
+    )[0] === undefined
+      ? projectList.filter((project) => project.navlink === "samay-baji")[0]
+      : projectList.filter(
+          (project) =>
+            project.navlink === location.slice(location.lastIndexOf("/") + 1),
+        )[0];
+
+  const [showSidebar, setShow] = useState(false);
+  const handleShowSidebar = () => setShow(true);
   useEffect(() => {
     document.title = "Project | Portfolio";
   }, []);
@@ -32,9 +78,63 @@ function ProjectsPage() {
   return (
     <StyledAppLayout>
       <Header />
-      <Sidebar />
+
+      <Sidebar show={showSidebar} closeSidebar={closeSidebar} />
+
       <Main>
         <Container>
+          <div className="flex items-center gap-4 mt-2 lg:hidden">
+            {!showSidebar ? (
+              <Styledbtn onClick={handleShowSidebar}>
+                <LuPanelRightClose className="h-6 w-6 " />
+              </Styledbtn>
+            ) : (
+              ""
+            )}
+            <div className=" w-4/5 pb-2 border-b-[var(--purple)] border-b-2 ">
+              {(() => {
+                if (projectData.projectType === "web") {
+                  return (
+                    <H6>
+                      Project &gt; Web Application &gt;{" "}
+                      <b>{projectData.projectSmallTitle}</b>
+                    </H6>
+                  );
+                } else if (projectData.projectType === "mobile") {
+                  return (
+                    <H6>
+                      Project &gt; Mobile Application &gt;{" "}
+                      <b>{projectData.projectSmallTitle}</b>
+                    </H6>
+                  );
+                } else if (projectData.projectType === "ml") {
+                  return (
+                    <H6>
+                      Project &gt; Machine Learning &gt;{" "}
+                      <b>{projectData.projectSmallTitle}</b>
+                    </H6>
+                  );
+                } else if (projectData.projectType === "game") {
+                  return (
+                    <H6>
+                      Project &gt; Executable Game &gt;{" "}
+                      <b>{projectData.projectSmallTitle}</b>
+                    </H6>
+                  );
+                } else if (projectData.projectType === "browserAutomation") {
+                  return (
+                    <H6>
+                      Project &gt; Browser Automation &gt;{" "}
+                      <b>{projectData.projectSmallTitle}</b>
+                    </H6>
+                  );
+                } else {
+                  return <H6>Project &gt; </H6>;
+                }
+              })()}
+            </div>
+          </div>
+
           <Outlet />
         </Container>
       </Main>

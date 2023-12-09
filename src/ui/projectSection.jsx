@@ -17,7 +17,6 @@ const A = styled.a`
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
   color: var(--accent);
-  float: right;
 
   &:hover {
     color: var(--blue);
@@ -29,11 +28,6 @@ const H1 = styled.h1`
   font-weight: 600;
   color: var(--purple);
   font-family: "Space Grotesk", sans-serif;
-`;
-const StyledDiv = styled.div`
-  display: row;
-  margin-top: -2rem;
-  margin-bottom: 4rem;
 `;
 
 const projectList = ProjectList();
@@ -47,7 +41,11 @@ function Projects() {
         projectRoute={project.projectRoute}
         techUsed={project.techUsed}
         ghubLink={project.ghubLink}
-        carouselImg={ project.targetDevice === "phone" ? project.carouselImg.phone : project.carouselImg.web}
+        carouselImg={
+          project.targetDevice === "phone"
+            ? project.carouselImg.phone
+            : project.carouselImg.web
+        }
         demoLink={project.demoLink}
         orientation={project.orientation}
         projectCategory={project.projectCategory}
@@ -58,15 +56,15 @@ function Projects() {
       />
     ));
   return (
-    <section className="px-8 py-16 flex justify-center items-center content-center bg-center bg-fixed  bg-[var(--background)] ">
-      <div className="w-4/5">
+    <section className="px-8 pt-16 pb-8 flex justify-center items-center content-center bg-center bg-fixed  bg-[var(--background)]">
+      <div className="w-full flex flex-col items-center lg:items-start md:w-4/5 lg:w-4/5">
         <H1>Featured Projects</H1>
-        <StyledDiv>
+        <div className="flex flex-col mb-8 mt-[-2rem] items-center lg:items-end">
           {renderProjectList}
           <A href={RoutingLinks.projects + "/samay-baji"}>
             More Projects <AiOutlineArrowRight />
           </A>
-        </StyledDiv>
+        </div>
       </div>
     </section>
   );

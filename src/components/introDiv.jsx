@@ -2,11 +2,9 @@ import styled from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { RoutingLinks } from "../data/data";
 
-const StyledDiv = styled.div`
-  padding: 1rem;
-`;
 const H1 = styled.h1`
   font-size: 3.6rem;
+  line-height: 4.2rem;
   font-weight: 600;
   margin-bottom: -0.5rem;
   background-image: linear-gradient(45deg, var(--purple), var(--accent));
@@ -14,6 +12,9 @@ const H1 = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   font-family: "Space Grotesk", sans-serif;
+  @media (min-width: 1024px) {
+    line-height: 5.4rem;
+  }
 `;
 const H2 = styled.h2`
   font-size: 1.8rem;
@@ -22,15 +23,21 @@ const H2 = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   font-family: "Space Grotesk", sans-serif;
+  margin-top: 1rem;
+  @media (min-width: 1024px) {
+    margin-top: 0rem;
+  }
 `;
 const H3 = styled.h3`
   font-size: 1.3rem;
   font-weight: 400;
   color: var(--purple);
-  margin: 0rem 0rem -0.5rem 0.8rem;
   background-clip: text;
   -webkit-background-clip: text;
   font-family: "Space Grotesk", sans-serif;
+  @media (min-width: 1024px) {
+    margin: 0rem 0rem -0.5rem 0.8rem;
+  }
 `;
 const H4 = styled.h4`
   font-size: 1.3rem;
@@ -87,7 +94,7 @@ const Button = styled.a`
 
 function IntroDiv() {
   return (
-    <StyledDiv>
+    <div className="flex flex-col items-center p-4 text-center lg:text-left lg:items-start">
       <H3>Hi, I am</H3>
       <H1>Jenish Twayana</H1>
       <H2>A Software Developer</H2>
@@ -103,7 +110,7 @@ function IntroDiv() {
       <Button href={RoutingLinks.contact}>
         Contact <AiOutlineArrowRight />
       </Button>
-    </StyledDiv>
+    </div>
   );
 }
 

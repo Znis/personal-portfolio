@@ -17,7 +17,7 @@ const CardDiv = styled.div`
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
-  padding: 2rem 2rem 0rem 2rem;
+  padding: 2rem;
 `;
 
 const IconDiv = styled.img`
@@ -130,25 +130,29 @@ function AboutMePage() {
         <H3>{cat.title}</H3>
       </div>
       <div className="flex flex-wrap mt-8 place-content-evenly gap-8">
-        {cat.technologies.map((tech) => (
-          <div
-            key={tech.title}
-            className="flex flex-col  px-2 items-center text-center grow mb-8  md:grow-0"
-          >
-            <IconDiv
-              src={tech.imgSrc}
-              alt={tech.imgAlt}
-              title={tech.imgTitle}
-            ></IconDiv>
-            <H4>{tech.title}</H4>
-          </div>
-        ))}
+        {cat.technologies.map((tech) =>
+          tech.isTechStack ? (
+            <div
+              key={tech.title}
+              className="flex flex-col  px-2 items-center text-center grow md:grow-0"
+            >
+              <IconDiv
+                src={tech.imgSrc}
+                alt={tech.imgAlt}
+                title={tech.imgTitle}
+              ></IconDiv>
+              <H4>{tech.title}</H4>
+            </div>
+          ) : (
+            ""
+          ),
+        )}
       </div>
     </CardDiv>
   ));
 
   return (
-    <div className="w-3/5 pb-20 flex flex-col items-center justify-center ">
+    <div className="w-4/5 pb-20 flex flex-col items-center text-center justify-center lg:w-3/5 ">
       <Carousel cards={cards} offset={2} showArrows={false} />
       <H1>About Me</H1>
       <P>

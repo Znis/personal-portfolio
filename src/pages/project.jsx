@@ -19,6 +19,7 @@ const CardDiv = styled.div`
   border-radius: 1.7rem;
   box-shadow: 0 0 10px rgba(85, 60, 154, 0.4);
   display: flex;
+  justify-content: space-evenly;
   height: auto;
   gap: 2.5rem;
   flex-wrap: wrap;
@@ -78,7 +79,7 @@ const A = styled.a`
   text-align: center;
   align-items: center;
   width: fit-content;
-  margin: 1rem 0rem 0rem 0rem;
+  margin: 0.5rem 0rem 0rem 0rem;
   gap: 0.5rem;
   color: var(--purple);
   font-size: 1.2rem;
@@ -93,13 +94,14 @@ const A = styled.a`
 
 const H5 = styled.h5`
   display: inline-block;
-  margin: 1rem 0.25rem 0rem 0rem;
+  margin: 0.5rem 0.25rem 0rem 0rem;
   color: var(--purple);
   font-size: 1.2rem;
   font-family: "Space Grotesk", sans-serif;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
 `;
+
 const projectList = ProjectList();
 
 function Project({ projectTitle }) {
@@ -108,10 +110,7 @@ function Project({ projectTitle }) {
   )[0];
 
   const techStackUsedCard = projectData.techUsed.map((cat) => (
-    <div
-      key={cat.title}
-      className="flex flex-col  items-center  scale-75 md:scale-100 "
-    >
+    <div key={cat.title} className="flex flex-col  items-center ">
       <div className="border-b-2 border-[var(--purple)] w-full text-center">
         <H3>{cat.title}</H3>
       </div>
@@ -136,7 +135,7 @@ function Project({ projectTitle }) {
   const targetedPlatformIcons = projectData.targetedPlatform.map((platform) => (
     <div
       key={platform.title}
-      className="flex flex-col px-2 items-center text-center  "
+      className="flex flex-col px-2 items-center text-center"
     >
       <IconDiv
         src={platform.src}
@@ -165,10 +164,10 @@ function Project({ projectTitle }) {
     );
 
   return (
-    <div>
+    <div className="text-center  lg:text-left ">
       <H1>{projectData.projectSmallTitle}</H1>
 
-      <div className="flex py-8 flex-wrap gap-16 justify-center grow lg:gap-32 ">
+      <div className="flex w-full py-8 flex-wrap gap-16 items-center justify-center grow lg:gap-32 ">
         {projectData.targetDevice === "web" ||
         projectData.targetDevice === "both" ? (
           <div className="relative min-h-[14rem] min-w-[24rem]  max-h-[14rem] max-w-[24rem]">
@@ -208,7 +207,7 @@ function Project({ projectTitle }) {
 
       <P>{projectData.description}</P>
 
-      <div className="flex flex-col gap-4 mt-8 mb-12 items-center md:flex-row">
+      <div className="flex flex-col gap-4 mt-8 mb-16 items-center lg:flex-row">
         <H2>Targeted Platform</H2>
         <VL />
         {targetedPlatformIcons}
@@ -243,7 +242,7 @@ function Project({ projectTitle }) {
         ""
       )}
       {projectData.isLive ? (
-        <div>
+        <div className="flex flex-col items-center my-8 justify-center lg:flex-wrap lg:justify-normal lg:flex-row ">
           <H5>For Live demo,</H5>
           <A href={projectData.demoLink} target="_blank">
             <u>Click here to visit the Live Site.</u>
@@ -254,7 +253,7 @@ function Project({ projectTitle }) {
       )}
 
       {!projectData.isLive && projectData.demoLink !== "" ? (
-        <div>
+        <div className="flex flex-col items-center justify-center lg:flex-wrap lg:justify-normal my-8 lg:flex-row ">
           <H5>For Demo,</H5>
           <A href={projectData.demoLink} target="_blank">
             <u>Click here to download the application.</u>
@@ -263,11 +262,12 @@ function Project({ projectTitle }) {
       ) : (
         ""
       )}
-
-      <H5>For source code and more information,</H5>
-      <A href={projectData.ghubLink} target="_blank">
-        <u>Click here to visit the Github repository.</u>
-      </A>
+      <div className="flex flex-col items-center justify-center lg:flex-wrap lg:flex-row lg:justify-normal">
+        <H5>For source code and more information,</H5>
+        <A href={projectData.ghubLink} target="_blank">
+          <u>Click here to visit the Github repository.</u>
+        </A>
+      </div>
     </div>
   );
 }

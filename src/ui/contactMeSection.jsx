@@ -83,12 +83,13 @@ const Button = styled.a`
 function ContactMeSection() {
   return (
     <section className="px-8 py-16 flex justify-center items-center  bg-center bg-fixed bg-[var(--background)]">
-      <div className="flex flex-col items-center  lg:flex-row w-4/5">
-        <div className="w-full lg:w-3/5">
+      <div className="flex flex-col items-center lg:flex-row w-full md:w-4/5 lg:w-4/5">
+        <div className="w-full flex flex-col items-center text-center lg:w-3/5 lg:text-left lg:items-start">
           <H1>Need A Developer? Need A Friend?</H1>
           <P>
-           
-If you&apos;re interested 🤩, shoot me an email or hit me up on social media. Best case scenario, we become friends; worst case scenario, I&apos;ll bring a smile 😋 to your face and drift apart.
+            If you&apos;re interested 🤩, shoot me an email or hit me up on
+            social media. Best case scenario, we become friends; worst case
+            scenario, I&apos;ll bring a smile 😋 to your face and drift apart.
           </P>
 
           <Button href={RoutingLinks.contact}>
@@ -114,7 +115,7 @@ If you&apos;re interested 🤩, shoot me an email or hit me up on social media. 
               <A href={RoutingLinks.linkedin} target="_blank">
                 <AiFillLinkedin />
               </A>
-              <A href={RoutingLinks.mail} >
+              <A href={RoutingLinks.mail}>
                 <FiMail />
               </A>
             </div>
