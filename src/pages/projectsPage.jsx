@@ -4,7 +4,7 @@ import Header from "../ui/header";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { LuPanelRightClose } from "react-icons/lu";
+import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
 import ProjectList from "../data/data";
 
 const StyledAppLayout = styled.div`
@@ -40,10 +40,8 @@ const H6 = styled.h6`
 
 const Styledbtn = styled.button`
   display: inline-block;
-
-  margin-right: 0.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
   color: var(--purple);
@@ -83,15 +81,16 @@ function ProjectsPage() {
 
       <Main>
         <Container>
-          <div className="flex items-center gap-4 mt-2 lg:hidden">
+          <div className="flex items-center w-full pb-2 border-b-[var(--purple)] border-b-2 gap-4 mt-2 lg:hidden">
+         
             {!showSidebar ? (
               <Styledbtn onClick={handleShowSidebar}>
-                <LuPanelRightClose className="h-6 w-6 " />
+                <TbLayoutSidebarLeftExpand className="h-8 w-8 " />
               </Styledbtn>
             ) : (
               ""
             )}
-            <div className=" w-4/5 pb-2 border-b-[var(--purple)] border-b-2 ">
+           
               {(() => {
                 if (projectData.projectType === "web") {
                   return (
@@ -133,7 +132,7 @@ function ProjectsPage() {
                 }
               })()}
             </div>
-          </div>
+        
 
           <Outlet />
         </Container>

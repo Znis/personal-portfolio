@@ -85,6 +85,7 @@ const StyledImg = styled.img`
     }
   }
   @media (min-width: 1024px) {
+    max-height: 500px;
     height: auto;
     padding: 0rem 2rem;
   }
@@ -113,8 +114,8 @@ function AboutMeSection() {
     <section className="px-8 py-8 flex justify-center items-center bg-center bg-fixed bg-[var(--background)]">
       <div className="flex flex-col w-full md:w-4/5 lg:w-4/5">
         <H1>About Me</H1>
-        <div className=" flex flex-col flex-wrap lg:flex-row">
-          <div className="py-8 w-full lg:w-1/2">
+        <div className=" flex flex-col items-center flex-wrap lg:flex-row lg:items-start">
+          <div className="flex py-8 w-3/4 lg:w-1/2 ">
             <StyledImg src="portfolio-code-snippet.png" />
           </div>
           <div className="w-full flex flex-col items-center gap-4 lg:w-1/2 lg:items-start lg:gap-0">

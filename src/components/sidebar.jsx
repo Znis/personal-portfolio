@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ProjectListSidebar from "./projectListSidebar";
-import { LuPanelLeftClose } from "react-icons/lu";
+import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 
 const StyledSidebar = styled.aside`
   margin-top: 3.4rem;
@@ -65,16 +65,13 @@ const StyledDiv = styled.div`
 
 const StyledBtn = styled.button`
   display: inline-block;
-  text-align: center;
-  align-items: center;
-  width: fit-content;
-
-  font-size: 1.6rem;
-  font-family: "Space Grotesk", sans-serif;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.5rem;
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
   color: var(--purple);
-  margin-top: -3.2rem;
+ 
 
   @media (min-width: 1024px) {
     display: none;
@@ -93,7 +90,7 @@ function Sidebar({ show, closeSidebar }) {
       <StyledDiv>
         <StyledH1>Project Category</StyledH1>
         <StyledBtn onClick={handleCloseSidebar}>
-          <LuPanelLeftClose className="h-6 w-6" />
+          <TbLayoutSidebarLeftCollapse className="h-8 w-8" />
         </StyledBtn>
       </StyledDiv>
       <ProjectListSidebar />

@@ -220,13 +220,16 @@ function Project({ projectTitle }) {
       {projectData.videoDemo !== "" ? (
         <>
           <H2>Demo</H2>
-          <div className="mb-16 mt-4">
+          
+          <div className="max-w-[800px] m-auto mb-16 mt-4 lg:m-0 lg:mb-16 lg:mt-4">
             {youtubeEmbed(
               true,
               projectData.videoDemo,
               projectData.projectTitle,
             )}
+          
           </div>
+         
         </>
       ) : (
         youtubeEmbed(false, projectData.videoDemo, projectData.projectTitle)
