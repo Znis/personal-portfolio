@@ -82,7 +82,6 @@ function ProjectsPage() {
       <Main>
         <Container>
           <div className="flex items-center w-full pb-2 border-b-[var(--purple)] border-b-2 gap-4 mt-2 lg:hidden">
-         
             {!showSidebar ? (
               <Styledbtn onClick={handleShowSidebar}>
                 <TbLayoutSidebarLeftExpand className="h-8 w-8 " />
@@ -90,49 +89,48 @@ function ProjectsPage() {
             ) : (
               ""
             )}
-           
-              {(() => {
-                if (projectData.projectType === "web") {
-                  return (
-                    <H6>
-                      Project &gt; Web Application &gt;{" "}
-                      <b>{projectData.projectSmallTitle}</b>
-                    </H6>
-                  );
-                } else if (projectData.projectType === "mobile") {
-                  return (
-                    <H6>
-                      Project &gt; Mobile Application &gt;{" "}
-                      <b>{projectData.projectSmallTitle}</b>
-                    </H6>
-                  );
-                } else if (projectData.projectType === "ml") {
-                  return (
-                    <H6>
-                      Project &gt; Machine Learning &gt;{" "}
-                      <b>{projectData.projectSmallTitle}</b>
-                    </H6>
-                  );
-                } else if (projectData.projectType === "game") {
-                  return (
-                    <H6>
-                      Project &gt; Executable Game &gt;{" "}
-                      <b>{projectData.projectSmallTitle}</b>
-                    </H6>
-                  );
-                } else if (projectData.projectType === "browserAutomation") {
-                  return (
-                    <H6>
-                      Project &gt; Browser Automation &gt;{" "}
-                      <b>{projectData.projectSmallTitle}</b>
-                    </H6>
-                  );
-                } else {
-                  return <H6>Project &gt; </H6>;
-                }
-              })()}
-            </div>
-        
+
+            {(() => {
+              if (projectData.projectType === "web") {
+                return (
+                  <H6>
+                    Project &gt; Web Application &gt;{" "}
+                    <b>{projectData.projectSmallTitle}</b>
+                  </H6>
+                );
+              } else if (projectData.projectType === "mobile") {
+                return (
+                  <H6>
+                    Project &gt; Mobile Application &gt;{" "}
+                    <b>{projectData.projectSmallTitle}</b>
+                  </H6>
+                );
+              } else if (projectData.projectType === "ml") {
+                return (
+                  <H6>
+                    Project &gt; Machine Learning &gt;{" "}
+                    <b>{projectData.projectSmallTitle}</b>
+                  </H6>
+                );
+              } else if (projectData.projectType === "game") {
+                return (
+                  <H6>
+                    Project &gt; Executable Game &gt;{" "}
+                    <b>{projectData.projectSmallTitle}</b>
+                  </H6>
+                );
+              } else if (projectData.projectType === "browserAutomation") {
+                return (
+                  <H6>
+                    Project &gt; Browser Automation &gt;{" "}
+                    <b>{projectData.projectSmallTitle}</b>
+                  </H6>
+                );
+              } else {
+                return <H6>Project &gt; </H6>;
+              }
+            })()}
+          </div>
 
           <Outlet />
         </Container>

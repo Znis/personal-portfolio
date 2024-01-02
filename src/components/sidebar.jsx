@@ -71,7 +71,6 @@ const StyledBtn = styled.button`
   transition: color 0.25s;
   -webkit-transition: color 0.25s;
   color: var(--purple);
- 
 
   @media (min-width: 1024px) {
     display: none;

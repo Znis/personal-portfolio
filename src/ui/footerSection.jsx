@@ -18,7 +18,7 @@ function FooterSection() {
     <section className="w-full py-8 flex justify-center items-center bg-center bg-fixed bg-gradient-to-br from-[var(--background)]  to-[var(--secondary)]">
       <div className="w-4/5">
         <StyledDiv>
-          <P>Copyright © 2023. All rights are reserved</P>
+          <P>Copyright © 2024. All rights are reserved</P>
         </StyledDiv>
       </div>
     </section>
