@@ -1227,7 +1227,7 @@ export default function ProjectList() {
       projectRoute: RoutingLinks.projects + "/deepfake-detection",
       isFeatured: false,
       hasNote: true,
-      isLive: false,
+      isLive: true,
       note: "Currently, the detection model deployed on remote server is offline so, the app cannot perform the DeepFake detection.",
       targetDevice: "web",
       navlink: "deepfake-detection",
