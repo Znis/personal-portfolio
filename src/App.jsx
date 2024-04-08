@@ -54,6 +54,10 @@ function App() {
             element={<Project projectTitle={"monument-recognition"} />}
           />
           <Route
+            path="deepfake-detection"
+            element={<Project projectTitle={"deepfake-detection"} />}
+          />
+          <Route
             path="movie-ticket-booking-bot"
             element={<Project projectTitle={"movie-ticket-booking-bot"} />}
           />
