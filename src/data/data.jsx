@@ -1474,7 +1474,7 @@ export function TechnologyList() {
           imgSrc: "bucket-icon.png",
           imgAlt: "Bucket Storage",
           imgTitle: "Bucket Storage",
-          isTechStack: true,
+          isTechStack: false,
         },
        
         
