@@ -1466,20 +1466,6 @@ export function TechnologyList() {
         
       ],
     },
-    {
-      title: "Storage",
-      technologies: [
-        {
-          title: "Bucket Storage",
-          imgSrc: "bucket-icon.png",
-          imgAlt: "Bucket Storage",
-          imgTitle: "Bucket Storage",
-          isTechStack: false,
-        },
-       
-        
-      ],
-    },
   ];
 }
 
