@@ -1086,6 +1086,152 @@ export default function ProjectList() {
       targetDevice: "web",
       navlink: "movie-ticket-booking-bot",
     },
+    {
+      id: 7,
+      orientation: 1,
+      projectTitle: "DeepFake Detection Web Application",
+      projectSmallTitle: "DeepFake Detection",
+      projectType: "ml",
+      projectCategory: ["Machine Learning", "Web Application"],
+      description: (
+        <p>
+          The Deepfake Detection Web Application was a collaborative effort
+          developed as part of our fourth-year computer engineering program. Our
+          aim was to create a platform that detects whether uploaded videos are
+          authentic or deepfake.
+          <br></br>
+          <br></br>
+          To achieve this, we employed a detection model based on CNN with LSTM
+          architecture. This model analyzes the temporal characteristics of
+          facial movement within videos to determine their authenticity. We
+          meticulously trained and tested the model using a dataset containing
+          both real and deepfake videos.
+          <br></br>
+          <br></br>
+          In terms of the application itself, we utilized ReactJS for the
+          frontend development, ensuring an interactive and user-friendly
+          experience. FastAPI, a Python-based web framework, served as the
+          backbone for our backend inferencing server. This allowed seamless
+          communication between the frontend and backend, enabling real-time
+          analysis of uploaded videos.
+          <br></br>
+          <br></br>
+          Moreover, our web application offers convenient account sign-in and
+          sign-up features, enhancing user accessibility and personalization.
+          With these features in place, users can easily access and manage their
+          uploaded videos, contributing to a streamlined experience overall. For
+          further project details, including the proposal and report, please
+          visit the project&apos;s GitHub link.
+        </p>
+      ),
+
+      miniDescription:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita accusamus at magni tenetur nulla necessitatibus quas omnis eaque, exercitationem perferendis neque optio ullam excepturi aut earum natus veritatis obcaecati quibusdam!",
+
+      techUsed: [
+        {
+          title: "Programming Language",
+          technologies: [
+            {
+              title: "Python",
+              imgSrc: "python-icon.png",
+              imgAlt: "Python Programming Language",
+              imgTitle: "Python Programming Language",
+            },
+            {
+              title: "Javascript",
+              imgSrc: "js-icon.png",
+              imgAlt: "Javascript Programming Language",
+              imgTitle: "Javascript Programming Language",
+            },
+          ],
+        },
+        {
+          title: "Library",
+          technologies: [
+            {
+              title: "React",
+              imgSrc: "react-icon.png",
+              imgAlt: "React",
+              imgTitle: "React",
+            },
+          ],
+        },
+        {
+          title: "Framework",
+          technologies: [
+            {
+              title: "Pytorch",
+              imgSrc: "pytorch-icon.png",
+              imgAlt: "Pytorch Framework",
+              imgTitle: "Pytorch Framework",
+            },
+          ],
+        },
+
+        {
+          title: "Database",
+          technologies: [
+            {
+              title: "PostgreSQL",
+              imgSrc: "postgres-icon.png",
+              imgAlt: "PostgreSQL Database",
+              imgTitle: "PostgreSQL Database",
+            },
+          ],
+        },
+        {
+          title: "Storage",
+          technologies: [
+            {
+              title: "Bucket Storage",
+              imgSrc: "bucket-icon.png",
+              imgAlt: "Bucket Storage",
+              imgTitle: "Bucket Storage",
+            },
+          ],
+        },
+
+        {
+          title: "IDE Softwares",
+          technologies: [
+            {
+              title: "Visual Studio Code",
+              imgSrc: "vscode-icon.png",
+              imgAlt: "Visual Studio Code IDE",
+              imgTitle: "Visual Studio Code IDE",
+            },
+          ],
+        },
+      ],
+      targetedPlatform: [
+        { alt: "Web Platform", title: "Web Platform", src: "web-icon.png" },
+      ],
+      ghubLink: "https://github.com/Znis/deepfake-video-detection-project",
+      carouselImg: {
+        web: [
+          { imgSrc: "deepfake-detection-web-application-images/web/1.jpg", imgTitle: "Homepage" },
+          { imgSrc: "deepfake-detection-web-application-images/web/2.jpg", imgTitle: "Google Sign In" },
+          { imgSrc: "deepfake-detection-web-application-images/web/3.jpg", imgTitle: "Homepage After Signing In" },
+          { imgSrc: "deepfake-detection-web-application-images/web/4.jpg", imgTitle: "Upload Video" },
+          { imgSrc: "deepfake-detection-web-application-images/web/5.jpg", imgTitle: "Inferencing Video" },
+          { imgSrc: "deepfake-detection-web-application-images/web/6.jpg", imgTitle: "Predicted Result" },
+          { imgSrc: "deepfake-detection-web-application-images/web/7.jpg", imgTitle: "More Info on Prediction Result" },
+          { imgSrc: "deepfake-detection-web-application-images/web/8.jpg", imgTitle: "Upload Video History" },
+        ],
+
+        phone: [],
+      },
+      demoLink: "https://deepfakedetection.me/",
+      videoDemo: "https://www.youtube.com/embed/Tgo_5fGszJQ",
+      projectRoute: RoutingLinks.projects + "/deepfake-detection",
+      isFeatured: false,
+      hasNote: true,
+      isLive: false,
+      note: "Currently, the detection model deployed on remote server is offline so, the app cannot perform the DeepFake detection.",
+      targetDevice: "web",
+      navlink: "deepfake-detection",
+    },
   ];
 }
 
@@ -1317,6 +1463,21 @@ export function TechnologyList() {
           imgTitle: "Android OS",
           isTechStack: true,
         },
+        
+      ],
+    },
+    {
+      title: "Storage",
+      technologies: [
+        {
+          title: "Bucket Storage",
+          imgSrc: "bucket-icon.png",
+          imgAlt: "Bucket Storage",
+          imgTitle: "Bucket Storage",
+          isTechStack: true,
+        },
+       
+        
       ],
     },
   ];
