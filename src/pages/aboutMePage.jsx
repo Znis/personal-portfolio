@@ -156,18 +156,19 @@ function AboutMePage() {
       <Carousel cards={cards} offset={2} showArrows={false} />
       <H1>About Me</H1>
       <P>
-        I&apos;m a senior year computer engineering student with a passion for
-        software development, currently residing in Bhaktapur, Nepal. At 22
-        years old, I&apos;ve embarked on an exciting journey in the tech world.
-        I&apos;ve honed my skills on software development through personal
-        projects and academic coursework. In addition to my software endeavors,
-        I have a keen interest in hardware technologies. Staying updated with
-        the latest trends in the tech industry is a true passion of mine.
-        Whether it&apos;s software or hardware, I find the ever-evolving world
-        of technology endlessly fascinating and enjoy exploring both sides of
-        this dynamic field. I&apos;m eagerly looking forward to applying my
-        knowledge and creativity as I take the next step in my software
-        development career.
+        I&apos;m a recent graduate who have completed the Bachelor&apos;s degree
+        in Computer Engineering, with a passion for software development and
+        machine learning, currently residing in Bhaktapur, Nepal. At 22 years
+        old, I&apos;ve embarked on an exciting journey in the tech world.
+        I&apos;ve honed my skills on software development and machine learning
+        through personal projects and academic coursework. In addition to my
+        software endeavors, I have a keen interest in hardware technologies too.
+        Staying updated with the latest trends in the tech industry is a true
+        passion of mine. Whether it&apos;s software or hardware, I find the
+        ever-evolving world of technology endlessly fascinating and enjoy
+        exploring both sides of this dynamic field. I&apos;m eagerly looking
+        forward to applying my knowledge and creativity as I take the next step
+        in my engineering career.
       </P>
       <br />
       <P>

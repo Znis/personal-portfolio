@@ -120,16 +120,17 @@ function AboutMeSection() {
           </div>
           <div className="w-full flex flex-col items-center gap-4 lg:w-1/2 lg:items-start lg:gap-0">
             <P>
-              I&apos;m a senior year computer engineering student 🎓 on a path
-              to becoming a proficient software developer. I have hands-on
-              experience in full-stack web development and mobile app
-              development through self-initiated projects. I&apos;m currently
-              delving into the fascinating field of machine learning as part of
-              my ongoing studies.<br></br>My passion lies in solving real-world
-              problems through creative coding. I&apos;m dedicated to continuous
-              learning, teamwork, and crafting efficient, user-friendly
-              solutions. My goal is to make a positive impact in the software
-              development world by pushing boundaries and delivering excellence
+              I&apos;m a recent graduate who have completed the Bachelor&apos;s
+              degree in Computer Engineering, 🎓 on a path to becoming a
+              proficient software developer and machine learning engineer. I
+              have hands-on experience in full-stack web development and mobile
+              app development through self-initiated projects. I&apos;m
+              currently delving into the fascinating field of machine learning.
+              <br></br>My passion lies in solving real-world problems through
+              creative coding. I&apos;m dedicated to continuous learning,
+              teamwork, and crafting efficient, user-friendly solutions. My goal
+              is to make a positive impact in the software development and
+              engineering world by pushing boundaries and delivering excellence
               in every project. 😸
             </P>
             <A href={RoutingLinks.about}>
