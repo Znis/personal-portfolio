@@ -50,6 +50,10 @@ function App() {
             element={<Project projectTitle={"debris-destroyer"} />}
           />
           <Route
+            path="eclipse-of-the-lantern"
+            element={<Project projectTitle={"eclipse-of-the-lantern"} />}
+          />
+          <Route
             path="monument-recognition"
             element={<Project projectTitle={"monument-recognition"} />}
           />

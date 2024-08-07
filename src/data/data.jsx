@@ -200,23 +200,19 @@ export default function ProjectList() {
       projectCategory: ["Full Stack", "Web Application"],
       description: (
         <p>
-          Samay Baji&apos;s web app is your virtual gateway to a Newari feast!
-          This online platform lets you order mouthwatering Newari delicacies
-          and ensures the restaurant receives your choices. It&apos;s not just
-          about the food; the app comes with account sign-in and sign-up
-          features for a convenient experience and order tracking feature.
-          What&apos;s more, the restaurant can effortlessly update its menu and
-          manage users as needed, making the entire process seamless. So,
-          whether you&apos;re craving traditional Newari dishes or just
-          exploring the options, Samay Baji has you covered, all at your
-          fingertips.
+          Samay Baji&apos;s web app is a full-stack web platform designed for
+          ordering authentic Newari cuisines. The platform allows restaurants
+          specializing in Newari cuisine to register and sell their menus. Users
+          can browse through a variety of dishes, place orders, and track their
+          order status in real-time. Samaybaji aims to bring the rich flavors of
+          Newari cuisine to a wider audience while providing a seamless and
+          efficient user experience for both customers and restaurant partners.
           <br></br>
           <br></br>
-          This application is crafted using a mix of HTML, CSS, and JavaScript
-          for the user interface, with Python Django powering the backend. It
-          features an integrated database and admin control panel, both running
-          within the Django framework. In its initial phase, the application was
-          hosted on the Microsoft Azure platform.
+          This application is crafted using a mix of HTML, CSS, and TypeScript
+          for the user interface, with Node JS and Express JS powering the
+          backend and MinIO S3 Bucket for storing and retrieving media files. It
+          features a PostgreSQL database.
         </p>
       ),
       miniDescription: (
@@ -224,7 +220,8 @@ export default function ProjectList() {
           The Samay Baji Web App is like an online food ordering website for a
           Newari restaurant. It allows you to pick your favorite Newari dishes
           from the menu and sends your order to the restaurant so they can
-          prepare and deliver it to you.
+          prepare and deliver it to you. You can register as seller too and
+          create you own menu.
         </p>
       ),
       techUsed: [
@@ -232,41 +229,62 @@ export default function ProjectList() {
           title: "Programming Language",
           technologies: [
             {
-              title: "Python",
-              imgSrc: "python-icon.png",
-              imgAlt: "Python Programming Language",
-              imgTitle: "Python Programming Language",
+              title: "TypeScript",
+              imgSrc: "ts-icon.png",
+              imgAlt: "TypeScript Programming Language",
+              imgTitle: "TypeScript Programming Language",
             },
-
+          ],
+        },
+        {
+          title: "Library",
+          technologies: [
             {
-              title: "Javascript",
-              imgSrc: "js-icon.png",
-              imgAlt: "Javascript Programming Language",
-              imgTitle: "Javascript Programming Language",
+              title: "Node JS",
+              imgSrc: "node-icon.png",
+              imgAlt: "Node JS Backend Library",
+              imgTitle: "Node JS Backend Library",
+            },
+            {
+              title: "Express JS",
+              imgSrc: "express-icon.png",
+              imgAlt: "Express JS Backend Library",
+              imgTitle: "Express JS Backend Library",
             },
           ],
         },
 
         {
-          title: "Framework",
+          title: "Database",
           technologies: [
             {
-              title: "Django",
-              imgSrc: "django-icon.png",
-              imgAlt: "Django Framework",
-              imgTitle: "Django Framework",
+              title: "PostgreSQL",
+              imgSrc: "postgres-icon.png",
+              imgAlt: "PostgreSQL Database",
+              imgTitle: "PostgreSQL Database",
             },
           ],
         },
-
         {
-          title: "Cloud Infrastructure",
+          title: "Storage",
           technologies: [
             {
-              title: "Microsoft Azure",
-              imgSrc: "azure-icon.png",
-              imgAlt: "Microsoft Azure",
-              imgTitle: "Microsoft Azure",
+              title: "MinIO S3",
+              imgSrc: "minio-icon.png",
+              imgAlt: "MinIO S3 Bucket",
+              imgTitle: "MinIO S3 Bucket",
+            },
+          ],
+        },
+        {
+          title: "Containerization",
+          technologies: [
+            {
+              title: "Docker",
+              imgSrc: "docker-icon.png",
+              imgAlt: "Docker",
+              imgTitle: "Docker",
+              isTechStack: true,
             },
           ],
         },
@@ -286,7 +304,7 @@ export default function ProjectList() {
       targetedPlatform: [
         { alt: "Web Platform", title: "Web Platform", src: "web-icon.png" },
       ],
-      ghubLink: "https://github.com/Znis/samay-baji.git",
+      ghubLink: "https://github.com/Znis/samaybaji-web-app.git",
       carouselImg: {
         web: [
           {
@@ -295,39 +313,39 @@ export default function ProjectList() {
           },
           {
             imgSrc: "samaybaji-web-application-images/web/2.jpg",
-            imgTitle: "Menu Section",
+            imgTitle: "Popular Menu Section",
           },
           {
             imgSrc: "samaybaji-web-application-images/web/3.jpg",
-            imgTitle: "About Us Section",
+            imgTitle: "Menu Page",
           },
           {
             imgSrc: "samaybaji-web-application-images/web/4.jpg",
-            imgTitle: "Sign In Section",
+            imgTitle: "Cart Page",
           },
           {
             imgSrc: "samaybaji-web-application-images/web/5.jpg",
-            imgTitle: "Sign Up Page",
+            imgTitle: "Authentication Modal",
           },
           {
             imgSrc: "samaybaji-web-application-images/web/6.jpg",
-            imgTitle: "Order Page",
+            imgTitle: "Checkout Page",
           },
           {
             imgSrc: "samaybaji-web-application-images/web/7.jpg",
-            imgTitle: "Delivery Detail Page",
+            imgTitle: "Customer Dashboard Page",
           },
           {
             imgSrc: "samaybaji-web-application-images/web/8.jpg",
-            imgTitle: "Location Maps Section",
+            imgTitle: "Restaurant Dashboard Page",
           },
           {
             imgSrc: "samaybaji-web-application-images/web/9.jpg",
-            imgTitle: "Order Place Success Message",
+            imgTitle: "Dish Detail Page",
           },
           {
             imgSrc: "samaybaji-web-application-images/web/10.jpg",
-            imgTitle: "Customer Orders Dashboard",
+            imgTitle: "Dish Review Section",
           },
         ],
 
@@ -366,13 +384,14 @@ export default function ProjectList() {
           },
         ],
       },
-      demoLink: "https://samaybaji.pythonanywhere.com",
-      videoDemo: "https://www.youtube.com/embed/qCfTGYsHJEc",
+      demoLink:
+        "https://66ae711495b597b867e46bde--spontaneous-pegasus-f8422c.netlify.app/",
+      videoDemo: "https://www.youtube.com/embed/boM0QXe7jR4",
       projectRoute: RoutingLinks.projects + "/samay-baji",
-      hasNote: false,
+      hasNote: true,
       isFeatured: true,
       isLive: true,
-      note: "hehe",
+      note: "The Live Demo features frontend only and may not be fully functional as it requires backend services.",
       targetDevice: "both",
       navlink: "samay-baji",
     },
@@ -685,6 +704,135 @@ export default function ProjectList() {
     {
       id: 4,
       orientation: 1,
+      projectTitle: "Eclipse of the Lantern Game",
+      projectSmallTitle: "Eclipse of the Lantern",
+      projectType: "game",
+      projectCategory: ["Game Development", "Web Browser Game"],
+      description: (
+        <p>
+          The Eclipse of the Lantern is an exciting action-adventure pixels game
+          set in a world much like our own, plunged into darkness. You play as a
+          lone wanderer trying to survive and eliminate the enemies. Your only
+          defense against the dangers of the dark is a lantern that makes
+          enemies weaker and lights your way. However, the lantern&apos;s light
+          fades over time, and you must keep it glowing by refueling it. Along
+          the journey, you can also find weapons and learn new abilities to help
+          you survive.
+          <br></br>
+          <br></br>
+          The game was crafted using only HTML, TypeScript and Canvas API. It
+          features no any backend and database services. You can play it on your
+          web browser.
+        </p>
+      ),
+
+      miniDescription: (
+        <p>
+          Eclipse of the Lantern is an action-adventure pixel game where you, a
+          lone wanderer, must survive in a darkened world. Use a fading lantern
+          to weaken enemies and light your way, refueling it to stay alive while
+          discovering weapons and abilities.
+        </p>
+      ),
+      techUsed: [
+        {
+          title: "Programming Language",
+          technologies: [
+            {
+              title: "TypeScript",
+              imgSrc: "ts-icon.png",
+              imgAlt: "TypeScript Programming Language",
+              imgTitle: "TypeScript Programming Language",
+            },
+          ],
+        },
+        {
+          title: "Web Technologies",
+          technologies: [
+            {
+              title: "HTML",
+              imgSrc: "html-icon.png",
+              imgAlt: "HTML",
+              imgTitle: "HTML",
+              isTechStack: true,
+            },
+          ],
+        },
+        {
+          title: "IDE Softwares",
+          technologies: [
+            {
+              title: "Visual Studio Code",
+              imgSrc: "vscode-icon.png",
+              imgAlt: "Visual Studio Code IDE",
+              imgTitle: "Visual Studio Code IDE",
+            },
+          ],
+        },
+      ],
+      targetedPlatform: [
+        { alt: "Web Platform", title: "Web Platform", src: "web-icon.png" },
+      ],
+      ghubLink: "https://github.com/Znis/Eclipse-of-the-Lantern.git",
+      carouselImg: {
+        web: [
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/1.jpg",
+            imgTitle: "Menu Screen",
+          },
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/2.jpg",
+            imgTitle: "Game Screen",
+          },
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/3.jpg",
+            imgTitle: "EnemyAttack Frame",
+          },
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/4.jpg",
+            imgTitle: "Axe Weapon Attack Screen",
+          },
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/5.jpg",
+            imgTitle: "Gun Attack Screen",
+          },
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/6.jpg",
+            imgTitle: "Lantern Refuel Screen",
+          },
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/7.jpg",
+            imgTitle: "Inside the House Screen",
+          },
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/8.jpg",
+            imgTitle: "Light of Blessings Skill Screen",
+          },
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/9.jpg",
+            imgTitle: "Breath of Dragon Skill Screen",
+          },
+          {
+            imgSrc: "eclipse-of-the-lantern-game-images/web/10.jpg",
+            imgTitle: "Boss Attack Screen",
+          },
+        ],
+
+        phone: [],
+      },
+      demoLink: "https://thriving-souffle-4fbf68.netlify.app/",
+      videoDemo: "https://www.youtube.com/embed/CZ-iM8cFd9A",
+      projectRoute: RoutingLinks.projects + "/eclipse-of-the-lantern",
+      hasNote: false,
+      isFeatured: true,
+      isLive: true,
+      note: "hehe",
+      targetDevice: "web",
+      navlink: "eclipse-of-the-lantern",
+    },
+    {
+      id: 5,
+      orientation: 1,
       projectTitle: "Crop Wiki Mobile Applciation",
       projectSmallTitle: "Crop Wiki",
       projectType: "mobile",
@@ -819,7 +967,7 @@ export default function ProjectList() {
       navlink: "crop-wiki",
     },
     {
-      id: 5,
+      id: 6,
       orientation: 1,
       projectTitle: "GpuV Web Application",
       projectSmallTitle: "GpuV",
@@ -998,7 +1146,7 @@ export default function ProjectList() {
       navlink: "gpuv",
     },
     {
-      id: 6,
+      id: 7,
       orientation: 1,
       projectTitle: "Movie Ticket Booking Bot",
       projectSmallTitle: "Movie Ticket Booking Bot",
@@ -1087,7 +1235,7 @@ export default function ProjectList() {
       navlink: "movie-ticket-booking-bot",
     },
     {
-      id: 7,
+      id: 8,
       orientation: 1,
       projectTitle: "DeepFake Detection Web Application",
       projectSmallTitle: "DeepFake Detection",
@@ -1210,14 +1358,38 @@ export default function ProjectList() {
       ghubLink: "https://github.com/Znis/deepfake-video-detection-project",
       carouselImg: {
         web: [
-          { imgSrc: "deepfake-detection-web-application-images/web/1.jpg", imgTitle: "Homepage" },
-          { imgSrc: "deepfake-detection-web-application-images/web/2.jpg", imgTitle: "Google Sign In" },
-          { imgSrc: "deepfake-detection-web-application-images/web/3.jpg", imgTitle: "Homepage After Signing In" },
-          { imgSrc: "deepfake-detection-web-application-images/web/4.jpg", imgTitle: "Upload Video" },
-          { imgSrc: "deepfake-detection-web-application-images/web/5.jpg", imgTitle: "Inferencing Video" },
-          { imgSrc: "deepfake-detection-web-application-images/web/6.jpg", imgTitle: "Predicted Result" },
-          { imgSrc: "deepfake-detection-web-application-images/web/7.jpg", imgTitle: "More Info on Prediction Result" },
-          { imgSrc: "deepfake-detection-web-application-images/web/8.jpg", imgTitle: "Upload Video History" },
+          {
+            imgSrc: "deepfake-detection-web-application-images/web/1.jpg",
+            imgTitle: "Homepage",
+          },
+          {
+            imgSrc: "deepfake-detection-web-application-images/web/2.jpg",
+            imgTitle: "Google Sign In",
+          },
+          {
+            imgSrc: "deepfake-detection-web-application-images/web/3.jpg",
+            imgTitle: "Homepage After Signing In",
+          },
+          {
+            imgSrc: "deepfake-detection-web-application-images/web/4.jpg",
+            imgTitle: "Upload Video",
+          },
+          {
+            imgSrc: "deepfake-detection-web-application-images/web/5.jpg",
+            imgTitle: "Inferencing Video",
+          },
+          {
+            imgSrc: "deepfake-detection-web-application-images/web/6.jpg",
+            imgTitle: "Predicted Result",
+          },
+          {
+            imgSrc: "deepfake-detection-web-application-images/web/7.jpg",
+            imgTitle: "More Info on Prediction Result",
+          },
+          {
+            imgSrc: "deepfake-detection-web-application-images/web/8.jpg",
+            imgTitle: "Upload Video History",
+          },
         ],
 
         phone: [],
@@ -1266,13 +1438,20 @@ export function TechnologyList() {
           imgSrc: "dart-icon.png",
           imgAlt: "Dart Programming Language",
           imgTitle: "Dart Programming Language",
-          isTechStack: true,
+          isTechStack: false,
         },
         {
           title: "Java",
           imgSrc: "java-icon.png",
           imgAlt: "Java Programming Language",
           imgTitle: "Java Programming Language",
+          isTechStack: false,
+        },
+        {
+          title: "TypeScript",
+          imgSrc: "ts-icon.png",
+          imgAlt: "TypeScript Programming Language",
+          imgTitle: "TypeScript Programming Language",
           isTechStack: true,
         },
         {
@@ -1329,6 +1508,20 @@ export function TechnologyList() {
           isTechStack: true,
         },
         {
+          title: "Node JS",
+          imgSrc: "node-icon.png",
+          imgAlt: "Node JS",
+          imgTitle: "Node JS",
+          isTechStack: true,
+        },
+        {
+          title: "Express JS",
+          imgSrc: "express-icon.png",
+          imgAlt: "Express JS",
+          imgTitle: "Express JS",
+          isTechStack: true,
+        },
+        {
           title: "OpenStreetMap",
           imgSrc: "openstreetmaps-icon.png",
           imgAlt: "OpenStreetMap",
@@ -1362,6 +1555,13 @@ export function TechnologyList() {
           imgTitle: "CSS",
           isTechStack: true,
         },
+        {
+          title: "SASS",
+          imgSrc: "sass-icon.png",
+          imgAlt: "SASS",
+          imgTitle: "SASS",
+          isTechStack: true,
+        },
 
         {
           title: "Tailwind CSS",
@@ -1388,6 +1588,18 @@ export function TechnologyList() {
           imgSrc: "postgres-icon.png",
           imgAlt: "PostgreSQL Database",
           imgTitle: "PostgreSQL Database",
+          isTechStack: true,
+        },
+      ],
+    },
+    {
+      title: "Containerization",
+      technologies: [
+        {
+          title: "Docker",
+          imgSrc: "docker-icon.png",
+          imgAlt: "Docker",
+          imgTitle: "Docker",
           isTechStack: true,
         },
       ],
@@ -1463,7 +1675,6 @@ export function TechnologyList() {
           imgTitle: "Android OS",
           isTechStack: true,
         },
-        
       ],
     },
   ];
