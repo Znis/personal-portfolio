@@ -703,7 +703,7 @@ export default function ProjectList() {
     },
     {
       id: 4,
-      orientation: 1,
+      orientation: 0,
       projectTitle: "Eclipse of the Lantern Game",
       projectSmallTitle: "Eclipse of the Lantern",
       projectType: "game",
