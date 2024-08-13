@@ -385,7 +385,7 @@ export default function ProjectList() {
         ],
       },
       demoLink:
-        "https://66ae711495b597b867e46bde--spontaneous-pegasus-f8422c.netlify.app/",
+        "https://samaybaji.jenishtwayana.com.np/",
       videoDemo: "https://www.youtube.com/embed/boM0QXe7jR4",
       projectRoute: RoutingLinks.projects + "/samay-baji",
       hasNote: true,
