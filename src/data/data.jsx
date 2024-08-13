@@ -820,7 +820,7 @@ export default function ProjectList() {
 
         phone: [],
       },
-      demoLink: "https://thriving-souffle-4fbf68.netlify.app/",
+      demoLink: "https://eotl.jenishtwayana.com.np/",
       videoDemo: "https://www.youtube.com/embed/CZ-iM8cFd9A",
       projectRoute: RoutingLinks.projects + "/eclipse-of-the-lantern",
       hasNote: false,
