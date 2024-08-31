@@ -384,8 +384,7 @@ export default function ProjectList() {
           },
         ],
       },
-      demoLink:
-        "https://samaybaji.jenishtwayana.com.np/",
+      demoLink: "https://samaybaji.jenishtwayana.com.np/",
       videoDemo: "https://www.youtube.com/embed/boM0QXe7jR4",
       projectRoute: RoutingLinks.projects + "/samay-baji",
       hasNote: false,
