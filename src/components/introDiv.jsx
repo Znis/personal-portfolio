@@ -23,9 +23,9 @@ const H2 = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   font-family: "Space Grotesk", sans-serif;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
   @media (min-width: 1024px) {
-    margin-top: 0rem;
+    margin-top: 0.8rem;
   }
 `;
 const H3 = styled.h3`
@@ -95,9 +95,9 @@ const Button = styled.a`
 function IntroDiv() {
   return (
     <div className="flex flex-col items-center p-4 text-center lg:text-left lg:items-start">
-      <H3>Hi, I am</H3>
+      <H3>Hi, I&apos;m</H3>
       <H1>Jenish Twayana</H1>
-      <H2>A Software Developer</H2>
+      <H2>Software Engineer · AI/ML · GenAI</H2>
       <H4>
         Based in Nepal{" "}
         <IMG
@@ -108,7 +108,7 @@ function IntroDiv() {
       </H4>
 
       <Button href={RoutingLinks.contact}>
-        Contact <AiOutlineArrowRight />
+      Let&apos;s Talk <AiOutlineArrowRight />
       </Button>
     </div>
   );

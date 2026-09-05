@@ -1419,13 +1419,6 @@ export function TechnologyList() {
           isTechStack: true,
         },
         {
-          title: "C#",
-          imgSrc: "csharp-icon.png",
-          imgAlt: "C# Programming Language",
-          imgTitle: "C# Programming Language",
-          isTechStack: false,
-        },
-        {
           title: "Javascript",
           imgSrc: "js-icon.png",
           imgAlt: "Javascript Programming Language",
@@ -1440,25 +1433,11 @@ export function TechnologyList() {
           isTechStack: false,
         },
         {
-          title: "Java",
-          imgSrc: "java-icon.png",
-          imgAlt: "Java Programming Language",
-          imgTitle: "Java Programming Language",
-          isTechStack: false,
-        },
-        {
           title: "TypeScript",
           imgSrc: "ts-icon.png",
           imgAlt: "TypeScript Programming Language",
           imgTitle: "TypeScript Programming Language",
           isTechStack: true,
-        },
-        {
-          title: "Kotlin",
-          imgSrc: "kotlin-icon.png",
-          imgAlt: "Kotlin Programming Language",
-          imgTitle: "Kotlin Programming Language",
-          isTechStack: false,
         },
       ],
     },
@@ -1467,10 +1446,24 @@ export function TechnologyList() {
       title: "Framework",
       technologies: [
         {
-          title: "Django",
-          imgSrc: "django-icon.png",
-          imgAlt: "Django Framework",
-          imgTitle: "Django Framework",
+          title: "Next JS",
+          imgSrc: "nextjs-icon.png",
+          imgAlt: "Next JS Framework",
+          imgTitle: "Next JS Framework",
+          isTechStack: true,
+        },
+        {
+          title: "FastAPI",
+          imgSrc: "fastapi-icon.png",
+          imgAlt: "FastAPI Framework",
+          imgTitle: "FastAPI Framework",
+          isTechStack: true,
+        },
+        {
+          title: "LangChain",
+          imgSrc: "langchain-icon.png",
+          imgAlt: "LangChain Framework",
+          imgTitle: "LangChain Framework",
           isTechStack: true,
         },
         {
@@ -1519,21 +1512,6 @@ export function TechnologyList() {
           imgAlt: "Express JS",
           imgTitle: "Express JS",
           isTechStack: true,
-        },
-        {
-          title: "OpenStreetMap",
-          imgSrc: "openstreetmaps-icon.png",
-          imgAlt: "OpenStreetMap",
-          imgTitle: "OpenStreetMap",
-          isTechStack: false,
-        },
-
-        {
-          title: "Selenium",
-          imgSrc: "selenium-icon.png",
-          imgAlt: "Selenium",
-          imgTitle: "Selenium",
-          isTechStack: false,
         },
       ],
     },
@@ -1592,18 +1570,6 @@ export function TechnologyList() {
       ],
     },
     {
-      title: "Containerization",
-      technologies: [
-        {
-          title: "Docker",
-          imgSrc: "docker-icon.png",
-          imgAlt: "Docker",
-          imgTitle: "Docker",
-          isTechStack: true,
-        },
-      ],
-    },
-    {
       title: "Cloud Infrastructure and Service",
       technologies: [
         {
@@ -1614,64 +1580,37 @@ export function TechnologyList() {
           isTechStack: true,
         },
         {
-          title: "Firebase",
-          imgSrc: "firebase-icon.png",
-          imgAlt: "Firebase Database",
-          imgTitle: "Firebase Database",
+          title: "AWS",
+          imgSrc: "aws-icon.png",
+          imgAlt: "AWS Cloud",
+          imgTitle: "AWS Cloud",
           isTechStack: true,
         },
       ],
     },
     {
-      title: "IDE Softwares",
+      title: "AI SDKs",
       technologies: [
         {
-          title: "Visual Studio Code",
-          imgSrc: "vscode-icon.png",
-          imgAlt: "Visual Studio Code IDE",
-          imgTitle: "Visual Studio Code IDE",
+          title: "OpenAI",
+          imgSrc: "openai-icon.png",
+          imgAlt: "OpenAI SDK",
+          imgTitle: "OpenAI SDK",
           isTechStack: true,
         },
         {
-          title: "Android Studio",
-          imgSrc: "android-studio-icon.png",
-          imgAlt: "Android Studio IDE",
-          imgTitle: "Android Studio IDE",
+          title: "Anthropic",
+          imgSrc: "anthropic-icon.png",
+          imgAlt: "Anthropic SDK",
+          imgTitle: "Anthropic SDK",
           isTechStack: true,
         },
 
         {
-          title: "Unity",
-          imgSrc: "unity-icon.png",
-          imgAlt: "Unity Engine",
-          imgTitle: "Unity Engine",
-          isTechStack: false,
-        },
-      ],
-    },
-    {
-      title: "Operating System",
-      technologies: [
-        {
-          title: "Windows",
-          imgSrc: "windows-icon.png",
-          imgAlt: "Windows OS",
-          imgTitle: "Windows OS",
-          isTechStack: true,
-        },
-        {
-          title: "Linux",
-          imgSrc: "linux-icon.png",
-          imgAlt: "Linux OS",
-          imgTitle: "Linux OS",
-          isTechStack: true,
-        },
-
-        {
-          title: "Android",
-          imgSrc: "android-icon.png",
-          imgAlt: "Android OS",
-          imgTitle: "Android OS",
+          title: "AWS Strands Agent",
+          imgSrc: "strands-icon.png",
+          imgAlt: "AWS Strands Agent SDK",
+          imgTitle: "AWS Strands Agent SDK",
           isTechStack: true,
         },
       ],
