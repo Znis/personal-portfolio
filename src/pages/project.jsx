@@ -4,7 +4,7 @@ import CarouselSlider from "../components/carouselSlider";
 
 const IconDiv = styled.img`
   height: 3.2rem;
-  width: fit-content;
+  width: auto;
   margin-bottom: 1rem;
   transition: transform 0.2s;
   -webkit-transition: transform 0.2s;
